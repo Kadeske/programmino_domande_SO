@@ -1,0 +1,896 @@
+[
+  {
+    "domanda": "Quali sono i modelli fondamentali di comunicazione fra processi (IPC)",
+    "opzioni": [
+      "Modularità e convenienza",
+      "Condivisione e scambio di memoria",
+      "Memoria condivisa e scambio di messaggi",
+      "Scambio di messaggi e modularità",
+      "Parallelismo e time sharing",
+      "Memoria condivisa e memoria paginata"
+    ],
+    "soluzioni": ["Memoria condivisa e scambio di messaggi"]
+  },
+  {
+    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della load word dell'ISA MIPS, caso della specifica espressa in linguaggio Assembly: lw $3, 0x0100($2) è la seguente",
+    "opzioni": [
+      "REGS[$3] = REGS[$2]+Mem[0x0100]",
+      "REGS[$2] = Mem(REGS[$3]+0x0100)",
+      "Mem[$3] = REGS[$2]+0x0100",
+      "Mem(REGS[$2]+0x0100)=REGS[$3]",
+      "REGS[$3] = Mem(REGS[$2]+0x0100)"
+    ],
+    "soluzioni": ["REGS[$3] = Mem(REGS[$2]+0x0100)"]
+  },
+  {
+    "domanda": "Si definisce sistema Bare Metal:",
+    "opzioni": [
+      "Qualunque sistema di elaborazione HW SW",
+      "Un sistema di elaborazione HW privo di sistema operativo",
+      "Un sistema operativo che gira su un sistema hardware senza visualizzazione",
+      "Un sistema HW in grado di implementare istruzioni Assembly di un programma eseguibile senza che sia stato introdotto un sistema operativo",
+      "Un sistema di elaborazione con HW che supporta direttamente un sistema di elaborazione, senza macchine virtuali coinvolte"
+    ],
+    "soluzioni": [
+      "Un sistema di elaborazione HW privo di sistema operativo",
+      "Un sistema HW in grado di implementare istruzioni Assembly di un programma eseguibile senza che sia stato introdotto un sistema operativo"
+    ]
+  },
+  {
+    "domanda": "In caso di implementazione del paradigma Produttore Consumatore che preveda lo sfruttamento completo di un buffer in memoria condivisa, descritta dalle slide seguenti, è vero che:",
+    "opzioni": [
+      "Si può verificare una corsa critica legata al fatto che l'ISA assembly che a basso livello traduce l'implementazione scritta in C è di tipo load store",
+      "Si verifica sistematicamente una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica",
+      "Si può verificare una corsa critica che porti a valori erronei della variabile counter perché l'interrupt che provoca il context switch si verifica durante l'esecuzione di una istruzione assembly",
+      "Non si verifica una corsa critica perché questa implementazione previene intrinsecamente il verificarsi di corse critiche",
+      "Si può verificare una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica"
+    ],
+    "soluzioni": [
+      "Si può verificare una corsa critica legata al fatto che l'ISA assembly che a basso livello traduce l'implementazione scritta in C è di tipo load store",
+      "Si può verificare una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica"
+    ]
+  },
+  {
+    "domanda": "Il PCB di un processo:",
+    "opzioni": [
+      "Contiene fra le altre cose lo stato del processo e il valore dei registri della CPU",
+      "Serve al compilatore per dimensionare lo stack",
+      "Viene utilizzato esclusivamente nei sistemi Linux",
+      "Contiene solo informazioni sullo stato del processo",
+      "Non contiene dati sullo scheduling della CPU"
+    ],
+    "soluzioni": [
+      "Contiene fra le altre cose lo stato del processo e il valore dei registri della CPU"
+    ]
+  },
+  {
+    "domanda": "Per quanto spiegato nel materiale del corso, è vero che il formato di una istruzione:",
+    "opzioni": [
+      "Non dipende dal compilatore",
+      "Viene utilizzato dal compilatore per decidere la logica di salvataggio e ripristino del contesto",
+      "E' sempre uguale per ogni istruzione dell'Instruction Set",
+      "Non dipende dall'Instruction Set Architecture",
+      "Specifica di quanti bit è composto l'opcode di una istruzione",
+      "Specifica come i simboli di una istruzione Assembly vengono trasformati in opportuni campi di bit",
+      "Produce i bit necessari per indirizzare registri sorgente"
+    ],
+    "soluzioni": [
+      "Non dipende dal compilatore",
+      "Specifica di quanti bit è composto l'opcode di una istruzione",
+      "Specifica come i simboli di una istruzione Assembly vengono trasformati in opportuni campi di bit",
+      "Produce i bit necessari per indirizzare registri sorgente"
+    ]
+  },
+  {
+    "domanda": "Un sistema monoprogrammato",
+    "opzioni": [
+      "Non supporta più processi",
+      "E basato su sistema HW monoprocessore",
+      "Si basa sempre su architettura monolitica del Sistema Operativo",
+      "Non implementa il paradigma della multiprogrammazione",
+      "Utilizza sempre i registri base e limite per la protezione della memoria"
+    ],
+    "soluzioni": [
+      "Non supporta più processi",
+      "Non implementa il paradigma della multiprogrammazione"
+    ]
+  },
+  {
+    "domanda": "Relativamente al lancio di un processo (nuova applicazione) da parte di un processo già in esecuzione, su sistema linux, è vero che:",
+    "opzioni": [
+      "Il processo figlio invoca la fork, il padre invoca la exec cui passa come parametro il nome completo del file eseguibile della nuova applicazione",
+      "Il processo padre invoca la system call exec cui passa come parametro il nome completo del file eseguibile della nuova applicazione",
+      "Il processo padre invoca la fork, il figlio invoca la exec cui passa come parametro il nome completo del file eseguibile della nuova applicazione",
+      "Il processo padre invoca la fork, il figlio lancia direttamente l'eseguibile con uno script a linea di comando",
+      "Il processo figlio invoca la fork cui passa come parametro il nome completo del file eseguibile della nuova applicazione"
+    ],
+    "soluzioni": [
+      "Il processo padre invoca la fork, il figlio invoca la exec cui passa come parametro il nome completo del file eseguibile della nuova applicazione"
+    ]
+  },
+  {
+    "domanda": "Per quanto spiegato nel materiale del corso, è vero che il compilatore:",
+    "opzioni": [
+      "Si occupa di produrre il codice per la gestione della memoria automatica",
+      "Trasforma un algoritmo espresso in linguaggio ad alto livello in una sequenza di istruzioni Assembly",
+      "Si occupa di produrre il codice per il salvataggio e ripristino dei registri della CPU",
+      "Si occupa di definire quali registri vengono utilizzati per implementare una funzione",
+      "Si occupa di calcolare quante istruzioni vanno saltate per ogni jump o branch"
+    ],
+    "soluzioni": [
+      "Si occupa di produrre il codice per la gestione della memoria automatica",
+      "Trasforma un algoritmo espresso in linguaggio ad alto livello in una sequenza di istruzioni Assembly",
+      "Si occupa di produrre il codice per il salvataggio e ripristino dei registri della CPU",
+      "Si occupa di definire quali registri vengono utilizzati per implementare una funzione"
+    ]
+  },
+  {
+    "domanda": "Per rendere funzionante questo codice (subroutine call/return), secondo quanto visto a lezione:",
+    "opzioni": [
+      "E' sufficiente che vengano inserite 4 opportune istruzioni Assembly",
+      "E' indispensabile salvare e ripristinare lo stato da parte delle subroutine sub1 e sub2",
+      "E' sufficiente venga salvato e ripristinato lo stato della funzione sub1",
+      "E' sufficiente che vengano inserite 2 opportune istruzioni Assembly",
+      "Non sono necessarie modifiche"
+    ],
+    "soluzioni": [
+      "E' sufficiente che vengano inserite 4 opportune istruzioni Assembly",
+      "E' sufficiente venga salvato e ripristinato lo stato della funzione sub1"
+    ]
+  },
+  {
+    "domanda": "Relativamente al parametro q dello scheduling Round Robin",
+    "opzioni": [
+      "Se cresce diminuisce il context switch overhead",
+      "Se decresce migliora il turnaround medio",
+      "Se decresce l'algoritmo tende a comportarsi come SJF",
+      "Se cresce l'algoritmo non tende a comportarsi come FCFS",
+      "Se cresce, cresce anche la cpu utilization"
+    ],
+    "soluzioni": [
+      "Se cresce diminuisce il context switch overhead",
+      "Se cresce, cresce anche la cpu utilization"
+    ]
+  },
+  {
+    "domanda": "Relativamente alle architetture di SO, è vero che:",
+    "opzioni": [
+      "Le architetture monolitiche sono relativamente meno manutenibili di quelle layered",
+      "L'architettura di Linux è monolitica ma modulare",
+      "Le architetture di rete sono un caso particolare delle architetture layered",
+      "Le architetture monolitiche sono relativamente meno performanti di quelle layered",
+      "Le architetture microkernel minimizzano il numero di cambi di modalità della CPU rispetto a monolitico e layered"
+    ],
+    "soluzioni": [
+      "Le architetture monolitiche sono relativamente meno manutenibili di quelle layered",
+      "L'architettura di Linux è monolitica ma modulare"
+    ]
+  },
+  {
+    "domanda": "Se la invocazione della fork() non va a buon fine è vero che:",
+    "opzioni": [
+      "Il processo figlio viene terminato",
+      "Al processo figlio viene restituito il valore -1",
+      "Al processo figlio viene assegnato il pid 1",
+      "Sia il processo figlio che il processo padre vengono terminati",
+      "Al processo padre viene restituito il valore -1"
+    ],
+    "soluzioni": ["Al processo padre viene restituito il valore -1"]
+  },
+  {
+    "domanda": "Relativamente allo schema di seguito relativo alla comunicazione fra processi, è vero che:",
+    "opzioni": [
+      "Le pipe utilizzano lo schema b",
+      "Lo schema a è riferibile ai socket",
+      "Entrambi gli schemi utilizzano memoria condivisa",
+      "Lo scambio di messaggi utilizza lo schema b",
+      "La memoria condivisa può essere utilizzata per scambiare le informazioni anche bypassando l'intervento del kernel"
+    ],
+    "soluzioni": [
+      "Lo schema a è riferibile ai socket",
+      "La memoria condivisa può essere utilizzata per scambiare le informazioni anche bypassando l'intervento del kernel"
+    ]
+  },
+  {
+    "domanda": "Relativamente al memory mapping è vero che",
+    "opzioni": [
+      "Dal punto di vista della comunicazione con la cpu rende le periferiche simili a memorie special purpose",
+      "Il processore accede alle periferiche usando load e store",
+      "Permette l'accesso alle periferiche ma esclusivamente in sola lettura o in sola scrittura",
+      "Funziona solo se memoria e periferiche hanno spazi di indirizzamento non sovrapposti",
+      "Permette alle periferiche di accedere alla memoria istruzioni"
+    ],
+    "soluzioni": [
+      "Dal punto di vista della comunicazione con la cpu rende le periferiche simili a memorie special purpose",
+      "Il processore accede alle periferiche usando load e store",
+      "Funziona solo se memoria e periferiche hanno spazi di indirizzamento non sovrapposti"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai threads è vero che:",
+    "opzioni": [
+      "Gli user thread riducono l'occupazione della memoria",
+      "Gli user thread minimizzano l'esigenza di gestire la protezione delle risorse condivise da parte del programmatore",
+      "Gli user thread minimizzano l'esigenza di gestire la sincronizzazione da parte del programmatore",
+      "I thread possono sempre utilizzare le system call senza bloccare altri thread",
+      "Sono potenzialmente convenienti perché possono minimizzare l'overhead legato al context switch",
+      "I kernel thread riducono l'occupazione della memoria"
+    ],
+    "soluzioni": [
+      "Gli user thread riducono l'occupazione della memoria",
+      "Sono potenzialmente convenienti perché possono minimizzare l'overhead legato al context switch",
+      "I kernel thread riducono l'occupazione della memoria"
+    ]
+  },
+  {
+    "domanda": "Il seguente supporto HW per protezione memoria (registri base e limite):",
+    "opzioni": [
+      "Prevede che il contenuto dei registri base e limite siano dei parametri del kernel",
+      "E' valido per qualunque modalità di allocazione di memoria si utilizzi",
+      "Rende impossibile al codice utente di accedere alle periferiche",
+      "Prevede che i registri base e limite siano modificati dal kernel prima di mandare in esecuzione codice utente...",
+      "In caso di verificarsi delle condizioni di accesso illegale scatena un interrupt..."
+    ],
+    "soluzioni": [
+      "Rende impossibile al codice utente di accedere alle periferiche"
+    ]
+  },
+  {
+    "domanda": "Le transizioni di stato possibili per un processo sono le seguenti:",
+    "opzioni": [
+      "Da ready a completed",
+      "Da waiting a waiting per un evento di altro tipo",
+      "Da running a waiting",
+      "Da waiting a ready",
+      "Da running a ready",
+      "Da ready a waiting",
+      "Da ready a running",
+      "Da waiting a completed"
+    ],
+    "soluzioni": [
+      "Da running a waiting",
+      "Da waiting a ready",
+      "Da running a ready",
+      "Da ready a running"
+    ]
+  },
+  {
+    "domanda": "Relativamente al thread pool:",
+    "opzioni": [
+      "Viene utilizzato in caso di raggiungimento del massimo numero di thread allocabili",
+      "E' basato su un numero fisso di thread creati all'avvio della applicazione, i singoli thread vengono attivati e disattivati all'occorrenza e il numero complessivo di thread attivi cambia continuamente",
+      "Ciascun thread del pool è sempre collegato a un diverso processo/task a livello kernel",
+      "Viene utilizzato ad esempio in caso di applicazioni webserver multithread",
+      "Ha un numero di thread allocati predefinito basato sempre sulle priorità del processo",
+      "Quando un thread ha terminato l'esecuzione di una attività viene disattivato e reso nuovamente reso disponibile per nuova attivazione"
+    ],
+    "soluzioni": [
+      "E' basato su un numero fisso di thread creati all'avvio della applicazione, i singoli thread vengono attivati e disattivati all'occorrenza e il numero complessivo di thread attivi cambia continuamente",
+      "Viene utilizzato ad esempio in caso di applicazioni webserver multithread",
+      "Quando un thread ha terminato l'esecuzione di una attività viene disattivato e reso nuovamente reso disponibile per nuova attivazione"
+    ]
+  },
+  {
+    "domanda": "Il problema produttore consumatore affrontato con la memoria condivisa richiede l'utilizzo di un buffer:",
+    "opzioni": [
+      "Sempre illimitato, in modo che il consumatore non deve mai attendere nuovi oggetti",
+      "Illimitato, il produttore non potrà inserire nuovi oggetti finche l'ultimo non è stato consumato",
+      "Limitato, il consumatore dovrà attendere in caso di buffer vuoto",
+      "Limitato, il produttore dovrà attendere in caso di buffer vuoto",
+      "Limitato, il produttore dovrà attendere in caso di buffer pieno",
+      "Limitato, lo scambio avviene sempre tramite utilizzo di semafori spinlock"
+    ],
+    "soluzioni": [
+      "Limitato, il consumatore dovrà attendere in caso di buffer vuoto",
+      "Limitato, il produttore dovrà attendere in caso di buffer pieno"
+    ]
+  },
+  {
+    "domanda": "Relativamente all'algoritmo SJF e alle sue varianti è vero che:",
+    "opzioni": [
+      "L'algoritmo SJF con predizione prevede che la CPU sia sempre assegnata al processo con l'ultimo burst di cpu più breve fra tutti",
+      "In caso di utilizzo della predizione si usa la media esponenziale (alpha = 1)",
+      "L'algoritmo SRTF equivale all'algoritmo SJF senza la prelazione",
+      "In caso di utilizzo della predizione si usa la media esponenziale (dove tn = penultimo burst)",
+      "L'algoritmo SJF puro prevede che la CPU sia assegnata al processo con il futuro burst di cpu più breve fra tutti"
+    ],
+    "soluzioni": [
+      "L'algoritmo SJF puro prevede che la CPU sia assegnata al processo con il futuro burst di cpu più breve fra tutti"
+    ]
+  },
+  {
+    "domanda": "Relativamente alla architettura SW Round Robin per sistemi di elaborazione Bare Metal / Embedded",
+    "opzioni": [
+      "Non ha alcuna applicazione pratica",
+      "E' in grado di gestire solo applicazioni con vincoli di interazione real time relativamente molto limitati",
+      "E' basata su un ciclo principale ( loop infinito) che si occupa di gestire sia processamento dati che lettura scrittura dalle periferiche",
+      "Esegue i task uno alla volta e poi si interrompe",
+      "E' basato su un ciclo principale che si occupa di processamento dei dati, mentre la comunicazione con le periferiche è implementata tramite routine di interrupt"
+    ],
+    "soluzioni": [
+      "E' in grado di gestire solo applicazioni con vincoli di interazione real time relativamente molto limitati",
+      "E' basata su un ciclo principale ( loop infinito) che si occupa di gestire sia processamento dati che lettura scrittura dalle periferiche"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai criteri di Scheduling, è vero che:",
+    "opzioni": [
+      "Utilizzo della CPU (CPU utilization) e Tempo di Risposta (response time) sono criteri fra di loro in conflitto",
+      "Tempo di completamento medio (turnaround time) e tempo di attesa massimo (maximum waiting time) sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU e Utilizzo dei dispositivi di I/O sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU e occupazione della memoria di secondo livello sono criteri fra di loro in conflitto"
+    ],
+    "soluzioni": [
+      "Utilizzo della CPU (CPU utilization) e Tempo di Risposta (response time) sono criteri fra di loro in conflitto",
+      "Tempo di completamento medio (turnaround time) e tempo di attesa massimo (maximum waiting time) sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU e Utilizzo dei dispositivi di I/O sono criteri fra di loro in conflitto"
+    ]
+  },
+  {
+    "domanda": "Circa la funzionalità di interrupt",
+    "opzioni": [
+      "Via software si occupa prima di salvare e quindi di ripristinare lo stato di tutti i registri interni del processore",
+      "E' una funzionalità esclusivamente software",
+      "Consente l'esecuzione di sottoprogrammi in maniera asincrona rispetto al flusso di esecuzione principale",
+      "Alla conclusione della routine ripristina sempre il valore del registro 31 in caso di ISA MIPS",
+      "Esegue codice in modalità utente"
+    ],
+    "soluzioni": [
+      "Consente l'esecuzione di sottoprogrammi in maniera asincrona rispetto al flusso di esecuzione principale"
+    ]
+  },
+  {
+    "domanda": "Nel caso di Multilevel queue scheduling con feedback è vero che:",
+    "opzioni": [
+      "La ready queue è suddivisa in code separate",
+      "Prevede code di processi gestite con algoritmo Round Robin, ciascuna con un durata del quanto di tempo diversa",
+      "Prevede che il feedback possa modificare le priorità in modo da evitare l'effetto aging",
+      "Utilizza l'algoritmo FCFS in caso di processo con lo stesso tempo di burst",
+      "I processi sono assegnati permanentemente ad una cosa"
+    ],
+    "soluzioni": [
+      "La ready queue è suddivisa in code separate",
+      "Prevede code di processi gestite con algoritmo Round Robin, ciascuna con un durata del quanto di tempo diversa"
+    ]
+  },
+  {
+    "domanda": "E' vero che uno dei casi in cui Il kernel viene eseguito é:",
+    "opzioni": [
+      "Durante l'esecuzione di una System call",
+      "In seguito alla generazione di una eccezione",
+      "Quando è in esecuzione un processo, per tutto il tempo",
+      "In caso di esecuzione di una routine di interrupt da periferica",
+      "In caso di esecuzione di codice assembly",
+      "All'avvio del sistema, dopo il reset",
+      "Quando non è in esecuzione un processo, per tutto il tempo",
+      "Quando un processo del kernel invoca una System call"
+    ],
+    "soluzioni": [
+      "Durante l'esecuzione di una System call",
+      "In seguito alla generazione di una eccezione",
+      "In caso di esecuzione di una routine di interrupt da periferica",
+      "All'avvio del sistema, dopo il reset"
+    ]
+  },
+  {
+    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche descritto nei sistemi di elaborazione monoprocessore... il ruolo del multiplexer controllato dal decoder del bus è:",
+    "opzioni": [
+      "Supportare l'accesso alle periferiche sia in scrittura che in lettura",
+      "Evitare l'utilizzo di decoder interni alle periferiche",
+      "Disaccoppiare le letture dalle scritture",
+      "Collegare la giusta periferica in modo che possa leggere dalla porta di uscita della CPU",
+      "Collegare la giusta periferica in modo che possa scrivere sulla porta di ingresso della CPU."
+    ],
+    "soluzioni": [
+      "Collegare la giusta periferica in modo che possa scrivere sulla porta di ingresso della CPU."
+    ]
+  },
+  {
+    "domanda": "Relativamente alla possibile architettura di un bus di comunicazione a supporto del memory mapping... sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "E' possibile che gli spazi di indirizzamento delle periferiche siano parzialmente sovrapposti...",
+      "Il decoder del bus è indispensabile per le operazioni di scrittura tipo sw",
+      "La scrittura da parte del processore del dato su una periferica sollecita i decoder interni...",
+      "Il dato in scrittura sulle periferiche viene inviato in parallelo a tutte le porte dati in in scrittura delle periferiche presenti nel sistema",
+      "Il Mux del bus ha lo scopo di selezionare quale periferica è abilitata a collegarsi alla porta dati di ingresso della cpu durante le operazioni di scrittura tipo lw"
+    ],
+    "soluzioni": [
+      "Il dato in scrittura sulle periferiche viene inviato in parallelo a tutte le porte dati in in scrittura delle periferiche presenti nel sistema",
+      "Il Mux del bus ha lo scopo di selezionare quale periferica è abilitata a collegarsi alla porta dati di ingresso della cpu durante le operazioni di scrittura tipo lw"
+    ]
+  },
+  {
+    "domanda": "Relativamente al parametro q dello scheduling Round Robin",
+    "opzioni": [
+      "Se decresce l'algoritmo tende a comportarsi come SJF",
+      "Se cresce, cresce anche la cpu utilization",
+      "Se cresce aumenta il context switch overhead",
+      "Se cresce l'algoritmo tende a comportarsi come FCFS",
+      "Se decresce migliora il turnaround medio"
+    ],
+    "soluzioni": [
+      "Se cresce, cresce anche la cpu utilization",
+      "Se cresce l'algoritmo tende a comportarsi come FCFS"
+    ]
+  },
+  {
+    "domanda": "L'esecuzione del seguente codice assembly (sub1, sub2), sulla base sell'ISA MIPS visto nel materiale del corso:",
+    "opzioni": [
+      "E' malfunzionante in quanto la routine sub2 non ritorna correttamente dopo esecuzione della jr",
+      "E' malfunzionante perché non viene salvato e ripristinato lo stato dei registri",
+      "E' malfunzionante in quanto la istruzione all'indirizzo 0x114 sovrascrive un registro in maniera errata",
+      "E' malfunzionante in quanto viene sovrascritto il registro $31 durante esecuzione della sub2",
+      "E' funzionante"
+    ],
+    "soluzioni": [
+      "E' malfunzionante perché non viene salvato e ripristinato lo stato dei registri"
+    ]
+  },
+  {
+    "domanda": "Circa le differenze fra Interrupt hardware e Interrupt software:",
+    "opzioni": [
+      "L'interrupt HW non dipende dal codice in esecuzione",
+      "L'interrupt SW non dipende da cosa succede all'ingresso di interrupt",
+      "Non ci sono differenze",
+      "L'interrupt HW non impedisce il completamento della istruzione in esecuzione",
+      "L'interrupt SW non impedisce il completamento della istruzione in esecuzione"
+    ],
+    "soluzioni": [
+      "L'interrupt HW non dipende dal codice in esecuzione",
+      "L'interrupt SW non dipende da cosa succede all'ingresso di interrupt",
+      "L'interrupt HW non impedisce il completamento della istruzione in esecuzione"
+    ]
+  },
+  {
+    "domanda": "Relativamente al flusso di esecuzione in caso di interrupt, descritto dallo schema seguente, è vero che:",
+    "opzioni": [
+      "L'interrupt si verifica sempre a causa della sollecitazione dell'apposito ingresso HW della CPU",
+      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare...",
+      "La routine di interrupt si fa carico in SW di salvare e ripristinare il contenuto dei registri sporcati durante la sua esecuzione",
+      "L'interrupt si attiva coerentemente al flusso normale di esecuzione, in maniera sincrona",
+      "L'interrupt si avvia sovrascrivendo il contenuto del PC con indirizzo della prima istruzione della routine di interrupt e salva in HW indirizzo della istruzione successiva da eseguire"
+    ],
+    "soluzioni": [
+      "L'interrupt si verifica sempre a causa della sollecitazione dell'apposito ingresso HW della CPU",
+      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare...",
+      "La routine di interrupt si fa carico in SW di salvare e ripristinare il contenuto dei registri sporcati durante la sua esecuzione",
+      "L'interrupt si avvia sovrascrivendo il contenuto del PC con indirizzo della prima istruzione della routine di interrupt e salva in HW indirizzo della istruzione successiva da eseguire"
+    ]
+  },
+  {
+    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della set on less than dell'ISA MIPS... slt $4, $2, $3 è la seguente",
+    "opzioni": [
+      "if(REGS[$2]<REGS[$4]) REGS[$3] = 1",
+      "if(REGS[$2]<= REGS[$3]) REGS[$4] = 1",
+      "if(REGS[$2]<REGS[$3]) REGS[$4] = 1",
+      "if(REGS[$2]<REGS[$3]) REGS[$4] = 0",
+      "if(REGS[$2]>REGS[$3]) REGS[$4] = 1"
+    ],
+    "soluzioni": ["if(REGS[$2]<REGS[$3]) REGS[$4] = 1"]
+  },
+  {
+    "domanda": "Oltre ad eventuali altre cose, i thread condividono:",
+    "opzioni": [
+      "Dati, Stack e risorse",
+      "Codice e file",
+      "Program Counter, Registri e stack",
+      "Registri, dati e program counter",
+      "Stack, codice e risorse"
+    ],
+    "soluzioni": ["Codice e file"]
+  },
+  {
+    "domanda": "L' istruzione JL (Jump and Link), utilizzata per l'implementazione della chiamata a funzione",
+    "opzioni": [
+      "Salva in HW il contenuto dei registri sporcati dalla funzione chiamata nel frame di attivazione della funzione",
+      "Viene utilizzata dal compilatore in coppia con la funzione JR",
+      "Salva indirizzo di ritorno nel frame di attivazione della funzione",
+      "Scrive nel $31 l'indirizzo della istruzione successiva da eseguire ed esegue un salto",
+      "Salva nel registro $31 l'indirizzo della istruzione a cui salta"
+    ],
+    "soluzioni": [
+      "Viene utilizzata dal compilatore in coppia con la funzione JR",
+      "Scrive nel $31 l'indirizzo della istruzione successiva da eseguire ed esegue un salto"
+    ]
+  },
+  {
+    "domanda": "Un sistema monoprogrammato",
+    "opzioni": [
+      "Non supporta più processi",
+      "E basato su sistema HW monoprocessore",
+      "Implementa il paradigma della multiprogrammazione in maniera monolitica",
+      "Non utilizza sempre i registri base e limite per la protezione della memoria",
+      "Si basa sempre su architettura monolitica del Sistema Operativo"
+    ],
+    "soluzioni": [
+      "Non supporta più processi",
+      "Non utilizza sempre i registri base e limite per la protezione della memoria"
+    ]
+  },
+  {
+    "domanda": "Relativamente al seguente codice che permette la comunicazione fra thread a livello utente (Produttore/Consumatore):",
+    "opzioni": [
+      "Il codice non è soggetto a corse critiche",
+      "La variabile condivisa inserisci indica l'elemento del buffer su cui leggere",
+      "Il consumatore cicla indefinitamente in caso di buffer completamente vuoto",
+      "Il produttore cicla indefinitamente in caso di buffer completamente pieno",
+      "La variabile condivisa preleva indica l'elemento del buffer su cui scrivere"
+    ],
+    "soluzioni": [
+      "Il codice non è soggetto a corse critiche",
+      "Il consumatore cicla indefinitamente in caso di buffer completamente vuoto"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai modelli di multi threading:",
+    "opzioni": [
+      "Il modello molti a uno prevede che il numero dei thread utente sia sempre molto maggiore del numero dei thread kernel",
+      "Il modello molti a uno è possibile solo in caso di supporto del sistema operativo",
+      "Il modello uno a uno prevede che non vengano usate le librerie di supporto agli user thread",
+      "Il modello molti a molti è l'unico che richiede il supporto del kernel",
+      "Il modello uno a uno è gestito tramite librerie a livello utente"
+    ],
+    "soluzioni": [
+      "Il modello uno a uno prevede che non vengano usate le librerie di supporto agli user thread"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai criteri di scheduling, è vero che:",
+    "opzioni": [
+      "Tempo di completamento medio (turnaround time) e tempo di attesa massimo (maximum waiting time) sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU e Utilizzo dei dispositivi di I/O sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU (CPU utilization) e Tempo di Risposta (response time) sono criteri fra di loro in conflitto"
+    ],
+    "soluzioni": [
+      "Tempo di completamento medio (turnaround time) e tempo di attesa massimo (maximum waiting time) sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU e Utilizzo dei dispositivi di I/O sono criteri fra di loro in conflitto",
+      "Utilizzo della CPU (CPU utilization) e Tempo di Risposta (response time) sono criteri fra di loro in conflitto"
+    ]
+  },
+  {
+    "domanda": "Affinché l'implementazione della chiamata a subroutine (questa attività viene svolta in automatico dal compilatore) sia correttamente funzionante è necessario che:",
+    "opzioni": [
+      "Vengano introdotte istruzioni assembly per salvare il contenuto di tutti i registri general purpose",
+      "Al termine della funzione chiamata sia introdotta un istruzione jr $31 che funziona in coppia con la jl della funzione chiamante",
+      "Vengano introdotte istruzioni assembly per ripristino dei registri sporcati dalla funzione chiamata",
+      "venga allocato spazio per tutti i dati privati di ciascuna nel suo frame di attivazione",
+      "Vengano introdotte istruzioni assembly per il salvataggio dei registri sporcati dalla funzione chiamante"
+    ],
+    "soluzioni": [
+      "Al termine della funzione chiamata sia introdotta un istruzione jr $31 che funziona in coppia con la jl della funzione chiamante",
+      "Vengano introdotte istruzioni assembly per ripristino dei registri sporcati dalla funzione chiamata",
+      "venga allocato spazio per tutti i dati privati di ciascuna nel suo frame di attivazione"
+    ]
+  },
+  {
+    "domanda": "Relativamente alla istruzione BEQ: beq $2, $3, label1 | if (REGS[$2]==REGS[$3]) PC = PC+4+imm",
+    "opzioni": [
+      "Il PC viene incrementato di 4 e non di uno perché le istruzioni sono a 32 bit",
+      "Il campo Imm quantifica quante istruzioni verranno eventualmente saltate",
+      "Il PC viene incrementato di 4 perché l'ISA MIPS supporta anche dai a 16 bit",
+      "Il valore Imm dipende dalla label. Il calcolo di Imm viene svolto dal compilatore",
+      "Il PC viene indirizzato in maniera assoluta"
+    ],
+    "soluzioni": [
+      "Il PC viene incrementato di 4 e non di uno perché le istruzioni sono a 32 bit",
+      "Il campo Imm quantifica quante istruzioni verranno eventualmente saltate"
+    ]
+  },
+  {
+    "domanda": "Relativamente al seguente schema che codifica gli stati di esecuzione di un processo è vero che:",
+    "opzioni": [
+      "Il passaggio da waiting a ready avviene anche sulla base di una decisione dello scheduler",
+      "Il passaggio da ready a running avviene sulla base di una decisione dell'algoritmo di scheduling",
+      "Il passaggio da running a waiting può dipendere da una decisione dello scheduler",
+      "Esiste una sola coda di processi waiting e una sola coda di processi ready",
+      "Il passaggio da running a ready dipende dal timer"
+    ],
+    "soluzioni": [
+      "Il passaggio da ready a running avviene sulla base di una decisione dell'algoritmo di scheduling",
+      "Il passaggio da running a ready dipende dal timer"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai threads, è vero che:",
+    "opzioni": [
+      "Rispetto alla percentuale di utilizzo della CPU non ci sono correlazioni con la tipologia di thread utilizzati",
+      "I thread utente sono schedati tramite implementazione a livello di libreria utente",
+      "La cancellazione di un thread utente ha lo stesso costo della cancellazione di un thread kernel",
+      "I thread utente hanno meno overhead dei thread kernel",
+      "I thread utente massimizzano la concorrenza rispetto ai thread kernel"
+    ],
+    "soluzioni": [
+      "I thread utente sono schedati tramite implementazione a livello di libreria utente",
+      "I thread utente hanno meno overhead dei thread kernel"
+    ]
+  },
+  {
+    "domanda": "Per quanto spiegato nel materiale del corso, è vero che l'assembler:",
+    "opzioni": [
+      "Si occupa di produrre il codice per il salvataggio e ripristino dei registri della CPU",
+      "Si occupa di produrre il codice per la gestione della memoria automatica",
+      "Si occupa di definire quali registri vengono utilizzati per implementare una funzione",
+      "Si occupa di risolvere le label presenti nel codice assembly",
+      "Trasforma un algoritmo espresso in linguaggio ad alto livello in una sequenza di istruzioni Assembly",
+      "Si occupa di tradurre le istruzioni Assembly espresse in formato testuale in stringhe di bit",
+      "Si occupa di calcolare quante istruzioni vanno saltate per ogni jump o branch"
+    ],
+    "soluzioni": [
+      "Si occupa di risolvere le label presenti nel codice assembly",
+      "Si occupa di tradurre le istruzioni Assembly espresse in formato testuale in stringhe di bit",
+      "Si occupa di calcolare quante istruzioni vanno saltate per ogni jump o branch"
+    ]
+  },
+  {
+    "domanda": "Relativamente al seguente esempio di flusso di esecuzione (System Mode: Kernel/User), è vero che:",
+    "opzioni": [
+      "Non protegge completamente sia la memoria che la cpu da comportamenti dannosi...",
+      "Il Timer, insieme alla doppia modalità di esecuzione, viene utilizzato per proteggere...",
+      "I registri base e limite sono accessibili solo dal codice del kernel",
+      "Non consente accesso alle periferiche, solo alla memoria protetta",
+      "I registri base e limite sono accessibili al momento dell'avvio del sistema",
+      "In caso di allocazione contigua della memoria, protegge completamente sia la memoria che la cpu da comportamenti dannosi da parte del codice utente",
+      "Se anche all'avvio venisse eseguito codice utente, è sufficiente che il sistema si avvii in modalità kernel...",
+      "Protegge la CPU perché al termine del quanto di tempo si verifica una trap"
+    ],
+    "soluzioni": [
+      "I registri base e limite sono accessibili solo dal codice del kernel",
+      "I registri base e limite sono accessibili al momento dell'avvio del sistema",
+      "In caso di allocazione contigua della memoria, protegge completamente sia la memoria che la cpu da comportamenti dannosi da parte del codice utente"
+    ]
+  },
+  {
+    "domanda": "Quali sono le modalità di esecuzione di una moderna CPU secondo quanto visto a lezione e nel materiale del corso?",
+    "opzioni": [
+      "Modalità kernel e modalità controllo accessi",
+      "Modalità privilegiata e modalità utente",
+      "Solo la modalità kernel",
+      "Tre: input, output e kernel",
+      "Modalità esecuzione, modalità lettura e modalità scrittura",
+      "Almeno due: kernel e user",
+      "Tre: Trasferimento dati, modifica dati, interrupt"
+    ],
+    "soluzioni": [
+      "Modalità privilegiata e modalità utente",
+      "Almeno due: kernel e user"
+    ]
+  },
+  {
+    "domanda": "Cos è il frame di attivazione della funzione?",
+    "opzioni": [
+      "Una porzione di memoria allocata alla invocazione di una funzione che ha la dimensione dei dati necessari alla funzione per il suo ciclo di vita",
+      "Una zona di memoria che serve, fra le altre cose, a salvare tutti i parametri passati alla funzione invocata",
+      "Una parte della memoria direttamente visibile al programmatore",
+      "Un meccanismo di gestione della memoria gestito da istruzioni definite in automatico a livello di compilatore",
+      "Uno speciale zona di memoria da attivare in caso di frame non disponibile in memoria",
+      "Una porzione di memoria di grandezza fissata ma modificabile con una system call"
+    ],
+    "soluzioni": [
+      "Una porzione di memoria allocata alla invocazione di una funzione che ha la dimensione dei dati necessari alla funzione per il suo ciclo di vita",
+      "Un meccanismo di gestione della memoria gestito da istruzioni definite in automatico a livello di compilatore"
+    ]
+  },
+  {
+    "domanda": "Secondo quanto visto nel materiale del corso, una istruzione in formato direttamente eseguibile dalla CPU:",
+    "opzioni": [
+      "In caso di architettura di Harvard viene copiata nell'IR della CPU attraverso il bus istruzioni",
+      "Viene composta secondo il formato dell'ISA alla quale appartiene",
+      "Non appartiene a nessun ISA specifico",
+      "Viene definita dal compilatore",
+      "E' una stringa di bit che sta in memoria istruzioni"
+    ],
+    "soluzioni": [
+      "In caso di architettura di Harvard viene copiata nell'IR della CPU attraverso il bus istruzioni",
+      "Viene composta secondo il formato dell'ISA alla quale appartiene",
+      "E' una stringa di bit che sta in memoria istruzioni"
+    ]
+  },
+  {
+    "domanda": "Si consideri il seguente scenario: Un sistema multiprocessore ... applicativo multithread basato sul many-to-many ...",
+    "opzioni": [
+      "Tutti i kernel level thread sono sempre in esecuzione",
+      "E' possibile che tutti i processori siano utilizzati simultaneamente",
+      "Non sempre tutti gli user level thread sono in esecuzione",
+      "Nessun processore rimarrà mai idle",
+      "Non è possibile che tutti i processori siano idle"
+    ],
+    "soluzioni": [
+      "E' possibile che tutti i processori siano utilizzati simultaneamente",
+      "Non sempre tutti gli user level thread sono in esecuzione"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai thread, è vero che:",
+    "opzioni": [
+      "Utilizzando i kernel thread parte della gestione della sincronizzazione può essere a carico del programmatore",
+      "Possono ma non necessariamente devono, condividere i file, il codice, lo Stack e i dati globali",
+      "A livello utente possono condividere i file, mentre a livello Kernel non possono",
+      "Un thread a livello kernel di un processo può usare le syscall senza rischiare di bloccare gli altri thread dello stesso processo",
+      "Un thread a livello utente non può mai scrivere sullo Stack di un altro thread"
+    ],
+    "soluzioni": [
+      "Utilizzando i kernel thread parte della gestione della sincronizzazione può essere a carico del programmatore",
+      "Un thread a livello kernel di un processo può usare le syscall senza rischiare di bloccare gli altri thread dello stesso processo"
+    ]
+  },
+  {
+    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della branch if equal dell'ISA MIPS... beq$2, $3, label1 è la seguente",
+    "opzioni": [
+      "if(REGS[$2]==REGS[$3]) PC = imm",
+      "if(REGS[$2]==REGS[$3]) PC = PC+imm",
+      "if(REGS[$2]==REGS[$3]) PC = PC+1+imm",
+      "if(REGS[$2]>REGS[$3]) PC = PC+4+imm",
+      "if(REGS[$2]==REGS[$3]) PC = PC+4+imm"
+    ],
+    "soluzioni": ["if(REGS[$2]==REGS[$3]) PC = PC+4+imm"]
+  },
+  {
+    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche... il ruolo del multiplexer controllato dal decoder del bus è:",
+    "opzioni": [
+      "Disaccoppiare le letture dalle scritture",
+      "Supportare l'accesso alle periferiche sia in scrittura che in lettura",
+      "Fare in modo che non ci siano registri sorgente che in parallelo possano tentare di scrivere valori opposti su uno stesso registro destinazione",
+      "Evitare l'utilizzo di decoder interni alle periferiche",
+      "Collegare la giusta periferica in modo che possa leggere dalla porta di uscita della CPU.",
+      "Collegare la giusta periferica in modo che possa scrivere sulla porta di ingresso della CPU."
+    ],
+    "soluzioni": [
+      "Fare in modo che non ci siano registri sorgente che in parallelo possano tentare di scrivere valori opposti su uno stesso registro destinazione",
+      "Collegare la giusta periferica in modo che possa scrivere sulla porta di ingresso della CPU."
+    ]
+  },
+  {
+    "domanda": "Relativamente alla modalità di interrupt, è vero che:",
+    "opzioni": [
+      "Quando si verifica durante l'esecuzione di una istruzione assembly del programma principale ne stoppa l'esecuzione, che non viene completata",
+      "E' una funzionalità esclusivamente software",
+      "Esegue codice in modalità utente",
+      "Consente l'esecuzione di sottoprogrammi in modalità asincrona rispetto al flusso di esecuzione principale",
+      "Via software (o meglio firmware) si occupa di salvare e quindi ripristinare il valore di tutti i registri della cpu"
+    ],
+    "soluzioni": [
+      "Consente l'esecuzione di sottoprogrammi in modalità asincrona rispetto al flusso di esecuzione principale"
+    ]
+  },
+  {
+    "domanda": "Relativamente alla problematica della inversione delle priorità nell'accesso alle risorse, quale potrebbe essere una soluzione sempre valida?",
+    "opzioni": [
+      "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità di un altro processo",
+      "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità bassa acquisisce priorità superiore rispetto al processo a priorità alta",
+      "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità intermedia acquisisce priorità superiore...",
+      "Quando un processo a priorità alta richiede una risorsa i processi a priorità intermedia vengono messi in attesa",
+      "Quando un processo ottiene l'accesso a una risorsa viene messo in prima posizione nella coda di waiting",
+      "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità più alta possibile",
+      "Quando un processo a priorità alta richiede una risorsa forza la preemption della risorsa",
+      "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità più bassa possibile"
+    ],
+    "soluzioni": [
+      "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità bassa acquisisce priorità superiore rispetto al processo a priorità alta",
+      "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità più alta possibile"
+    ]
+  },
+  {
+    "domanda": "Quali di queste descrizioni del concetto di processo sono corrette",
+    "opzioni": [
+      "Una infrastruttura software di supporto all'accesso alle periferiche",
+      "Una infrastruttura software di supporto alla monoprogrammazione",
+      "Una infrastruttura software che ha anche lo scopo di far si che il programma in esecuzione percepisca di essere l'unico a usufruire di tutte le risorse del sistema di elaborazione, anche se le condivide con altri programmi in esecuzione",
+      "Una infrastruttura software di supporto all'accesso allo scheduling",
+      "Una infrastruttura software di supporto alla comunicazione fra le applicazioni",
+      "Una infrastruttura software che consente al kernel di accedere alle risorse condivise"
+    ],
+    "soluzioni": [
+      "Una infrastruttura software che ha anche lo scopo di far si che il programma in esecuzione percepisca di essere l'unico a usufruire di tutte le risorse del sistema di elaborazione, anche se le condivide con altri programmi in esecuzione"
+    ]
+  },
+  {
+    "domanda": "Sono vere le seguenti affermazioni relative ai threads",
+    "opzioni": [
+      "I thread non sono adatti all'implementazione di una applicazione server che deve servire molti client in parallelo che svolgono operazioni diverse",
+      "In caso di processi comunicanti tramite pipes non è obbligatorio usare i processi ma si possono comunque usare i thread",
+      "In caso di task scorrelati è indifferente utilizzare processi o threads",
+      "L'utilizzo di passaggio informazioni tramite buffer circolare gestito in memoria condivisa è meno efficiente dell'utilizzo delle pipes",
+      "Se si implementa una stessa applicazione sotto forma di task concorrenti è meglio usare i processi"
+    ],
+    "soluzioni": [
+      "In caso di processi comunicanti tramite pipes non è obbligatorio usare i processi ma si possono comunque usare i thread"
+    ]
+  },
+  {
+    "domanda": "Cos è il frame di attivazione della funzione?",
+    "opzioni": [
+      "Una porzione di memoria allocata alla invocazione di una funzione che ha la dimensione dei dati necessari alla funzione per il suo ciclo di vita",
+      "Una zona di memoria che serve, fra le altre cose, a salvare tutti i parametri passati alla funzione invocata",
+      "Uno speciale zona di memoria da attivare in caso di frame non disponibile in memoria",
+      "Una porzione di memoria di grandezza fissata ma modificabile con una system call",
+      "Una parte della memoria direttamente visibile al programmatore"
+    ],
+    "soluzioni": [
+      "Una porzione di memoria allocata alla invocazione di una funzione che ha la dimensione dei dati necessari alla funzione per il suo ciclo di vita"
+    ]
+  },
+  {
+    "domanda": "Relativamente ai criteri di scheduling, è vero che:",
+    "opzioni": [
+      "Un criterio è il turnaround time = tempo intercorso fra l'avvio e il completamento del singolo processo",
+      "Un criterio è la % di utilizzo della cpu",
+      "Un criterio è il Throughput = numero di processi per unità di tempo",
+      "Un criterio è il Response time: tempo necessario perché un processo inizi una risposta",
+      "Un criterio è il tempo di attesa o waiting time = tempo durante il quale il processo non accede alla cpu"
+    ],
+    "soluzioni": [
+      "Un criterio è il turnaround time = tempo intercorso fra l'avvio e il completamento del singolo processo",
+      "Un criterio è la % di utilizzo della cpu",
+      "Un criterio è il Throughput = numero di processi per unità di tempo",
+      "Un criterio è il Response time: tempo necessario perché un processo inizi una risposta"
+    ]
+  },
+  {
+    "domanda": "Relativamente alle modalità di utilizzo della CPU da parte dei processi, è vero che:",
+    "opzioni": [
+      "La distribuzione della durata delle sequenze di CPU burst di solito prevede vi siano molte sequenze brevi e poche sequenze lunghe",
+      "Si dice CPU burst una sequenza di cicli consecutivi di utilizzo della CPU da parte di un processo",
+      "I processi CPU bound sono quelli molto interattivi",
+      "Un processo si dice CPU bound quando occupa la CPU e con molti burst brevi",
+      "Un processo si dice IO bound quando occupa la CPU e con pochi burst lunghi"
+    ],
+    "soluzioni": [
+      "La distribuzione della durata delle sequenze di CPU burst di solito prevede vi siano molte sequenze brevi e poche sequenze lunghe",
+      "Si dice CPU burst una sequenza di cicli consecutivi di utilizzo della CPU da parte di un processo"
+    ]
+  },
+  {
+    "domanda": "Il tempo di attesa in caso di algoritmo di scheduling round robin è:",
+    "opzioni": [
+      "Il tempo in cui il processo attende prima di ottenere la cpu per il primo burst",
+      "Il tempo totale dall'inizio alla fine dell'esecuzione del processo meno il tempo in cui il processo ha utilizzato la cpu, se il processo non va mai in stato waiting",
+      "La somma degli istanti trascorsi dal processo nella ready queue",
+      "Il tempo necessario affinché il processo produca il primo risultato",
+      "Il tempo necessario a concludere l'elaborazione"
+    ],
+    "soluzioni": [
+      "Il tempo totale dall'inizio alla fine dell'esecuzione del processo meno il tempo in cui il processo ha utilizzato la cpu, se il processo non va mai in stato waiting",
+      "La somma degli istanti trascorsi dal processo nella ready queue"
+    ]
+  },
+  {
+    "domanda": "Quale dei seguenti corrisponde a un formato di istruzioni dell'ISA MIPS:",
+    "opzioni": [
+      "Opcode, rs, rt, Immediate",
+      "Opcode, flags",
+      "Opcode, rs, rt, rd, shamt, function",
+      "Opcode, rt, Immediate, PC",
+      "Opcode, rs, tx, sx, ir"
+    ],
+    "soluzioni": [
+      "Opcode, rs, rt, Immediate",
+      "Opcode, rs, rt, rd, shamt, function"
+    ]
+  },
+  {
+    "domanda": "Secondo quanto visto nel materiale del corso, relativamente alla architettura SW Round Robin più interrupt per sistemi di elaborazione Bare Metal / Embedded",
+    "opzioni": [
+      "E' basata su un ciclo principale ( loop infinito) che si occupa di gestire sia processamento dati che lettura scrittura dalle periferiche",
+      "Risolve le problematiche relative allo sviluppo di applicazioni indipendenti che debbano condividere la stessa cpu",
+      "Non richiede la gestione di problematiche relative ad accesso concorrente a dati condivisi fra thread indipendenti",
+      "E' basato su un ciclo principale che si occupa di processamento dei dati, mentre la comunicazione con le periferiche è implementata tramite routine di interrupt",
+      "Esegue i task uno alla volta e poi si interrompe"
+    ],
+    "soluzioni": [
+      "E' basato su un ciclo principale che si occupa di processamento dei dati, mentre la comunicazione con le periferiche è implementata tramite routine di interrupt"
+    ]
+  },
+  {
+    "domanda": "Un possibile meccanismo HW di protezione della memoria implementato dal kernel in caso di allocazione contigua della memoria per proteggere le risorse da accessi illegali del codice utente utilizza le System call per accedere alle risorse protette secondo lo schema seguente (registri Base/Limite). E' vero che:",
+    "opzioni": [
+      "Durante le system call è possibile che il processo passi direttamente dallo stato running allo stato ready",
+      "L'invocazione della system call viene sempre invocata dal codice kernel se parliamo di un processo del kernel",
+      "L'invocazione della system call viene sempre invocata dal codice utente",
+      "Durante la esecuzione della system call può essere utilizzato codice utente",
+      "Le system call servono solo per accedere alle periferiche"
+    ],
+    "soluzioni": [
+      "L'invocazione della system call viene sempre invocata dal codice utente"
+    ]
+  }
+]
