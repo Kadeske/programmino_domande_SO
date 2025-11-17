@@ -7,6 +7,7 @@ import random
 
 lista_domande_caricata = []
 lista_domande_fatte = []
+punti = 0
 
 
 def randomizza_lista(list_inp):
@@ -21,6 +22,7 @@ def randomizza_lista(list_inp):
 
 
 def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
+    global punti
     """
     Genera la schermata del quiz.
     """
@@ -49,15 +51,37 @@ def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
         lista_checkbuttons.append((chk, var, opzione))
 
     # LOGICA VALIDA
+    
     def valida_risposte():
+        global punti
+        count_giuste = 0
         for chk_widget, var_value, testo_opzione in lista_checkbuttons:
             chk_widget.config(bg="#f0f0f0", fg="black")
-
+            
+            #controllo punti
+            if testo_opzione in soluzioni and var_value.get() == False:
+                count_giuste = -1
+            if testo_opzione in soluzioni and var_value.get() == True and count_giuste != -1:
+                count_giuste += 1
+            #---------------------#
+        
             if testo_opzione in soluzioni:
                 chk_widget.config(bg="lightgreen", selectcolor="lightgreen")
 
             elif var_value.get() == True and testo_opzione not in soluzioni:
                 chk_widget.config(bg="#ffcccc")
+
+                
+        if count_giuste == -1 :
+            count_giuste = 0
+
+        tot_punti = (1/len(soluzioni)) * count_giuste
+        punti += tot_punti
+        
+    
+    
+
+    
 
     # tastini oja
     frame_tasti = tk.Frame(finestra)
@@ -77,8 +101,12 @@ def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
     frame_info = tk.Frame(finestra)
     frame_info.pack(pady=10)
 
-    label_N_domande = tk.Label(frame_info, text = f"{len(lista_domande_fatte)}/{len(lista_domande_caricata)+len(lista_domande_fatte)}")
-    label_N_domande.pack(padx=20)
+    label_N_domande = tk.Label(frame_info, text = f"domanda: {len(lista_domande_fatte)}/{len(lista_domande_caricata)+len(lista_domande_fatte)}")
+    label_N_domande.pack(side= "left", padx=20)
+
+    label_punti = tk.Label(frame_info, text = f"punti: {punti}/{len(lista_domande_caricata)+len(lista_domande_fatte)}")
+    label_punti.pack(side="right",padx = 20)
+
     
 
 
