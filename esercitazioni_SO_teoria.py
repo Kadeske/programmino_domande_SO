@@ -4,6 +4,22 @@ from tkinter import messagebox
 import random
 
 
+
+lista_domande_caricata = []
+lista_domande_fatte = []
+
+
+def randomizza_lista(list_inp):
+    new_list = []
+    lista = list_inp.copy()
+
+    while len(lista) > 0:
+        rand = random.randrange(len(lista))
+        new_list.append(lista.pop(rand))
+
+    return new_list
+
+
 def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
     """
     Genera la schermata del quiz.
@@ -23,7 +39,8 @@ def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
     frame_opzioni = tk.Frame(finestra)
     frame_opzioni.pack(pady=10)
 
-    for opzione in opzioni:
+    temp_opzioni = randomizza_lista(opzioni)
+    for opzione in temp_opzioni:
         var = tk.BooleanVar()
         # Aggiunto wraplength anche alle opzioni per evitare che escano dallo schermo, super mario karta
         chk = tk.Checkbutton(frame_opzioni, text=opzione, variable=var, font=(
@@ -46,16 +63,25 @@ def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
     frame_tasti = tk.Frame(finestra)
     frame_tasti.pack(side="bottom", pady=20)
 
+    btn_indietro = tk.Button(frame_tasti, text="INDIETRO", bg="red", fg ="white", font= ("Arial",10,"bold"), command = carica_domanda_precedente)
+    btn_indietro.pack(side = "left", padx = 20)
     btn_valida = tk.Button(frame_tasti, text="VALIDA", bg="green", fg="white", font=("Arial", 10, "bold"),
                            command=valida_risposte)
-    btn_valida.pack(side="left", padx=20)
+    btn_valida.pack(side="bottom", padx=20, pady=20)
 
     btn_salta = tk.Button(frame_tasti, text="SALTA / PROSSIMA", bg="orange", fg="white", font=("Arial", 10, "bold"),
                           command=funzione_salta)
     btn_salta.pack(side="right", padx=20)
+    
+
+    frame_info = tk.Frame(finestra)
+    frame_info.pack(pady=10)
+
+    label_N_domande = tk.Label(frame_info, text = f"{len(lista_domande_fatte)}/{len(lista_domande_caricata)+len(lista_domande_fatte)}")
+    label_N_domande.pack(padx=20)
+    
 
 
-lista_domande_caricata = []
 
 
 def inizializza_dati():
@@ -73,6 +99,23 @@ def inizializza_dati():
             "Errore", "Il file 'domande.json' non è formattato correttamente.")
         root.destroy()
 
+    #randomizza le domande
+    mischia_domande()
+
+
+def mischia_domande():
+    global lista_domande_caricata
+    lista_domande_caricata = randomizza_lista(lista_domande_caricata)
+
+
+
+def carica_domanda_precedente():
+    lista_domande_caricata.append(lista_domande_fatte.pop(-1))
+    lista_domande_caricata.append(lista_domande_fatte.pop(-1))
+
+    
+    carica_nuova_domanda()
+
 
 def carica_nuova_domanda():
     """Pesca una domanda dalla lista caricata e aggiorna la grafica"""
@@ -83,11 +126,10 @@ def carica_nuova_domanda():
         root.destroy()
         return
 
-    # Sceglie una domanda a caso dalla lista caricata dal JSON
-    indice_casuale = random.randrange(len(lista_domande_caricata))
-
-    dati = lista_domande_caricata.pop(indice_casuale)
-
+    
+    
+    lista_domande_fatte.append(lista_domande_caricata.pop())
+    dati = lista_domande_fatte[-1]
     # Chiama la funzione grafica
     genera_schermata(
         root,
