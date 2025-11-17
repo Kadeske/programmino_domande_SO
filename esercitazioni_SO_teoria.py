@@ -67,11 +67,11 @@ def genera_schermata(finestra, domanda, opzioni, soluzioni, funzione_salta):
     btn_indietro.pack(side = "left", padx = 20)
     btn_valida = tk.Button(frame_tasti, text="VALIDA", bg="green", fg="white", font=("Arial", 10, "bold"),
                            command=valida_risposte)
-    btn_valida.pack(side="bottom", padx=20, pady=20)
+    btn_valida.pack(side="right", padx=20)
 
     btn_salta = tk.Button(frame_tasti, text="SALTA / PROSSIMA", bg="orange", fg="white", font=("Arial", 10, "bold"),
                           command=funzione_salta)
-    btn_salta.pack(side="right", padx=20)
+    btn_salta.pack(side="left", expand = True)
     
 
     frame_info = tk.Frame(finestra)
@@ -143,7 +143,7 @@ def carica_nuova_domanda():
 # --- main senza main ---
 root = tk.Tk()
 root.title("Quiz SO")
-root.geometry("600x500")
+root.geometry("700x500")
 
 inizializza_dati()
 

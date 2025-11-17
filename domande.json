@@ -892,5 +892,99 @@
     "soluzioni": [
       "L'invocazione della system call viene sempre invocata dal codice utente"
     ]
+  },
+  {
+    "domanda": "Qual è la principale differenza tra processi CPU-bound e I/O-bound?",
+    "opzioni": [
+      "Gli I/O-bound non usano mai la CPU",
+      "I CPU-bound eseguono solo operazioni di I/O",
+      "I CPU-bound eseguono pochi burst lunghi",
+      "Gli I/O-bound eseguono molti burst brevi"
+    ],
+    "soluzioni": [
+      "I CPU-bound eseguono pochi burst lunghi",
+      "Gli I/O-bound eseguono molti burst brevi"
+    ]
+  },
+  {
+    "domanda": "Quando è vantaggioso preferire i thread rispetto ai processi?",
+    "opzioni": [
+      "Quando è richiesta condivisione efficiente di dati",
+      "Task che fanno parte dello stesso lavoro/applicazione e condividono risorse",
+      "Quando è necessario isolamento completo tra i task",
+      "Comunicazione tra entità isolate"
+    ],
+    "soluzioni": [
+      "Quando è richiesta condivisione efficiente di dati",
+      "Task che fanno parte dello stesso lavoro/applicazione e condividono risorse"
+    ]
+  },
+  {
+    "domanda": "Quale fra le seguenti affermazioni sullo scheduling Round Robin è corretta?",
+    "opzioni": [
+      "Minimizza il context switch",
+      "Utilizza quanti di tempo fissi per ogni processo",
+      "È un algoritmo preemptive tipico dei sistemi time-sharing",
+      "Garantisce sempre il tempo di completamento minimo"
+    ],
+    "soluzioni": [
+      "Utilizza quanti di tempo fissi per ogni processo",
+      "È un algoritmo preemptive tipico dei sistemi time-sharing"
+    ]
+  },
+  {
+    "domanda": "Quali eventi possono causare l'intervento dello scheduler?",
+    "opzioni": [
+      "Esecuzione continua senza evento esterno",
+      "Terminazione del processo",
+      "Timer interrupt",
+      "I/O interrupt"
+    ],
+    "soluzioni": [
+      "Timer interrupt",
+      "I/O interrupt"
+    ]
+  },
+  {
+    "domanda": "Il problema produttore consumatore affrontato con la memoria condivisa richiede l'utilizzo di un buffer:",
+    "opzioni": [
+      "Illimitato, il produttore non potrà inserire nuovi oggetti finche l'ultimo non è stato consumato.",
+      "Limitato, il produttore dovrà attendere in caso di buffer vuoto.",
+      "Limitato, il consumatore dovrà attendere in caso di buffer vuoto.",
+      "Sempre illimitato, in modo che il consumatore non deve mai attendere nuovi oggetti",
+      "Limitato: lo scambio avviene sempre tramite utilizzo di contatori"
+    ],
+    "soluzioni": [
+      "Limitato, il consumatore dovrà attendere in caso di buffer vuoto."
+    ]
+  },
+  {
+    "domanda": "Un processo zombie è",
+    "opzioni": [
+      "Un processo che riaccede alla CPU troppo frequentemente",
+      "Un processo sospeso in attesa di I/O",
+      "Un processo terminato il cui stato di uscita non è stato ancora recuperato dal padre",
+      "Un thread che condivide lo stesso PID del padre"
+    ],
+    "soluzioni": [
+      "Un processo terminato il cui stato di uscita non è stato ancora recuperato dal padre"
+    ]
+  },
+  {
+    "domanda": "Quale tra i seguenti sono i principali criteri di scheduling?",
+    "opzioni": [
+      "Frammentazione interna",
+      "Tempo di turnaround",
+      "Tempo di attesa",
+      "Utilizzo della CPU",
+      "Throughput"
+    ],
+    "soluzioni": [
+      "Tempo di turnaround",
+      "Tempo di attesa",
+      "Utilizzo della CPU",
+      "Throughput"
+    ]
   }
+  
 ]
