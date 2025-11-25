@@ -50,10 +50,6 @@ def genera_schermata_scelta_file():
                     fg="white", command=set_nome_file)
     btn.pack(pady=20)
 
-    img = UI.crea_widget_immagine(
-        root, f"{utils.config["path_img"]}scelta_file.png")
-    img.pack(pady=10)
-
 
 def genera_schermata(finestra, dati, funzione_salta, img=None):
     global punti
@@ -286,13 +282,7 @@ def carica_nuova_domanda():
     )
 
 
-def main():
-    global root
-    root = tk.Tk()
-    root.title("Qui")
-    root.geometry("1000x800")
-
-    '''
+'''
     1) carica settings
     2) inizializza pagina di scelta del file
     3) init domande
@@ -300,9 +290,18 @@ def main():
         - mischia le domande
     4) funzione quiz
         - controlla necessità immagine allegata (e controlla che esista)
-    '''
+'''
+
+
+def main():
+    global root
+
     UI.init_settings_UI()
     utils.init_config()
+
+    root = tk.Tk()
+    root.title("Quiz")
+    root.geometry(f"{UI.dati_pagina["altezza"]}x{UI.dati_pagina["larghezza"]}")
 
     genera_schermata_scelta_file()
 

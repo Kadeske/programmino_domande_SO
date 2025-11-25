@@ -34,6 +34,9 @@ def init_settings_UI():
     except Exception:
         print("Settori UI non trovati nelle impostazioni")
 
+    print(dati_pagina)
+    print(dati_testo)
+
 
 def pulisci_finestra(finestra):
     for widget in finestra.winfo_children():
