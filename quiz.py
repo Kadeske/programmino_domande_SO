@@ -131,7 +131,80 @@ def valida_risposte_multiple(dati, soluzioni, lista_checkbuttons):
     dati[campo_check_domanda] = True
 
 
-def g_risp_singola(finestra,dati):
+def g_risp_singola(finestra,dati):  # estrai cose utili per comodità
+    opzioni = dati["opzioni"]
+
+    # carica opzioni della domanda
+    lista_radiobutton = []
+
+    frame_opzioni = tk.Frame(finestra)
+    frame_opzioni.pack(pady=10)
+
+    temp_opzioni = utils.randomizza_lista(opzioni)
+    var = tk.StringVar()
+
+    # Set risposta data precedentemente (se verificata)
+    if dati[campo_check_domanda]:
+        var.set(dati[campo_risposte_domanda[0]])    # può avere solo una soluzione, quindi segno la prima
+    for opzione in temp_opzioni:
+
+        # Aggiunto wraplength anche alle opzioni per evitare che escano dallo schermo, super mario karta
+        radio_b = tk.Radiobutton(frame_opzioni, text=opzione, variable=var, font=(
+            UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"]), selectcolor="white", wraplength=500, justify="left")
+        radio_b.pack(anchor="w", pady=2)
+        lista_radiobutton.append((radio_b, var, opzione))
+
+    return lista_radiobutton
+
+
+def valida_risposta_singola(dati,soluzioni,lista_radiobutton):
+    global punti
+    risposta_corretta = False  # ipotizzo errata
+
+    # creo un nuovo campo per tenere le riposte date
+    if not dati[campo_check_domanda]:
+        dati[campo_risposte_domanda] = []
+
+    for radio_widget, var_value, testo_opzione in lista_radiobutton:
+
+        is_selezionata = var_value.get()
+        is_corretta = testo_opzione in soluzioni
+
+        if not dati[campo_check_domanda]:  # controllo domanda non ancora verificata
+            # calcolo punti
+            if is_selezionata and is_corretta:
+                risposta_corretta = True
+            # -------------------------
+
+            # segno le risposte date (solo se non ha mai risposto a questa domanda)
+
+            if is_selezionata:
+                dati[campo_risposte_domanda].append(testo_opzione)
+
+        # ---------------------
+
+        radio_widget.config(bg="#f0f0f0", fg="black")  # Reset
+
+        if is_corretta:
+            radio_widget.config(bg="lightgreen", selectcolor="lightgreen")
+
+        elif is_selezionata and not is_corretta:
+            radio_widget.config(bg="#ffcccc")
+
+    # aggiorna i punti
+    if dati[campo_check_domanda] is False:  # controllo se ha già risposto alla domanda
+        if risposta_corretta:
+            punti += 1
+
+    # segno la domanda come completata
+    dati[campo_check_domanda] = True
+
+
+def g_risp_aperta(finestra, dati):
+    pass
+
+
+def valida_risposta_aperta(dati,soluzioni,text_area):
     pass
 
 
@@ -166,12 +239,16 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
 
     match tipo_domanda:
         case "multiple": dati_opzioni = g_risp_multiple(finestra,dati)
+        case "singola": dati_opzioni = g_risp_singola(finestra,dati)
+        case "aperta": dati_opzioni = g_risp_aperta(finestra,dati)
 
     # LOGICA VALIDA (in base alla tipologia)
 
     def valida_risposte():
         match tipo_domanda:
             case "multiple": valida_risposte_multiple(dati,soluzioni,dati_opzioni)
+            case "singola": dati_opzioni = valida_risposta_singola(dati,soluzioni,dati_opzioni)
+            case "aperta": dati_opzioni = valida_risposta_aperta(dati,soluzioni,dati_opzioni)
 
     # tastini oja (indietro, valida, salta/prossima)
     frame_tasti = tk.Frame(finestra)
