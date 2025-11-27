@@ -12,7 +12,9 @@ punti = 0
 campo_check_domanda = "isCompleted"
 campo_risposte_domanda = "risposte"
 
-nome_file = ""  # nome del file delle domande
+elenco_file = []  # elenco file con domande scelti
+randomizza_domande = True
+randomizza_ordine_opzioni = True
 
 # tipologie di domande accettate
 # singola, multiple, aperta,
@@ -24,19 +26,19 @@ nome_file = ""  # nome del file delle domande
 def genera_schermata_scelta_file():
     global nome_file
 
-    var_temp = tk.StringVar(value=None)
-
-    lbl = tk.Label(root, text="Quale file vuoi usare?", font=(
+    lbl = tk.Label(root, text="Quali file vuoi usare?", font=(
         UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] + UI.dati_testo["diff_titoli"], "bold"))
     lbl.pack(pady=10)
+    tk.Label(root, text="Puoi scegliere più file, verranno uniti.", font=(
+        UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"], "bold")).pack(pady=10)
 
+    scelte = []
     for file in utils.elenca_file_json(utils.config["path_domande"]):
-
-        radio = tk.Radiobutton(
+        var = tk.BooleanVar()
+        radio = tk.Checkbutton(
             root,
             text=file.split("/")[-1],
-            value=file,
-            variable=var_temp,
+            variable=var,
             font=(
                 UI.dati_testo["font_testo"],
                 UI.dati_testo["dimensione_base"]
@@ -44,10 +46,55 @@ def genera_schermata_scelta_file():
             anchor="w"
         )
         radio.pack(fill='x', padx=20, pady=2)
+        scelte.append((var,file))
+
+    # frame per opzioni aggiuntive
+    frame_opzioni = tk.Frame(root)
+    frame_opzioni.pack(pady=20)
+
+    tk.Label(frame_opzioni, text="Altre opzioni:", font=(
+        UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"], "bold")).pack(pady=10)
+
+    var_ordine_domande_random = tk.BooleanVar(value=True)
+    var_ordine_opzioni_random = tk.BooleanVar(value=True)
+
+    radio_domande_random = tk.Checkbutton(
+        frame_opzioni,
+        text="Randomizza ordine domande",
+        variable=var_ordine_domande_random,
+        font=(
+            UI.dati_testo["font_testo"],
+            UI.dati_testo["dimensione_base"]
+        ),
+        anchor="w"
+    )
+    radio_domande_random.pack(fill='x', padx=20, pady=2)
+
+    radio_opzioni_random = tk.Checkbutton(
+        frame_opzioni,
+        text="Randomizza ordine opzioni",
+        variable=var_ordine_opzioni_random,
+        font=(
+            UI.dati_testo["font_testo"],
+            UI.dati_testo["dimensione_base"]
+        ),
+        anchor="w"
+    )
+    radio_opzioni_random.pack(fill='x', padx=20, pady=2)
 
     def set_nome_file():
-        global nome_file
-        nome_file = var_temp.get()
+        global elenco_file
+        global randomizza_domande, randomizza_ordine_opzioni
+
+        # aggiorno elenco file scelti
+        for var, file in scelte:
+            isSelected = var.get()
+            if isSelected:
+                elenco_file.append(file)
+
+        # set var globali per l'ordine
+        randomizza_domande = var_ordine_domande_random.get()
+        randomizza_ordine_opzioni = var_ordine_opzioni_random.get()
         inizio_quiz()
 
     btn = tk.Button(root, text="CONFERMA SCELTA", bg="green",
@@ -65,8 +112,10 @@ def g_risp_multiple(finestra, dati):
     frame_opzioni = tk.Frame(finestra)
     frame_opzioni.pack(pady=10)
 
-    temp_opzioni = utils.randomizza_lista(opzioni)
-    for opzione in temp_opzioni:
+    if randomizza_ordine_opzioni:
+        opzioni = utils.randomizza_lista(opzioni)
+
+    for opzione in opzioni:
         var = tk.BooleanVar()
 
         if dati[campo_check_domanda]:   # controllo domanda già validata
@@ -140,13 +189,14 @@ def g_risp_singola(finestra,dati):  # estrai cose utili per comodità
     frame_opzioni = tk.Frame(finestra)
     frame_opzioni.pack(pady=10)
 
-    temp_opzioni = utils.randomizza_lista(opzioni)
-    var = tk.StringVar()
+    if randomizza_ordine_opzioni:
+        opzioni = utils.randomizza_lista(opzioni)
 
+    var = tk.StringVar()
     # Set risposta data precedentemente (se verificata)
     if dati[campo_check_domanda]:
         var.set(dati[campo_risposte_domanda][0])    # può avere solo una soluzione, quindi segno la prima
-    for opzione in temp_opzioni:
+    for opzione in opzioni:
 
         # Aggiunto wraplength anche alle opzioni per evitare che escano dallo schermo, super mario karta
         radio_b = tk.Radiobutton(frame_opzioni, text=opzione, variable=var, value=opzione, font=(
@@ -384,20 +434,21 @@ def deduci_tipologia(n_opzioni, n_soluzioni):
 
 
 def inizializza_dati():
-    global nome_file
+    global elenco_file
     global lista_domande_caricata
 
-    try:
-        # <--- CORREZIONE: Aggiunto encoding='utf-8' per leggere gli accenti correttamente, onomatopea della libellula
-        with open(nome_file, 'r', encoding='utf-8') as file:
-            lista_domande_caricata = json.load(file)
-    except FileNotFoundError:
-        messagebox.showerror("Errore", f"File {nome_file} non trovato!")
-        root.destroy()
-    except json.JSONDecodeError:
-        messagebox.showerror(
-            "Errore", f"Il file {nome_file} non è formattato correttamente.")
-        root.destroy()
+    for nome_file in elenco_file:
+        try:
+            # <--- CORREZIONE: Aggiunto encoding='utf-8' per leggere gli accenti correttamente, onomatopea della libellula
+            with open(nome_file, 'r', encoding='utf-8') as file:
+                lista_domande_caricata += json.load(file)
+        except FileNotFoundError:
+            messagebox.showerror("Errore", f"File {nome_file} non trovato!")
+            root.destroy()
+        except json.JSONDecodeError:
+            messagebox.showerror(
+                "Errore", f"Il file {nome_file} non è formattato correttamente.")
+            root.destroy()
 
     # aggiungo campo di verifica della risposta a ciascuna domanda, controllo inserimento tipologia
     for item in lista_domande_caricata:
@@ -409,10 +460,10 @@ def inizializza_dati():
             item["tipologia"]
         except Exception:
             item["tipologia"] = deduci_tipologia(len(item["opzioni"]), len(item["soluzioni"]))
-            print(f"settata tipoligia: {item["tipologia"]}")
 
     # randomizza le domande
-    lista_domande_caricata = utils.randomizza_lista(lista_domande_caricata)
+    if randomizza_domande:
+        lista_domande_caricata = utils.randomizza_lista(lista_domande_caricata)
 
 ############
 
