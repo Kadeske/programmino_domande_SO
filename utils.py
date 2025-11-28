@@ -68,4 +68,3 @@ def get_settings(section):
 def init_config():
     global config
     config = get_settings(sec_config)
-

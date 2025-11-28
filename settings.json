@@ -1,26 +1,28 @@
 {
-    "UI": {
-        "pagina": {
-            "altezza": 1000,
-            "larghezza": 800
-        },
-        "immagini": {
-            "altezza": 200,
-            "larghezza": 300,
-            "incremento_dimensione": 250
-        },
-        "testo": {
-            "font_titoli": "Arial",
-            "font_testo": "Arial",
-            "dimensione_base": 16,
-            "diff_titoli": 2,
-            "diff_info": 5,
-            "diff_sett": 8
-        }
+  "UI": {
+    "pagina": {
+      "altezza": 1000,
+      "larghezza": 800,
+      "colore_sfondo": "#988ca1"
     },
-    "config": {
-        "path_domande": "domande/",
-        "path_img": "img/",
-        "path_risultati": "risultati/"
+    "immagini": {
+      "altezza": 200,
+      "larghezza": 300,
+      "incremento_dimensione": 250
+    },
+    "testo": {
+      "font_titoli": "Arial",
+      "font_testo": "Arial",
+      "dimensione_base": 16,
+      "diff_titoli": 2,
+      "diff_info": 5,
+      "diff_sett": 8
     }
+  },
+  "config": {
+    "path_domande": "domande/",
+    "path_img": "img/",
+    "path_risultati": "risultati/"
+  }
 }
+

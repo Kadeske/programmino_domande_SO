@@ -19,24 +19,24 @@ randomizza_ordine_opzioni = True
 # tipologie di domande accettate
 # singola, multiple, aperta,
 
-
+app_frame = None    # frame dell'app, è scorrevole
 # ------------------------------#
 
 
 def genera_schermata_scelta_file():
     global nome_file
 
-    lbl = tk.Label(root, text="Quali file vuoi usare?", font=(
+    lbl = tk.Label(app_frame, text="Quali file vuoi usare?", font=(
         UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] + UI.dati_testo["diff_titoli"], "bold"))
     lbl.pack(pady=10)
-    tk.Label(root, text="Puoi scegliere più file, verranno uniti.", font=(
+    tk.Label(app_frame, text="Puoi scegliere più file, verranno uniti.", font=(
         UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"], "bold")).pack(pady=10)
 
     scelte = []
     for file in utils.elenca_file_json(utils.config["path_domande"]):
         var = tk.BooleanVar()
         radio = tk.Checkbutton(
-            root,
+            app_frame,
             text=file.split("/")[-1],
             variable=var,
             font=(
@@ -49,7 +49,7 @@ def genera_schermata_scelta_file():
         scelte.append((var,file))
 
     # frame per opzioni aggiuntive
-    frame_opzioni = tk.Frame(root)
+    frame_opzioni = tk.Frame(app_frame)
     frame_opzioni.pack(pady=20)
 
     tk.Label(frame_opzioni, text="Altre opzioni:", font=(
@@ -97,12 +97,26 @@ def genera_schermata_scelta_file():
         randomizza_ordine_opzioni = var_ordine_opzioni_random.get()
         inizio_quiz()
 
-    btn = tk.Button(root, text="CONFERMA SCELTA", bg="green",
+    btn = tk.Button(app_frame, text="CONFERMA SCELTA", bg="green",
                     fg="white", command=set_nome_file)
     btn.pack(pady=20)
 
+    # "fix" per far scrollare fino in fondo
+    tk.Label(app_frame, text="", height=4, bg="#f0f0f0").pack(pady=20)
 
-def g_risp_multiple(finestra, dati):
+    # forza l'aggiornamento delle torri molto simili tra loro
+    app_frame.update_idletasks()
+
+    # cacata nel puzzacchion (prova a forzare lo scroll completo)
+    try:
+        # Risale: frame_contenuti -> canvas
+        canvas = app_frame.master
+        canvas.configure(scrollregion=canvas.bbox("all"))
+    except Exception:
+        pass
+
+
+def g_risp_multiple(finestra, dati, rand_opz=randomizza_ordine_opzioni):
     # estrai cose utili per comodità
     opzioni = dati["opzioni"]
 
@@ -112,7 +126,7 @@ def g_risp_multiple(finestra, dati):
     frame_opzioni = tk.Frame(finestra)
     frame_opzioni.pack(pady=10)
 
-    if randomizza_ordine_opzioni:
+    if rand_opz:
         opzioni = utils.randomizza_lista(opzioni)
 
     for opzione in opzioni:
@@ -180,7 +194,7 @@ def valida_risposte_multiple(dati, soluzioni, lista_checkbuttons):
     dati[campo_check_domanda] = True
 
 
-def g_risp_singola(finestra,dati):  # estrai cose utili per comodità
+def g_risp_singola(finestra,dati, rand_opz=randomizza_ordine_opzioni):  # estrai cose utili per comodità
     opzioni = dati["opzioni"]
 
     # carica opzioni della domanda
@@ -189,7 +203,7 @@ def g_risp_singola(finestra,dati):  # estrai cose utili per comodità
     frame_opzioni = tk.Frame(finestra)
     frame_opzioni.pack(pady=10)
 
-    if randomizza_ordine_opzioni:
+    if rand_opz:
         opzioni = utils.randomizza_lista(opzioni)
 
     var = tk.StringVar()
@@ -412,6 +426,20 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
                 wraplength=finestra.winfo_width() - UI.margine_finestre)
     finestra.bind('<Configure>', aggiorna_wraplength)
 
+    # "fix" per far scrollare fino in fondo
+    tk.Label(finestra, text="", height=4, bg="#f0f0f0").pack(pady=20)
+
+    # forza l'aggiornamento delle torri molto simili tra loro
+    finestra.update_idletasks()
+
+    # cacata nel puzzacchion (prova a forzare lo scroll completo)
+    try:
+        # Risale: frame_contenuti -> canvas
+        canvas = finestra.master
+        canvas.configure(scrollregion=canvas.bbox("all"))
+    except Exception:
+        pass
+
     # valida automaticamente (senza dare punti) se la domanda è già stata completata
     if dati[campo_check_domanda]:
         valida_risposte()
@@ -444,11 +472,11 @@ def inizializza_dati():
                 lista_domande_caricata += json.load(file)
         except FileNotFoundError:
             messagebox.showerror("Errore", f"File {nome_file} non trovato!")
-            root.destroy()
+            app_frame.destroy()
         except json.JSONDecodeError:
             messagebox.showerror(
                 "Errore", f"Il file {nome_file} non è formattato correttamente.")
-            root.destroy()
+            app_frame.destroy()
 
     # aggiungo campo di verifica della risposta a ciascuna domanda, controllo inserimento tipologia
     for item in lista_domande_caricata:
@@ -481,7 +509,7 @@ def carica_nuova_domanda():
     if not lista_domande_caricata:
         messagebox.showinfo(
             "Finito!", f"Hai risposto a tutte le domande disponibili. Hai fatto {punti} punti.")
-        root.destroy()
+        app_frame.destroy()
         return
 
     # aggiorno n domande fatte in totale
@@ -499,7 +527,7 @@ def carica_nuova_domanda():
 
     # Chiama la funzione grafica
     genera_schermata(
-        root,
+        app_frame,
         dati,
         carica_nuova_domanda,
         img  # None se non serve
@@ -518,14 +546,22 @@ def carica_nuova_domanda():
 
 
 def main():
-    global root
+    global app_frame
 
     UI.init_settings_UI()
     utils.init_config()
 
     root = tk.Tk()
     root.title("Quiz")
-    root.geometry(f"{UI.dati_pagina["altezza"]}x{UI.dati_pagina["larghezza"]}")
+
+    w = UI.dati_pagina.get("larghezza", 800)
+    h = UI.dati_pagina.get("altezza", 600)
+    root.geometry(f"{w}x{h}")
+
+    container_scroll = UI.ScrollableFrame(root)
+    container_scroll.pack(fill="both", expand=True, anchor="nw")
+
+    app_frame = container_scroll.scrollable_frame
 
     genera_schermata_scelta_file()
 
