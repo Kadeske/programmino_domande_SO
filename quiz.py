@@ -19,6 +19,7 @@ randomizza_ordine_opzioni = True
 # tipologie di domande accettate
 # singola, multiple, aperta,
 
+root = None
 app_frame = None    # frame dell'app, è scorrevole
 # ------------------------------#
 
@@ -209,7 +210,8 @@ def g_risp_singola(finestra,dati, rand_opz=randomizza_ordine_opzioni):  # estrai
     var = tk.StringVar()
     # Set risposta data precedentemente (se verificata)
     if dati[campo_check_domanda]:
-        var.set(dati[campo_risposte_domanda][0])    # può avere solo una soluzione, quindi segno la prima
+        if len(dati[campo_risposte_domanda]) > 0:
+            var.set(dati[campo_risposte_domanda][0])    # può avere solo una soluzione, quindi segno la prima
     for opzione in opzioni:
 
         # Aggiunto wraplength anche alle opzioni per evitare che escano dallo schermo, super mario karta
@@ -231,7 +233,7 @@ def valida_risposta_singola(dati,soluzioni,lista_radiobutton):
 
     for radio_widget, var_value, testo_opzione in lista_radiobutton:
 
-        is_selezionata = var_value.get() == testo_opzione
+        is_selezionata = (var_value.get() == testo_opzione)
         is_corretta = testo_opzione in soluzioni
 
         if not dati[campo_check_domanda]:  # controllo domanda non ancora verificata
@@ -252,7 +254,7 @@ def valida_risposta_singola(dati,soluzioni,lista_radiobutton):
         if is_corretta:
             radio_widget.config(bg="lightgreen", selectcolor="lightgreen")
 
-        elif is_selezionata and not is_corretta:
+        elif is_selezionata:
             radio_widget.config(bg="#ffcccc")
 
     # aggiorna i punti
@@ -326,6 +328,9 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
     domanda = dati["domanda"]
     soluzioni = dati["soluzioni"]
     tipo_domanda = dati["tipologia"]
+
+    if img is not None:
+        domanda += f" (img: {img})"
 
     # dati opzioni caricate (in base alla tipologia)
     dati_opzioni = None
@@ -403,9 +408,16 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
         genera_schermata(finestra, dati, funzione_salta, img)
         return
 
+    def refresh():
+        genera_schermata(finestra, dati, funzione_salta, img)
+        return
+
     inc_button = tk.Button(frame_info, text="+", bg="gray", fg="black", font=(
         UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_sett"], "bold"), command=inc_dim_text)
     inc_button.pack(side="right", pady=2)
+    refresh_button = tk.Button(frame_info, text="refresh", bg="gray", fg="black", font=(
+        UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_sett"], "bold"), command=refresh)
+    refresh_button.pack(side="left", pady=2)
     dec_button = tk.Button(frame_info, text="-", bg="gray", fg="black", font=(
         UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_sett"], "bold"), command=dec_dim_text)
     dec_button.pack(side="left", pady=2)
@@ -509,7 +521,7 @@ def carica_nuova_domanda():
     if not lista_domande_caricata:
         messagebox.showinfo(
             "Finito!", f"Hai risposto a tutte le domande disponibili. Hai fatto {punti} punti.")
-        app_frame.destroy()
+        root.destroy()
         return
 
     # aggiorno n domande fatte in totale
@@ -546,7 +558,7 @@ def carica_nuova_domanda():
 
 
 def main():
-    global app_frame
+    global root, app_frame
 
     UI.init_settings_UI()
     utils.init_config()

@@ -1,0 +1,845 @@
+[
+  {
+    "domanda": "Selezionare le affermazioni NON CORRETTE su 'file descriptor' relativi alle 'pipe':",
+    "opzioni": [
+      "I 'file descriptor' sono gestiti tramite un buffer memorizzato sul disco",
+      "Le pipe sono oggetti generati dal kernel",
+      "I 'file descriptor' delle pipe non riconducono a nessun file reale"
+    ],
+    "soluzioni": [
+      "I 'file descriptor' sono gestiti tramite un buffer memorizzato sul disco"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Dire se il seguente schema descrittivo del funzionamento delle 'pipe' è corretto ('fd'=file descriptor):",
+    "opzioni": [
+      "No, gli indici degli array dei file descriptor sono errati",
+      "No, la direzione delle frecce è invertita",
+      "Si, lo schema è corretto"
+    ],
+    "soluzioni": ["Si, lo schema è corretto"],
+    "tipologia": "singola",
+    "img": "lab_001.png"
+  },
+  {
+    "domanda": "Selezionare le affermazioni corrette sui 'file descriptor' relativi alle 'pipe':",
+    "opzioni": [
+      "Le pipe non risiedono sul disco, ma in un buffer del kernel",
+      "Le pipe sono oggetti creati dal kernel",
+      "I 'file descriptor' non riconducono a nessun file reale"
+    ],
+    "soluzioni": [
+      "I 'file descriptor' non riconducono a nessun file reale",
+      "Le pipe sono oggetti creati dal kernel",
+      "Le pipe non risiedono sul disco, ma in un buffer del kernel"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Dire se il seguente schema descrittivo del funzionamento delle 'pipe' è corretto ('fd'=file descriptor):",
+    "opzioni": [
+      "Si, lo schema è corretto ma incompleto",
+      "Si, lo schema è corretto",
+      "No, lo schema non è corretto"
+    ],
+    "soluzioni": ["No, lo schema non è corretto"],
+    "tipologia": "singola",
+    "img": "lab_002.png"
+  },
+  {
+    "domanda": "L'affermazione 'Dopo una fork il processo figlio condivide gli stessi file descriptor del padre, compresi quelli associati ad una pipe' è:",
+    "opzioni": [
+      "Totalmente falsa, dato che padre e figlio non condividono alcun 'file descriptor'",
+      "Totalmente corretta",
+      "Corretta a meno di quanto detto sulle pipe, i cui 'file descriptor' sono proprio gli unici a non essere condivisi"
+    ],
+    "soluzioni": ["Totalmente corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A chi si riferisce il PID stampato dalla printf di questo estratto di codice C (vedi immagine):",
+    "opzioni": [
+      "Al processo figlio",
+      "A nessuno, in quanto ci si riferisce al caso specifico di fallimento della fork",
+      "Al processo padre"
+    ],
+    "soluzioni": ["Al processo padre"],
+    "tipologia": "singola",
+    "img": "lab_003.png"
+  },
+  {
+    "domanda": "La system call 'wait' consente:",
+    "opzioni": [
+      "la terminazione dei processi aperti",
+      "la sincronizzazione fra processi",
+      "la corretta terminazione dei processi figli"
+    ],
+    "soluzioni": ["la sincronizzazione fra processi"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Valutare la correttezza dell'affermazione 'la system call wait() consente ad un processo di terminare uno dei suoi processi figli, ottenendo il valore ritornato dalla sua funzione exit()'",
+    "opzioni": [
+      "L'affermazione non è corretta",
+      "L'affermazione è corretta se esiste un solo processo figlio",
+      "L'affermazione è corretta"
+    ],
+    "soluzioni": ["L'affermazione non è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Selezionare le corrette affermazioni sui processi nello stato 'zombie' (o defunct)",
+    "opzioni": [
+      "Un processo diviene zombie dopo essere terminato e prima che il processo padre abbia eseguito una wait per esso",
+      "Un processo zombie non consuma risorse",
+      "Un processo zombie consuma risorse fino alla sua terminazione da parte di init"
+    ],
+    "soluzioni": [
+      "Un processo diviene zombie dopo essere terminato e prima che il processo padre abbia eseguito una wait per esso",
+      "Un processo zombie non consuma risorse"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "La WIFEXITED(status) ritorna un valore di tipo:",
+    "opzioni": [
+      "FALSE, se il processo termina normalmente",
+      "TRUE, se il processo termina normalmente",
+      "TRUE, se il processo non termina normalmente"
+    ],
+    "soluzioni": ["TRUE, se il processo termina normalmente"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se il processo padre è terminato:",
+    "opzioni": [
+      "Il PPID del processo 'orfano' viene settato a 1",
+      "Il processo 'orfano' termina ed il suo PID viene comunicato al processo init",
+      "Il processo 'orfano' viene adottato da init"
+    ],
+    "soluzioni": [
+      "Il processo 'orfano' viene adottato da init",
+      "Il PPID del processo 'orfano' viene settato a 1"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Selezionare le corrette affermazioni riguardo alla system call 'execl':",
+    "opzioni": [
+      "Le istruzioni che seguono la sua chiamata vengono eseguite nel processo padre",
+      "Le istruzioni che seguono la sua chiamata verranno eseguite soltanto in caso si verifichi un errore",
+      "Elimina il programma originale, sovrascrivendolo"
+    ],
+    "soluzioni": [
+      "Elimina il programma originale, sovrascrivendolo",
+      "Le istruzioni che seguono la sua chiamata verranno eseguite soltanto in caso si verifichi un errore"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Invocando la funzione printw(), l'output verrà visualizzato:",
+    "opzioni": [
+      "Al centro dello schermo",
+      "Nella prima riga dello schermo",
+      "A partire dalla posizione corrente del cursore"
+    ],
+    "soluzioni": ["A partire dalla posizione corrente del cursore"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione deleteln():",
+    "opzioni": [
+      "Cancella l'intera riga su cui si trova il cursore, muovendo in alto le linee che seguono",
+      "Sovrascrive con spazi bianchi ogni linea dello schermo",
+      "Cancella le linee che seguono il cursore"
+    ],
+    "soluzioni": [
+      "Cancella l'intera riga su cui si trova il cursore, muovendo in alto le linee che seguono"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione curs_set(2):",
+    "opzioni": [
+      "Rende maggiormente visibile il cursore",
+      "Rende visibile il cursore",
+      "Rende invisibile il cursore"
+    ],
+    "soluzioni": ["Rende maggiormente visibile il cursore"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In ncurses l'angolo in alto a destra ha coordinate:",
+    "opzioni": ["(x=COLS-1, y=0)", "(x=0, y=0)", "(x=0, y=LINES-1)"],
+    "soluzioni": ["(x=COLS-1, y=0)"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione noecho() consente di:",
+    "opzioni": [
+      "Cancellare i caratteri sulla riga corrente",
+      "Non visualizzare sullo schermo i caratteri digitati in fase di input",
+      "Visualizzare sullo schermo i caratteri digitati in fase di input"
+    ],
+    "soluzioni": [
+      "Non visualizzare sullo schermo i caratteri digitati in fase di input"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione in grado di modificare il colore di sfondo dell'intera area di output è:",
+    "opzioni": ["attron()", "stdscr()", "bkgd()"],
+    "soluzioni": ["bkgd()"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se un thread del processo esegue una exec:",
+    "opzioni": [
+      "Anche lo spazio di indirizzamento di tutti gli altri threads viene sovrascritto dal nuovo processo invocato",
+      "Non è possibile effettuare una exec in ambito thread",
+      "Lo spazio di indirizzamento di tutti gli altri threads non viene sovrascritto dal nuovo processo invocato"
+    ],
+    "soluzioni": [
+      "Anche lo spazio di indirizzamento di tutti gli altri threads viene sovrascritto dal nuovo processo invocato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Selezionare l'affermazione vera:",
+    "opzioni": [
+      "Un processo esiste all'interno di un thread",
+      "Thread e processi possono convivere se attivati mediante la system call fork() invece che clone()",
+      "Un thread esiste all'interno di un processo"
+    ],
+    "soluzioni": ["Un thread esiste all'interno di un processo"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Alcuni vantaggi principali dei thread sono:",
+    "opzioni": [
+      "Risparmio di risorse",
+      "Impossibilità di ottenere un errore durante la loro creazione",
+      "Tempi di risposta migliori"
+    ],
+    "soluzioni": ["Tempi di risposta migliori", "Risparmio di risorse"],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Quale tipo di commutazione tra threads supporta il sistema operativo Linux?",
+    "opzioni": [
+      "Kernel-level ma non quella user-level",
+      "User-level e kernel-level",
+      "User-level ma non quella kernel-level"
+    ],
+    "soluzioni": ["User-level e kernel-level"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nell'ambito dell'associazione dei thread a livello kernel, selezionare i modelli di multithreading possibili:",
+    "opzioni": ["One-to-One", "One-to-Many", "Many-to-Many"],
+    "soluzioni": ["Many-to-Many", "One-to-One"],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Molti user-level threads possono essere mappati su un singolo kernel thread",
+    "opzioni": [
+      "Falso",
+      "Solo con sistemi operativi che supportano i kernel threads",
+      "Vero"
+    ],
+    "soluzioni": ["Vero"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "I requisiti da assicurare per la corretta esecuzione delle sezioni critiche di un programma multithreads sono:",
+    "opzioni": ["Sospensione", "Attesa limitata", "Mutua esclusione"],
+    "soluzioni": ["Mutua esclusione", "Attesa limitata"],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Un 'semaforo contatore' può essere visto come:",
+    "opzioni": [
+      "Un intero che può cambiare valore solo sotto il controllo di un mutex binario",
+      "Un intero che può assumere valori in un dominio non limitato",
+      "Un intero che può assumere valori in un dominio limitato"
+    ],
+    "soluzioni": [
+      "Un intero che può assumere valori in un dominio non limitato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Alla funzione 'sem_init' vanno passati:",
+    "opzioni": ["Nessun parametro", "3 parametri", "2 parametri"],
+    "soluzioni": ["3 parametri"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione 'sem_trywait':",
+    "opzioni": [
+      "È una funzione di wait non bloccante",
+      "Non esiste questa funzione",
+      "È la funzione di wait bloccante"
+    ],
+    "soluzioni": ["È una funzione di wait non bloccante"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se la seguente affermazione è corretta: 'Per creare un mutex è necessario creare una variabile di tipo pthread_mutex_init e passare un puntatore a questa variabile alla funzione pthread_mutex_t'",
+    "opzioni": [
+      "No, non è corretta",
+      "Si, è corretta",
+      "Solo l'ultima parte è corretta"
+    ],
+    "soluzioni": ["No, non è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "L'operazione di post su un semaforo:",
+    "opzioni": [
+      "Incrementa il valore del semaforo di 1",
+      "Decrementa il valore del semaforo di 1",
+      "La post opera solo nell'ambito dei mutex"
+    ],
+    "soluzioni": ["Incrementa il valore del semaforo di 1"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nei sistemi operativi Linux un 'file descriptor' è:",
+    "opzioni": [
+      "Un numero intero non negativo",
+      "Un numero intero negativo solo in caso di errore",
+      "Un numero con il quale possiamo riferirci allo standard 'input', 'output' ed 'error'"
+    ],
+    "soluzioni": [
+      "Un numero intero non negativo",
+      "Un numero con il quale possiamo riferirci allo standard 'input', 'output' ed 'error'"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Selezionare il corretto prototipo della funzione 'wait':",
+    "opzioni": [
+      "pid_t wait(int *status)",
+      "pid_t wait(pid_t pid, int *status, int options)",
+      "pid_t wait(pid_t pid, int *status, int options, pid_t ppid)"
+    ],
+    "soluzioni": ["pid_t wait(int *status)"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione waitpid(PID) ci consente di:",
+    "opzioni": [
+      "Attendere la terminazione di qualunque figlio",
+      "Attendere la terminazione dei figli con process group ID uguale a quello del processo corrente",
+      "Attendere la terminazione dei figli con process group ID uguale al valore assoluto del PID specificato"
+    ],
+    "soluzioni": [
+      "Attendere la terminazione dei figli con process group ID uguale al valore assoluto del PID specificato",
+      "Attendere la terminazione di qualunque figlio",
+      "Attendere la terminazione dei figli con process group ID uguale a quello del processo corrente"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Selezionare le corrette affermazioni riguardo alla system call 'fork':",
+    "opzioni": [
+      "il valore restituito consente di distinguere il processo genitore dal processo figlio",
+      "solo al padre, restituisce -1 in caso di errore",
+      "lo spazio di indirizzamento del nuovo processo è diverso da quello del padre"
+    ],
+    "soluzioni": [
+      "il valore restituito consente di distinguere il processo genitore dal processo figlio",
+      "solo al padre, restituisce -1 in caso di errore"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Valutare la correttezza dell'affermazione 'la programmazione di sistema consiste nell'utilizzare l'interfaccia di system call fra il kernel e le applicazioni che girano sotto Linux'",
+    "opzioni": [
+      "L'affermazione è corretta parzialmente",
+      "L'affermazione non è corretta",
+      "L'affermazione è corretta"
+    ],
+    "soluzioni": ["L'affermazione è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Una fork:",
+    "opzioni": [
+      "crea un processo figlio duplicando il processo chiamante",
+      "crea un thread duplicando il processo chiamante",
+      "crea un processo figlio invocando il processo padre"
+    ],
+    "soluzioni": ["crea un processo figlio duplicando il processo chiamante"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In ncurses l'angolo in basso a destra ha coordinate:",
+    "opzioni": ["(x=0, y=LINES-1)", "(x=COLS-1, y=0)", "(x=COLS-1, y=LINES-1)"],
+    "soluzioni": ["(x=COLS-1, y=LINES-1)"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In ambito ncurses è possibile definire colori in modo arbitrario",
+    "opzioni": [
+      "Si, adoperando la funzione rgb_define()",
+      "Si, adoperando la funzione init_color()",
+      "No, esistono dei colori predefiniti che si possono usare"
+    ],
+    "soluzioni": ["Si, adoperando la funzione init_color()"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Tipicamente, tutte le funzioni di ncurses restituiscono:",
+    "opzioni": [
+      "Solo valori positivi",
+      "Valori positivi o negativi",
+      "Solo valori negativi"
+    ],
+    "soluzioni": ["Valori positivi o negativi"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella funzione con prototipo 'int init_pair(short pair, short f, short b)', il parametro 'pair' può essere:",
+    "opzioni": [
+      "Un numero intero compreso nell'intervallo da 1 a 2",
+      "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS",
+      "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS-1"
+    ],
+    "soluzioni": [
+      "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS-1"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nei sistemi Linux, le thread function restituiscono in uscita come valore di ritorno:",
+    "opzioni": [
+      "Un valore di tipo void*",
+      "Un valore di tipo int",
+      "Non restituiscono nulla se non si verifica un errore, altrimenti restituiscono un valore negativo"
+    ],
+    "soluzioni": ["Un valore di tipo void*"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "I thread a livello utente sono gestiti da:",
+    "opzioni": [
+      "Una libreria",
+      "Da una serie di interrupts hardware",
+      "Direttamente dal kernel"
+    ],
+    "soluzioni": ["Una libreria"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "I thread possono essere considerati:",
+    "opzioni": [
+      "Parti di un processo che vengono eseguite in maniera asincrona",
+      "Parti di un processo che vengono eseguite in maniera concorrente",
+      "Parti di un processo che vengono eseguite in maniera sequenziale"
+    ],
+    "soluzioni": [
+      "Parti di un processo che vengono eseguite in maniera concorrente",
+      "Parti di un processo che vengono eseguite in maniera asincrona"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Dopo una chiamata a 'pthread_create', il nuovo thread inizia la sua esecuzione in modo concorrente ed asincrono",
+    "opzioni": ["Dipende dal contesto", "Vero", "Falso"],
+    "soluzioni": ["Vero"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Il modello di multithreading Many-to-Many consente che:",
+    "opzioni": [
+      "Non esiste questo modello di multithreading",
+      "Un user level thread possa essere eseguito mediante diversi kernel threads",
+      "Molti user level threads siano mappati su molti kernel threads"
+    ],
+    "soluzioni": [
+      "Molti user level threads siano mappati su molti kernel threads"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione pthread_mutex_unlock:",
+    "opzioni": [
+      "Deve sempre essere chiamata dallo stesso thread che ha posto il mutex in stato di lock",
+      "Il nome della funzione è incorretto",
+      "Può essere chiamata da qualunque thread in qualsiasi istante"
+    ],
+    "soluzioni": [
+      "Deve sempre essere chiamata dallo stesso thread che ha posto il mutex in stato di lock"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Il cosiddetto 'deadlock' rappresenta:",
+    "opzioni": [
+      "Una situazione in cui due o più task si bloccano a vicenda, aspettando che uno esegua una certa azione",
+      "Una situazione in cui due o più task si alternano in modo indefinito su una determinata azione",
+      "L'impossibilità continua, da parte di un processo pronto all'esecuzione, di ottenere le risorse di cui necessita per essere eseguito"
+    ],
+    "soluzioni": [
+      "Una situazione in cui due o più task si bloccano a vicenda, aspettando che uno esegua una certa azione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "L'operazione di wait su un semaforo:",
+    "opzioni": [
+      "Incrementa il valore del semaforo di 1",
+      "La wait opera solo nell'ambito dei mutex",
+      "Decrementa il valore del semaforo di 1"
+    ],
+    "soluzioni": ["Decrementa il valore del semaforo di 1"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Più task possono essere bloccati contemporaneamente da un mutex in stato di lock",
+    "opzioni": [
+      "Vero, ma non contemporaneamente",
+      "Vero",
+      "No, soltanto uno alla volta"
+    ],
+    "soluzioni": ["Vero"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se questa sequenza di istruzioni per l'inizializzazione di un mutex è corretta (vedi immagine):",
+    "opzioni": [
+      "Le istruzioni sono invertite",
+      "No, non è corretta",
+      "Si, è corretta"
+    ],
+    "soluzioni": ["Si, è corretta"],
+    "tipologia": "singola",
+    "img": "lab_004.png"
+  },
+  {
+    "domanda": "Il principale limite delle pipe consiste nella:",
+    "opzioni": [
+      "Incapacità di operare con processi 'imparentati' tra loro",
+      "Incapacità di comunicare con più di due processi",
+      "Incapacità di operare con processi 'non imparentati' tra loro"
+    ],
+    "soluzioni": [
+      "Incapacità di operare con processi 'non imparentati' tra loro"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quanto scritto in un 'file descriptor' aperto in scrittura:",
+    "opzioni": [
+      "Viene ripresentato tale e quale nell'altro 'file descriptor' aperto in scrittura",
+      "Viene ripresentato tale e quale nel 'file descriptor' aperto in lettura",
+      "Viene ripresentato tale e quale a tutti i 'file descriptor' aperti in scrittura"
+    ],
+    "soluzioni": [
+      "Viene ripresentato tale e quale nel 'file descriptor' aperto in lettura"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale istruzione completa correttamente il codice in figura nel punto 'default:'?",
+    "opzioni": ["wait(-1, 0, 0);", "wait((int*)0);", "waitpid((int*)0);"],
+    "soluzioni": ["wait((int*)0);"],
+    "tipologia": "singola",
+    "img": "lab_005.png"
+  },
+  {
+    "domanda": "Nell'ambito delle system call wait e waitpid, con 'WEXITSTATUS(status)':",
+    "opzioni": [
+      "Accediamo al valore restituito dalla exit",
+      "Otteniamo un valore di tipo True se il processo termina normalmente",
+      "Accediamo al valore restituito dalla wait"
+    ],
+    "soluzioni": ["Accediamo al valore restituito dalla exit"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire quale funzione svolge il seguente estratto di codice C (vedi immagine):",
+    "opzioni": [
+      "Chiude il descrittore di lettura della pipe e utilizza quello di scrittura per inviare il messaggio msg di dimensione msize",
+      "Anche quando inserito nel giusto contesto, il codice genererebbe un errore",
+      "Chiude il descrittore di scrittura della pipe e utilizza quello di lettura per ricevere il messaggio msg di dimensione msize"
+    ],
+    "soluzioni": [
+      "Chiude il descrittore di lettura della pipe e utilizza quello di scrittura per inviare il messaggio msg di dimensione msize"
+    ],
+    "tipologia": "singola",
+    "img": "lab_006.png"
+  },
+  {
+    "domanda": "In riferimento al codice in figura, dire quando verrà eseguita la riga 'printf(\"miariga\");' (posta dopo una execl):",
+    "opzioni": [
+      "Al termine del processo figlio",
+      "Se non si verificano errori nella execl, mai",
+      "Al termine del processo padre"
+    ],
+    "soluzioni": ["Se non si verificano errori nella execl, mai"],
+    "tipologia": "singola",
+    "img": "lab_007.png"
+  },
+  {
+    "domanda": "Selezionare le corrette affermazioni riguardo alla system call 'fork':",
+    "opzioni": [
+      "Padre e figlio condividono la tabella dei file aperti (ma non il puntatore alla locazione corrente di ogni file)",
+      "Padre e figlio condividono la tabella dei file aperti (e quindi anche il puntatore alla locazione corrente di ogni file)",
+      "Padre e figlio hanno due tabelle dei descrittori di file diverse (il figlio ha una copia di quella del padre)"
+    ],
+    "soluzioni": [
+      "Padre e figlio hanno due tabelle dei descrittori di file diverse (il figlio ha una copia di quella del padre)",
+      "Padre e figlio condividono la tabella dei file aperti (e quindi anche il puntatore alla locazione corrente di ogni file)"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Nella funzione con prototipo 'int init_pair(short pair, short f, short b)', mediante il parametro 'b' specifichiamo:",
+    "opzioni": [
+      "Il colore del carattere",
+      "Il colore dello sfondo",
+      "Il colore della window corrente"
+    ],
+    "soluzioni": ["Il colore dello sfondo"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione initscr() di ncurses:",
+    "opzioni": [
+      "Cancellare soltanto lo schermo",
+      "Inizializzare la libreria per l'impiego e cancellare lo schermo",
+      "Cancellare e ridimensionare lo schermo"
+    ],
+    "soluzioni": [
+      "Inizializzare la libreria per l'impiego e cancellare lo schermo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella funzione con prototipo 'int init_pair(short pair, short f, short b)', mediante il parametro 'f' specifichiamo:",
+    "opzioni": [
+      "Il colore dello schermo predefinito",
+      "Il colore del carattere",
+      "Il colore dello sfondo"
+    ],
+    "soluzioni": ["Il colore del carattere"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione erase():",
+    "opzioni": [
+      "Sovrascrive con il carattere specificato ogni posizione dello schermo",
+      "Sovrascrive con spazi bianchi ogni posizione dello schermo, cancellandolo",
+      "Cancella l'intera riga su cui si trova il cursore, muovendo in alto le linee che seguono"
+    ],
+    "soluzioni": [
+      "Sovrascrive con spazi bianchi ogni posizione dello schermo, cancellandolo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per eseguire i thread a livello utente:",
+    "opzioni": [
+      "Occorre associare loro un thread a livello kernel mediante un modello One-to-many",
+      "Occorre associare loro dei processi a livello kernel mediante un modello di multithreading",
+      "Occorre associare loro dei thread a livello kernel mediante un modello di multithreading"
+    ],
+    "soluzioni": [
+      "Occorre associare loro dei thread a livello kernel mediante un modello di multithreading"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se ciascun thread user-level è mappato su un kernel thread, il massimo numero di thread gestibili dipende:",
+    "opzioni": [
+      "Un thread user-level NON può essere mappato su un kernel thread",
+      "Dal massimo numero di processi gestibili dal kernel",
+      "Dal massimo numero di kernel thread gestibili dal kernel"
+    ],
+    "soluzioni": ["Dal massimo numero di kernel thread gestibili dal kernel"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Il thread che crea e quello creato condividono:",
+    "opzioni": [
+      "Gli stessi file descriptors",
+      "Le risorse di sistema del processo originale",
+      "Lo stesso spazio di memoria"
+    ],
+    "soluzioni": [
+      "Lo stesso spazio di memoria",
+      "Gli stessi file descriptors",
+      "Le risorse di sistema del processo originale"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Dire se è corretta la seguente affermazione: 'Quando eseguiamo un programma, viene creato un nuovo processo ed a esso viene associato un singolo thread'",
+    "opzioni": [
+      "L'affermazione è corretta",
+      "L'affermazione è parzialmente corretta",
+      "L'affermazione NON è corretta"
+    ],
+    "soluzioni": ["L'affermazione è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La funzione 'sem_getvalue':",
+    "opzioni": [
+      "Restituisce il valore corrente del contatore interno al semaforo",
+      "Non esiste questa funzione",
+      "Restituisce il valore successivo del semaforo dopo una invocazione di 'sem_trywait'"
+    ],
+    "soluzioni": [
+      "Restituisce il valore corrente del contatore interno al semaforo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se questa sequenza di istruzioni per l'inizializzazione di un mutex è corretta (vedi immagine):",
+    "opzioni": [
+      "Si, è corretta",
+      "Le istruzioni sono invertite",
+      "No, non è corretta"
+    ],
+    "soluzioni": ["No, non è corretta"],
+    "tipologia": "singola",
+    "img": "lab_008.png"
+  },
+  {
+    "domanda": "I semafori si possono definire degli 'strumenti di sincronizzazione'",
+    "opzioni": ["Solo in ambito thread", "Vero", "Falso"],
+    "soluzioni": ["Vero"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "L'accesso alla pipe in scrittura:",
+    "opzioni": [
+      "Blocca il processo in caso di pipe piena",
+      "Blocca il processo in caso di pipe vuota",
+      "Blocca il processo in caso di pipe non correttamente inizializzata"
+    ],
+    "soluzioni": ["Blocca il processo in caso di pipe piena"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Commentare le seguenti system call presenti nell'immagine:",
+    "opzioni": [
+      "Le due chiamate sono corrette e hanno due effetti ben distinti",
+      "La sintassi di waitpid genera un errore",
+      "Le due chiamate sono corrette ed equivalenti"
+    ],
+    "soluzioni": ["Le due chiamate sono corrette ed equivalenti"],
+    "tipologia": "singola",
+    "img": "lab_009.png"
+  },
+  {
+    "domanda": "Trascinare (selezionare) le corrette istruzioni all'interno nel seguente codice per verificare lo stato di uscita (vedi immagine per gli spazi vuoti):",
+    "opzioni": ["WEXITSTATUS(status)", "WIFEXITED(status)", "WIFEXITED(NULL)"],
+    "soluzioni": ["WIFEXITED(status)", "WEXITSTATUS(status)"],
+    "tipologia": "multiple",
+    "img": "lab_010.png"
+  },
+  {
+    "domanda": "Selezionare il corretto prototipo della funzione 'waitpid':",
+    "opzioni": [
+      "pid_t waitpid(pid_t pid, int *status)",
+      "pid_t waitpid(pid_t pid, int *status, int options, pid_t ppid)",
+      "pid_t waitpid(pid_t pid, int *status, int options)"
+    ],
+    "soluzioni": ["pid_t waitpid(pid_t pid, int *status, int options)"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Valutare la correttezza dell'affermazione 'il kernel è la parte di Linux che corrisponde al sistema operativo vero e proprio; esso gestisce sia i processi sia le funzioni di input/output'",
+    "opzioni": [
+      "L'affermazione non è corretta",
+      "L'affermazione è corretta",
+      "L'affermazione è corretta parzialmente"
+    ],
+    "soluzioni": ["L'affermazione è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se le seguenti system call sono equivalenti (vedi immagine):",
+    "opzioni": [
+      "No",
+      "La sintassi di waitpid è scorretta e genera un errore",
+      "Si"
+    ],
+    "soluzioni": ["No"],
+    "tipologia": "singola",
+    "img": "lab_011.png"
+  },
+  {
+    "domanda": "La funzione echo() consente di:",
+    "opzioni": [
+      "Cancellare i caratteri presenti sullo schermo",
+      "Non visualizzare sullo schermo i caratteri digitati in fase di input",
+      "Visualizzare sullo schermo i caratteri digitati in fase di input"
+    ],
+    "soluzioni": [
+      "Visualizzare sullo schermo i caratteri digitati in fase di input"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per eliminare una window precedentemente definita possiamo ricorrere alla funzione:",
+    "opzioni": ["delwin()", "window(false)", "remove_window()"],
+    "soluzioni": ["delwin()"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se è corretta la seguente affermazione: 'Una volta creato, ciascun thread invoca una funzione che contiene il codice che deve eseguire'",
+    "opzioni": [
+      "L'affermazione è parzialmente corretta",
+      "L'affermazione NON è corretta",
+      "L'affermazione è corretta"
+    ],
+    "soluzioni": ["L'affermazione è corretta"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se il seguente prototipo della funzione 'pthread_create' è corretto (vedi immagine):",
+    "opzioni": [
+      "È corretto",
+      "Seppur vi è scritto 'pthread_create', i tipi e i parametri sono in realtà quelli della funzione 'pthread_clone'",
+      "Non è corretto"
+    ],
+    "soluzioni": ["È corretto"],
+    "tipologia": "singola",
+    "img": "lab_012.png"
+  },
+  {
+    "domanda": "Una commutazione fra thread di tipo kernel-level:",
+    "opzioni": [
+      "Richiede l'impiego di system call, ma un eventuale problema su un thread non si ripercuote sugli altri threads",
+      "Richiede l'impiego di system call, ma un eventuale problema si ripercuote sugli altri threads",
+      "Richiede l'impiego di sistemi multiprocessore"
+    ],
+    "soluzioni": [
+      "Richiede l'impiego di system call, ma un eventuale problema su un thread non si ripercuote sugli altri threads"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Una chiamata a 'pthread_create' effettua immediatamente una return",
+    "opzioni": ["Vero", "Dipende dal contesto", "Falso"],
+    "soluzioni": ["Vero"],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dire se la seguente affermazione è corretta: 'Per creare un mutex è necessario creare una variabile di tipo lpmutex e passare un puntatore a questa variabile alla funzione lpmutex_init'",
+    "opzioni": [
+      "Solo l'ultima parte è corretta",
+      "No, non è corretta",
+      "Si, è corretta"
+    ],
+    "soluzioni": ["No, non è corretta"],
+    "tipologia": "singola"
+  }
+]

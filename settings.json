@@ -6,14 +6,14 @@
       "colore_sfondo": "#988ca1"
     },
     "immagini": {
-      "altezza": 200,
-      "larghezza": 300,
+      "altezza": 950,
+      "larghezza": 1050,
       "incremento_dimensione": 250
     },
     "testo": {
       "font_titoli": "Arial",
       "font_testo": "Arial",
-      "dimensione_base": 16,
+      "dimensione_base": 20,
       "diff_titoli": 2,
       "diff_info": 5,
       "diff_sett": 8
@@ -25,4 +25,3 @@
     "path_risultati": "risultati/"
   }
 }
-
