@@ -379,5 +379,395 @@
       "Utilizzo di 2 registri che definiscano i confini dello spazio di memoria allocato al processo da usare per un test HW"
     ],
     "tipologia": "multiple"
+  },
+
+
+
+
+
+  
+  {
+    "domanda": "Relativamente allo schema a blocchi rappresentativo della segmentazione descritto nel seguito, sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "G = Test fallito",
+      "E = Numero del segmento",
+      "A = numero della pagina",
+      "C = test di uguaglianza fra numero di segmento indirizzato e numero presente nella tabella dei segmenti",
+      "L = limite",
+      "M = Tabella dei segmenti",
+      "I = base = indirizzo base del segmento",
+      "B = Numero del segmento",
+      "N = indica la routine di interrupt che viene lanciata al termine della istruzione che ha provocato l'accesso illegale in memoria",
+      "F = test avvenuto con successo",
+      "H = Memoria di primo livello",
+      "D = somma il displacement con il numero di segmento per formare indirizzo completo"
+    ],
+    "soluzioni": [
+      "E = Numero del segmento",
+      "F = test avvenuto con successo",
+      "G = Test fallito",
+      "H = Memoria di primo livello",
+      "M = Tabella dei segmenti"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_018.png"
+  },
+  {
+    "domanda": "Relativamente all'algoritmo di Peterson, è vero che:",
+    "opzioni": [
+      "Rappresenta una delle soluzioni al problema della sezione critica in caso di due o più processi",
+      "All'uscita dalla sezione critica lo scalare viene settato a false",
+      "Nel suo codice viene utilizzato un vettore di booleani condiviso fra tutti i processi coinvolti",
+      "Nel suo codice viene utilizzato un intero condiviso fra tutti i processi coinvolti",
+      "Per ingresso nella sezione critica viene verificato che il processo abbia una priorità superiore all'altro processo"
+    ],
+    "soluzioni": [
+      "Nel suo codice viene utilizzato un vettore di booleani condiviso fra tutti i processi coinvolti",
+      "Nel suo codice viene utilizzato un intero condiviso fra tutti i processi coinvolti"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Il page fault si può verificare quando:",
+    "opzioni": [
+      "Viene indirizzata una pagina non presente nel segmento principale del processo",
+      "Viene settato il bit di modifica che certifica un accesso in scrittura a una pagina",
+      "Viene indirizzata una pagina non presente in TLB",
+      "Non vi sono più pagine disponibili da allocare per il processo in esecuzione",
+      "Viene indirizzata una pagina non presente in memoria principale"
+    ],
+    "soluzioni": [
+      "Viene indirizzata una pagina non presente in memoria principale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Relativamente alla primitiva Test and Set Lock (TSL), secondo quanto visto nel materiale del corso, è vero che:",
+    "opzioni": [
+      "Permette di controllare e modificare il contenuto di una parola di memoria dedicata in maniera atomica",
+      "Non si può utilizzare per implementare un mutex",
+      "Non si può scrivere sullo stesso registro della TSL con una istruzione normale di write",
+      "E' una primitiva hardware/ software di supporto alla gestione della sincronizzazione",
+      "E' una istruzione che legge il contenuto di un registro dedicato e scrive un valore non nullo"
+    ],
+    "soluzioni": [
+      "Permette di controllare e modificare il contenuto di una parola di memoria dedicata in maniera atomica",
+      "E' una istruzione che legge il contenuto di un registro dedicato e scrive un valore non nullo"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente allo schema a blocchi rappresentativo della paginazione descritto nel seguito, sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "c = f = frame che ha dimensione uguale a quella della pagina",
+      "I = d = scostamento di pagina",
+      "E = Indirizzo Logico",
+      "F = f = numero del frame",
+      "B = p = numero di pagina",
+      "L = f = del segmento",
+      "D = Tabella delle pagine che risiede su supporto di memoria dedicato",
+      "H = p = numero di pagina",
+      "M = d = dimensione del segmento",
+      "A = indirizzo fisico",
+      "G = Memoria Principale"
+    ],
+    "soluzioni": [
+      "B = p = numero di pagina",
+      "F = f = numero del frame",
+      "G = Memoria Principale",
+      "H = p = numero di pagina",
+      "I = d = scostamento di pagina"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_019.png"
+  },
+  {
+    "domanda": "Si consideri un sistema che usa la memoria virtuale (paginazione on demand) con utilizzo della CPU al 25%, periferiche di I/O al 7% e sottosistema HW di supporto alla paginazione al 92%. Sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "Installare una memoria di primo livello di maggiori dimensioni può incrementare la % di occupazione della CPU",
+      "Incrementare il livello di multiprogrammazione può incrementare la % di occupazione della CPU",
+      "Installare una CPU più lenta può incrementare la % di occupazione della CPU",
+      "Incrementare la dimensione delle pagine non incrementa in nessun caso la % di occupazione della CPU",
+      "Decrementare la dimensione delle pagine non incrementa in nessun caso la % di occupazione della CPU"
+    ],
+    "soluzioni": [
+      "Installare una CPU più lenta può incrementare la % di occupazione della CPU",
+      "Installare una memoria di primo livello di maggiori dimensioni può incrementare la % di occupazione della CPU"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente al fenomeno del trashing",
+    "opzioni": [
+      "L'efficienza complessiva del sistema di memoria di secondo livello è correlata",
+      "Il numero di processi attivi nel sistema non è correlato",
+      "Per risolverlo può essere sufficiente contare il page fault rate e agire di conseguenza",
+      "Si può gestire anche ignorando il parametro delta = numero di riferimenti",
+      "La percentuale di pagine che viene utilizzata solo in lettura non è correlata"
+    ],
+    "soluzioni": [
+      "Per risolverlo può essere sufficiente contare il page fault rate e agire di conseguenza",
+      "L'efficienza complessiva del sistema di memoria di secondo livello è correlata",
+      "Si può gestire anche ignorando il parametro delta = numero di riferimenti"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Un sistema di elaborazione ha 512 Megabyte di memoria fisica di primo livello, l'indirizzamento è su 26 bit, e la dimensione di una riga della tabella delle pagine è di 14 bit. Quale è il numero di bit del displacement (o offset) che rappresenta una parte dell'indirizzo logico.",
+    "opzioni": [],
+    "soluzioni": [
+      "15,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "La FAT",
+    "opzioni": [
+      "Ha un elemento per ogni blocco del disco ed è indicizzata dal numero del blocco",
+      "Occupa una quantità di memoria che non varia al variare del numero di blocchi liberi",
+      "Ha un elemento per ogni blocco del disco e ciascun elemento contiene la dimensione e la posizione del blocco",
+      "E acronimo di File Aggregation Table",
+      "E' una variante della allocazione indicizzata",
+      "Raggruppa nel disco i puntatori ai vari blocchi del file"
+    ],
+    "soluzioni": [
+      "Ha un elemento per ogni blocco del disco ed è indicizzata dal numero del blocco",
+      "Occupa una quantità di memoria che non varia al variare del numero di blocchi liberi"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "In caso di implementazione del paradigma Produttore Consumatore che preveda lo sfruttamento completo di un buffer in memoria condivisa, descritta dalle slide seguenti, è vero che:",
+    "opzioni": [
+      "Non si verifica una corsa critica perché questa implementazione previene intrinsecamente il verificarsi di corse critiche",
+      "Si può verificare una corsa critica che porti a valori erronei della variabile counter perché l'interrupt che provoca il context switch si verifica durante l'esecuzione di una istruzione assembly",
+      "Si verifica sistematicamente una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica",
+      "Si può verificare una corsa critica legata al fatti che l'ISA assembly che a basso livello traduce l'implementazione scritta in C è di tipo load store",
+      "Si può verificare una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica"
+    ],
+    "soluzioni": [
+      "Si può verificare una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica",
+      "Si può verificare una corsa critica legata al fatti che l'ISA assembly che a basso livello traduce l'implementazione scritta in C è di tipo load store"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_020.png"
+  },
+  {
+    "domanda": "Relativamente al codice (parzialmente offuscato) dell'algoritmo del banchiere visto nel materiale del corso e descritto nel seguito, è vero che:",
+    "opzioni": [
+      "Matrice Disponibili = identifica le istanze disponibili di ciascuna risorsa",
+      "Necessità = matrice che indica la necessità di risorse residue di ciascun tipo per ciascun processo",
+      "Vettore Lavoro = identifica il numero di risorse accumulate e rese disponibili dai processi man mano che si procede con le iterazioni e si simula terminazione di ciascuno di essi",
+      "riga xxx A xxx = Scansiona i processi da 1 sino a n",
+      "Vettore Assegnate = identifica il numero di risorse di ciascun tipo assegnate a ciascun processo"
+    ],
+    "soluzioni": [
+      "Vettore Lavoro = identifica il numero di risorse accumulate e rese disponibili dai processi man mano che si procede con le iterazioni e si simula terminazione di ciascuno di essi",
+      "Necessità = matrice che indica la necessità di risorse residue di ciascun tipo per ciascun processo"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_021.png"
+  },
+  {
+    "domanda": "Nel caso di paginazione con utilizzo della TLB, con alpha = 0,5, Tmem = 300 ns e epsilon = 30 ns:",
+    "opzioni": [],
+    "soluzioni": [
+      "480,00"
+    ],
+    "tipologia": "aperta"
+  },
+
+
+
+
+
+  {
+    "domanda": "Per la gestione dei blocchi liberi del filesystem",
+    "opzioni": [
+      "Quando si usa la bitmap è utile una ISA che preveda istruzioni di salto basate su singolo bit",
+      "Si può usare l'allocazione indicizzata insieme a una bitmap",
+      "Utilizzando una bitmap si ottimizza il caso di disco molto pieno rispetto all'uso dell'allocazione indicizzata",
+      "Utilizzando l'allocazione indicizzata si ottimizza il caso di disco vuoto rispetto all'uso di una bitmap",
+      "Si può usare una bitmap"
+    ],
+    "soluzioni": [
+      "Si può usare una bitmap",
+      "Quando si usa la bitmap è utile una ISA che preveda istruzioni di salto basate su singolo bit"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente al seguente codice che permette la comunicazione fra thread a livello utente (Produttore/Consumatore):",
+    "opzioni": [
+      "Il produttore cicla indefinitamente in caso di buffer completamente pieno",
+      "La variabile condivisa preleva indica l'elemento del buffer su cui scrivere",
+      "La variabile condivisa inserisci indica l'elemento del buffer su cui leggere",
+      "Il codice non è soggetto a corse critiche",
+      "Il consumatore cicla indefinitamente in caso di buffer completamente vuoto"
+    ],
+    "soluzioni": [
+      "Il consumatore cicla indefinitamente in caso di buffer completamente vuoto",
+      "Il codice non è soggetto a corse critiche"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_022.png"
+  },
+  {
+    "domanda": "Relativamente alla primitiva Test and Set Lock (TSL), secondo quanto visto nel materiale del corso, è vero che:",
+    "opzioni": [
+      "E' una primitiva hardware/ software di supporto alla gestione della sincronizzazione",
+      "Permette di controllare e modificare il contenuto di una parola di memoria dedicata in maniera atomica",
+      "Non si può utilizzare per implementare un mutex",
+      "E' una istruzione che legge il contenuto di un registro dedicato e scrive un valore non nullo",
+      "Non si può scrivere sullo stesso registro della TSL con una istruzione normale di write"
+    ],
+    "soluzioni": [
+      "Permette di controllare e modificare il contenuto di una parola di memoria dedicata in maniera atomica",
+      "E' una istruzione che legge il contenuto di un registro dedicato e scrive un valore non nullo"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente allo schema a blocchi rappresentativo della paginazione descritto nel seguito, sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "I = d = scostamento di pagina",
+      "D = Tabella delle pagine che risiede su supporto di memoria dedicato",
+      "F = f = numero del frame",
+      "M = d = dimensione del segmento",
+      "c = f = frame che ha dimensione uguale a quella della pagina",
+      "A = indirizzo fisico",
+      "G = Memoria Principale",
+      "H = p = numero di pagina",
+      "E = Indirizzo Logico",
+      "B = p = numero di pagina",
+      "L = f = numero del segmento"
+    ],
+    "soluzioni": [
+      "B = p = numero di pagina",
+      "F = f = numero del frame",
+      "G = Memoria Principale",
+      "H = p = numero di pagina",
+      "I = d = scostamento di pagina"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_023.png"
+  },
+  {
+    "domanda": "Quale delle seguenti affermazioni fa parte della definizione di stato sicuro secondo quanto visto a lezione e sul libro di testo",
+    "opzioni": [
+      "Per ogni sequenza di processi P1...Pn, le risorse di Pi devono soddisfare le richieste di un Pj con j>i, Pj deve eventualmente attendere che i Pi finiscano",
+      "Deve esistere almeno una sequenza di processi P1...Pn tale che per ogni Pi, le sue richieste sono soddisfatte con le risorse disponibili più quelle possedute da Pj con j<i, Pi deve eventualmente attendere che i Pj finiscano",
+      "Per ogni sequenza di processi P1...Pn, le risorse di Pi devono soddisfare le richieste di Pj con j<i. Pi deve eventualmente attendere che i Pj finiscano",
+      "Deve esistere una ed una sola sequenza di processi P1...Pn tale che per ogni Pi, le sue richieste sono soddisfatte con le risorse disponibili più quelle di Pj con j<i. Pi deve eventualmente attendere che i Pj finiscano",
+      "Deve esistere almeno una sequenza di processi P1...Pn tale per cui le risorse richieste da Pi non devono coincidere con le risorse possedute da Pj con j<i. Pi deve eventualmente attendere che i Pj finiscano"
+    ],
+    "soluzioni": [
+      "Deve esistere almeno una sequenza di processi P1...Pn tale che per ogni Pi, le sue richieste sono soddisfatte con le risorse disponibili più quelle possedute da Pj con j<i, Pi deve eventualmente attendere che i Pj finiscano"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Considerando il working set model e il suo utilizzo per la allocazione delle pagine ai processi, quale è l'effetto dell'incremento del valore di delta",
+    "opzioni": [
+      "Il page fault rate tende a crescere",
+      "Il numero di pagine allocate per un processo tende a decrescere",
+      "Il page fault rate rimane invariato",
+      "Il numero di pagine allocate per un processo tende a crescere",
+      "Il context switch overhead tende a crescere",
+      "Il page fault rate tende a decrescere"
+    ],
+    "soluzioni": [
+      "Il page fault rate tende a decrescere",
+      "Il numero di pagine allocate per un processo tende a crescere"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente al fenomeno del trashing",
+    "opzioni": [
+      "L'efficienza complessiva del sistema di memoria di secondo livello è correlata",
+      "Per risolverlo può essere sufficiente contare il page fault rate e agire di conseguenza",
+      "Si può gestire anche ignorando il parametro delta = numero di riferimenti",
+      "Il numero di processi attivi nel sistema non è correlato",
+      "La percentuale di pagine che viene utilizzata solo in lettura non è correlata"
+    ],
+    "soluzioni": [
+      "Per risolverlo può essere sufficiente contare il page fault rate e agire di conseguenza",
+      "L'efficienza complessiva del sistema di memoria di secondo livello è correlata",
+      "Si può gestire anche ignorando il parametro delta = numera di riferimenti"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Si consideri un sistema che usa la memoria virtuale (paginazione on demand) che presenti le seguenti misurazioni di utilizzo: Percentuale di utilizzo della CPU: 25%, Percentuale di utilizzo delle periferiche di I/O: 7%, Percentuale di utilizzo del sottosistema HW di supporto alla paginazione: 92%. Sotto queste ipotesi si può dire che sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "Incrementare la dimensione delle pagine non incrementa in nessun caso la % di occupazione della CPU",
+      "Decrementare la dimensione delle pagine non incrementa in nessun caso la % di occupazione della CPU",
+      "Incrementare il livello di multiprogrammazione può incrementare la % di occupazione della CPU",
+      "Installare una CPU più lenta può incrementare la % di occupazione della CPU",
+      "Installare una memoria di primo livello di maggiori dimensioni può incrementare la % di occupazione della CPU"
+    ],
+    "soluzioni": [
+      "Installare una CPU più lenta può incrementare la % di occupazione della CPU",
+      "Installare una memoria di primo livello di maggiori dimensioni può incrementare la % di occupazione della CPU"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Relativamente allo schema a blocchi rappresentativo della segmentazione descritto nel seguito, sono vere le seguenti affermazioni:",
+    "opzioni": [
+      "N = indica la routine di interrupt che viene lanciata al termine della istruzione che ha provocato l'accesso illegale in memoria",
+      "L = limite",
+      "I = base = indirizzo base del segmento",
+      "B = Numero del segmento",
+      "G = Test fallito",
+      "A = numero della pagina",
+      "M = Tabella dei segmenti",
+      "H = Memoria di primo livello",
+      "D = somma il displacement con il numero di segmento per formare indirizzo completo",
+      "E = Numero del segmento",
+      "F = test avvenuto con successo",
+      "C = test di uguaglianza fra numero di segmento indirizzato e numero presente nella tabella dei segmenti"
+    ],
+    "soluzioni": [
+      "E = Numero del segmento",
+      "F = test avvenuto con successo",
+      "G = Test fallito",
+      "H = Memoria di primo livello",
+      "M = Tabella dei segmenti"
+    ],
+    "tipologia": "multiple",
+    "img": "lab_024.png"
+  },
+  {
+    "domanda": "Nel caso di paginazione con utilizzo della TLB, con alpha = 0,5, Tmem = 200 ns e epsilon = 20 ns:",
+    "opzioni": [],
+    "soluzioni": [
+      "320,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "I semafori con busy waiting (spinlock), quando attivati per un processo",
+    "opzioni": [
+      "Non mandano il processo fra i processi waiting",
+      "A livello di implementazione prevedono l'utilizzo di un loop in ciascuna delle primitive",
+      "Non tengono occupata la cpu ciclando a vuoto",
+      "Se implementati con una libreria utente, devono necessariamente richiamare una system call",
+      "Sono meno problematici sui sistemi multiprocessore"
+    ],
+    "soluzioni": [
+      "Non mandano il processo fra i processi waiting",
+      "Sono meno problematici sui sistemi multiprocessore"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Si supponga di avere un processo caratterizzato da un codice di 234 Kbyte, un'area dati di 258 Kbyte e uno stack di 42 Kbyte. Si consideri che diversi segmenti non possono condividere la stessa pagina. Si ipotizzi che la macchina fisica possa avere 128 Megabyte di memoria massima teorica, che l'indirizzamento logico sia su 22 bit, e che il processo sia tutto in memoria durante l'esecuzione. La memoria è organizzata a pagine, con pagine di 8 Kbyte. Quante sono le righe valide della tabella delle pagine del processo?",
+    "opzioni": [],
+    "soluzioni": [
+      "69"
+    ],
+    "tipologia": "aperta"
   }
 ]
