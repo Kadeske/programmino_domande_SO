@@ -293,10 +293,10 @@ def valida_risposta_aperta(finestra, dati,soluzioni,text_area):
     testo_correzione = ""   # testo mostrato dopo la validazione
     isCorretta = False  # ipotizzo errata
 
-    risposta = int(text_area.get("1.0", "end-1c"))  # recupero il testo inserito
+    risposta = float(text_area.get("1.0", "end-1c").replace(",","."))  # recupero il testo inserito
 
     # controllo risposta corretta
-    isCorretta = risposta in [int(x) for x in soluzioni]
+    isCorretta = risposta in [float(x.replace(",",".")) for x in soluzioni]
 
     if not dati[campo_check_domanda]:   # controllo risposta mai validata
         dati[campo_risposte_domanda] = []
