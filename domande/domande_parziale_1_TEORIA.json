@@ -52,7 +52,8 @@
       "Si può verificare una corsa critica legata al fatto che l'ISA assembly che a basso livello traduce l'implementazione scritta in C è di tipo load store",
       "Si può verificare una corsa critica perché le istruzioni di aggiornamento della variabile counter non sono implementate in maniera atomica"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_009.png"
   },
   {
     "domanda": "Il PCB di un processo:",
@@ -134,7 +135,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Per rendere funzionante questo codice (subroutine call/return), secondo quanto visto a lezione:",
+    "domanda": "Per rendere funzionante questo codice, secondo quanto visto a lezione:",
     "opzioni": [
       "E' sufficiente che vengano inserite 4 opportune istruzioni Assembly",
       "E' indispensabile salvare e ripristinare lo stato da parte delle subroutine sub1 e sub2",
@@ -146,7 +147,8 @@
       "E' sufficiente che vengano inserite 4 opportune istruzioni Assembly",
       "E' sufficiente venga salvato e ripristinato lo stato della funzione sub1"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_006.png"
   },
   {
     "domanda": "Relativamente al parametro q dello scheduling Round Robin",
@@ -203,7 +205,8 @@
       "Lo schema a è riferibile ai socket",
       "La memoria condivisa può essere utilizzata per scambiare le informazioni anche bypassando l'intervento del kernel"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_008.png"
   },
   {
     "domanda": "Relativamente al memory mapping è vero che",
@@ -239,7 +242,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Il seguente supporto HW per protezione memoria (registri base e limite):",
+    "domanda": "Il seguente supporto HW per protezione memoria:",
     "opzioni": [
       "Prevede che il contenuto dei registri base e limite siano dei parametri del kernel",
       "E' valido per qualunque modalità di allocazione di memoria si utilizzi",
@@ -250,7 +253,8 @@
     "soluzioni": [
       "Rende impossibile al codice utente di accedere alle periferiche"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_001.png"
   },
   {
     "domanda": "Le transizioni di stato possibili per un processo sono le seguenti:",
@@ -317,7 +321,8 @@
     "soluzioni": [
       "L'algoritmo SJF puro prevede che la CPU sia assegnata al processo con il futuro burst di cpu più breve fra tutti"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_011.png"
   },
   {
     "domanda": "Relativamente alla architettura SW Round Robin per sistemi di elaborazione Bare Metal / Embedded",
@@ -399,7 +404,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche descritto nei sistemi di elaborazione monoprocessore... il ruolo del multiplexer controllato dal decoder del bus è:",
+    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche descritto nei sistemi di elaborazione monoprocessore di esempio visti durante il corso, il ruolo del multiplexer controllato dal decoder del bus è:",
     "opzioni": [
       "Supportare l'accesso alle periferiche sia in scrittura che in lettura",
       "Evitare l'utilizzo di decoder interni alle periferiche",
@@ -413,7 +418,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Relativamente alla possibile architettura di un bus di comunicazione a supporto del memory mapping... sono vere le seguenti affermazioni:",
+    "domanda": "Relativamente alla possibile architettura di un bus di comunicazione a supporto del memory mapping vista nel materiale del corso e descritta dallo schema seguente sono vere le seguenti affermazioni:",
     "opzioni": [
       "E' possibile che gli spazi di indirizzamento delle periferiche siano parzialmente sovrapposti...",
       "Il decoder del bus è indispensabile per le operazioni di scrittura tipo sw",
@@ -425,7 +430,8 @@
       "Il dato in scrittura sulle periferiche viene inviato in parallelo a tutte le porte dati in in scrittura delle periferiche presenti nel sistema",
       "Il Mux del bus ha lo scopo di selezionare quale periferica è abilitata a collegarsi alla porta dati di ingresso della cpu durante le operazioni di scrittura tipo lw"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_007.png"
   },
   {
     "domanda": "Relativamente al parametro q dello scheduling Round Robin",
@@ -443,7 +449,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "L'esecuzione del seguente codice assembly (sub1, sub2), sulla base sell'ISA MIPS visto nel materiale del corso:",
+    "domanda": "L'esecuzione del seguente codice assembly, sulla base sell'ISA MIPS visto nel materiale del corso:",
     "opzioni": [
       "E' malfunzionante in quanto la routine sub2 non ritorna correttamente dopo esecuzione della jr",
       "E' malfunzionante perché non viene salvato e ripristinato lo stato dei registri",
@@ -454,7 +460,8 @@
     "soluzioni": [
       "E' malfunzionante perché non viene salvato e ripristinato lo stato dei registri"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_006.png"
   },
   {
     "domanda": "Circa le differenze fra Interrupt hardware e Interrupt software:",
@@ -487,10 +494,11 @@
       "La routine di interrupt si fa carico in SW di salvare e ripristinare il contenuto dei registri sporcati durante la sua esecuzione",
       "L'interrupt si avvia sovrascrivendo il contenuto del PC con indirizzo della prima istruzione della routine di interrupt e salva in HW indirizzo della istruzione successiva da eseguire"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img" : "te_005.png"
   },
   {
-    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della set on less than dell'ISA MIPS... slt $4, $2, $3 è la seguente",
+    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della set on less than dell'ISA MIPS, caso della specifica espressa in linguaggio Assembly: slt$4, $2, $3 è la seguente:",
     "opzioni": [
       "if(REGS[$2]<REGS[$4]) REGS[$3] = 1",
       "if(REGS[$2]<= REGS[$3]) REGS[$4] = 1",
@@ -499,7 +507,7 @@
       "if(REGS[$2]>REGS[$3]) REGS[$4] = 1"
     ],
     "soluzioni": ["if(REGS[$2]<REGS[$3]) REGS[$4] = 1"],
-    "tipologia": "multiple"
+    "tipologia": "singola"
   },
   {
     "domanda": "Oltre ad eventuali altre cose, i thread condividono:",
@@ -544,7 +552,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Relativamente al seguente codice che permette la comunicazione fra thread a livello utente (Produttore/Consumatore):",
+    "domanda": "Relativamente al seguente codice che permette la comunicazione fra thread a livello utente:",
     "opzioni": [
       "Il codice non è soggetto a corse critiche",
       "La variabile condivisa inserisci indica l'elemento del buffer su cui leggere",
@@ -556,7 +564,8 @@
       "Il codice non è soggetto a corse critiche",
       "Il consumatore cicla indefinitamente in caso di buffer completamente vuoto"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_004.png"
   },
   {
     "domanda": "Relativamente ai modelli di multi threading:",
@@ -603,7 +612,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Relativamente alla istruzione BEQ: beq $2, $3, label1 | if (REGS[$2]==REGS[$3]) PC = PC+4+imm",
+    "domanda": "Relativamente alla istruzione BEQ:",
     "opzioni": [
       "Il PC viene incrementato di 4 e non di uno perché le istruzioni sono a 32 bit",
       "Il campo Imm quantifica quante istruzioni verranno eventualmente saltate",
@@ -615,7 +624,8 @@
       "Il PC viene incrementato di 4 e non di uno perché le istruzioni sono a 32 bit",
       "Il campo Imm quantifica quante istruzioni verranno eventualmente saltate"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img" : "te_003.png"
   },
   {
     "domanda": "Relativamente al seguente schema che codifica gli stati di esecuzione di un processo è vero che:",
@@ -630,7 +640,8 @@
       "Il passaggio da ready a running avviene sulla base di una decisione dell'algoritmo di scheduling",
       "Il passaggio da running a ready dipende dal timer"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img": "te_010.png"
   },
   {
     "domanda": "Relativamente ai threads, è vero che:",
@@ -666,7 +677,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Relativamente al seguente esempio di flusso di esecuzione (System Mode: Kernel/User), è vero che:",
+    "domanda": "Relativamente al seguente esempio di flusso di esecuzione, è vero che:",
     "opzioni": [
       "Non protegge completamente sia la memoria che la cpu da comportamenti dannosi...",
       "Il Timer, insieme alla doppia modalità di esecuzione, viene utilizzato per proteggere...",
@@ -682,7 +693,8 @@
       "I registri base e limite sono accessibili al momento dell'avvio del sistema",
       "In caso di allocazione contigua della memoria, protegge completamente sia la memoria che la cpu da comportamenti dannosi da parte del codice utente"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img" : "te_002.png"
   },
   {
     "domanda": "Quali sono le modalità di esecuzione di una moderna CPU secondo quanto visto a lezione e nel materiale del corso?",
@@ -734,7 +746,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Si consideri il seguente scenario: Un sistema multiprocessore ... applicativo multithread basato sul many-to-many ...",
+    "domanda": "Un sistema multiprocessore sul quale opera un applicativo multithread basato sul many- to-many threading model e che è l'unico processo in esecuzione.      Il numero di thread user-level threads è più grande del numero di processori, e il numero di kernel thread è uguale al numero di processori.",
     "opzioni": [
       "Tutti i kernel level thread sono sempre in esecuzione",
       "E' possibile che tutti i processori siano utilizzati simultaneamente",
@@ -776,7 +788,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche... il ruolo del multiplexer controllato dal decoder del bus è:",
+    "domanda": "Nello schema di bus di sistema che collega la CPU alle periferiche descritto nei sistemi di elaborazione monoprocessore di esempio visti durante il corso, il ruolo del multiplexer controllato dal decoder del bus è:",
     "opzioni": [
       "Disaccoppiare le letture dalle scritture",
       "Supportare l'accesso alle periferiche sia in scrittura che in lettura",
@@ -940,10 +952,10 @@
     "soluzioni": [
       "E' basato su un ciclo principale che si occupa di processamento dei dati, mentre la comunicazione con le periferiche è implementata tramite routine di interrupt"
     ],
-    "tipologia": "multiple"
+    "tipologia": "singola"
   },
   {
-    "domanda": "Un possibile meccanismo HW di protezione della memoria implementato dal kernel in caso di allocazione contigua della memoria per proteggere le risorse da accessi illegali del codice utente utilizza le System call per accedere alle risorse protette secondo lo schema seguente (registri Base/Limite). E' vero che:",
+    "domanda": "Un possibile meccanismo HW di protezione della memoria implementato dal kernel in caso di allocazione contigua della memoria per proteggere le risorse da accessi illegali del codice utente utilizza le System call per accedere alle risorse protette secondo lo schema seguente. E' vero che:",
     "opzioni": [
       "Durante le system call è possibile che il processo passi direttamente dallo stato running allo stato ready",
       "L'invocazione della system call viene sempre invocata dal codice kernel se parliamo di un processo del kernel",
@@ -954,7 +966,8 @@
     "soluzioni": [
       "L'invocazione della system call viene sempre invocata dal codice utente"
     ],
-    "tipologia": "multiple"
+    "tipologia": "multiple",
+    "img" : "te_001.png"
   },
   {
     "domanda": "Qual è la principale differenza tra processi CPU-bound e I/O-bound?",
