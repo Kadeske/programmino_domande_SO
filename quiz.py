@@ -2,7 +2,9 @@ import UI
 import utils
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import filedialog
 import json
+import os
 
 # ---------VAR GLOBALI-----------#
 
@@ -56,6 +58,19 @@ def genera_schermata_scelta_file():
     tk.Label(frame_opzioni, text="Altre opzioni:", font=(
         UI.dati_testo["font_titoli"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"], "bold")).pack(pady=10)
 
+    def scegli_file_esterno():
+        global elenco_file
+        percorso_file = filedialog.askopenfilename(
+            title="Seleziona una cartella",
+            initialdir=os.getcwd()
+        )
+        elenco_file.append(percorso_file)
+
+    scelta_file_esterno = tk.Button(frame_opzioni, text="Scegli file esterno", bg="gray", fg="black", font=(
+        UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_sett"], "bold"), command=scegli_file_esterno)
+    scelta_file_esterno.pack(fill='x', padx=20, pady=2)
+
+
     var_ordine_domande_random = tk.BooleanVar(value=True)
     var_ordine_opzioni_random = tk.BooleanVar(value=True)
 
@@ -83,6 +98,7 @@ def genera_schermata_scelta_file():
     )
     radio_opzioni_random.pack(fill='x', padx=20, pady=2)
 
+    
     def set_nome_file():
         global elenco_file
         global randomizza_domande, randomizza_ordine_opzioni

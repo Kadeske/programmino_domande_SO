@@ -1,1020 +1,1262 @@
 [
-  {
-    "domanda": "La system call \"wait\" consente:",
-    "opzioni": [
-      "la sincronizzazione fra processi",
-      "la terminazione dei processi aperti",
-      "la corretta terminazione dei processi figli"
-    ],
-    "soluzioni": ["la corretta terminazione dei processi figli"]
-  },
-  {
-    "domanda": "Selezionare le affermazioni corrette:",
-    "opzioni": [
-      "\"file\" visualizza il contenuto di un file",
-      "\"head\" visualizza la prima parte di un file di testo",
-      "\"strings\" visualizza stringhe di testo all'interno di un file binario"
-    ],
-    "soluzioni": [
-      "\"head\" visualizza la prima parte di un file di testo",
-      "\"strings\" visualizza stringhe di testo all'interno di un file binario"
-    ]
-  },
-  {
-    "domanda": "Per visualizzare le variabili definite si può usare il comando:",
-    "opzioni": ["echo", "env", "set"],
-    "soluzioni": ["set"]
-  },
-  {
-    "domanda": "Il comando \"ln nome_file altro_nome_file\":",
-    "opzioni": [
-      "Permette di creare ulteriori nomi per il file, cioè creare ulteriori link per referenziarlo",
-      "Genera un errore",
-      "Permette di creare ulteriori link al file, cioè creare un ulteriori nomi per referenziarlo"
-    ],
-    "soluzioni": [
-      "Permette di creare ulteriori link al file, cioè creare un ulteriori nomi per referenziarlo"
-    ]
-  },
-  {
-    "domanda": "In ambito bash, per dichiarare un array \"mydata\" di dimensione N devo scrivere:",
-    "opzioni": ["{mydata[N]}", "mydata[N]", "{mydata}[N]"],
-    "soluzioni": ["mydata[N]"]
-  },
-  {
-    "domanda": "I permessi di un file si riferiscono:",
-    "opzioni": [
-      "A 2 categorie di utenti: proprietario e utenti appartenenti gruppo del proprietario",
-      "A 3 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario e tutti gli altri utenti",
-      "A 4 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario, utenti del sistema e tutti gli altri utenti"
-    ],
-    "soluzioni": [
-      "A 3 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario e tutti gli altri utenti"
-    ]
-  },
-  {
-    "domanda": "Il comando \"whatis\":",
-    "opzioni": [
-      "Visualizza la breve descrizione di un comando",
-      "Visualizza il tipo di file",
-      "Visualizza le pagine di manuale del comando specificato come parametro"
-    ],
-    "soluzioni": ["Visualizza la breve descrizione di un comando"]
-  },
-  {
-    "domanda": "Un programma viene avviato esplicitamente come job in background quando alla fine della riga di comando aggiungiamo il simbolo:",
-    "opzioni": ["2>", "|", "&"],
-    "soluzioni": ["&"]
-  },
-  {
-    "domanda": "La variabile speciale $#",
-    "opzioni": [
-      "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola",
-      "Restituisce il numero dei parametri",
-      "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
-    ],
-    "soluzioni": ["Restituisce il numero dei parametri"]
-  },
-  {
-    "domanda": "Per visualizzare il contenuto di una variabile occorre usare il comando:",
-    "opzioni": ["echo", "env", "set"],
-    "soluzioni": ["echo"]
-  },
-  {
-    "domanda": "Nel seguente output, ottenuto tramite il comando \"ls -l\", cosa identifica la stringa \"due\"? (- rwx rwx rwx 1 uno due 210 Feb 18 12:10 tre)",
-    "opzioni": [
-      "Il proprietario del file",
-      "Il nome del file",
-      "Il gruppo di apparteneneza del proprietario del file"
-    ],
-    "soluzioni": ["Il gruppo di apparteneneza del proprietario del file"]
-  },
-  {
-    "domanda": "Dire se il seguente frammento di codice è corretto: (for ((i=1; i <= $X; i++)) ...)",
-    "opzioni": [
-      "No",
-      "Funziona togliendo le doppie virgolette nell'istruzione \"echo\"",
-      "Si"
-    ],
-    "soluzioni": ["No"]
-  },
-  {
-    "domanda": "In ambito bash che cosa si intende per \"magic number\"?",
-    "opzioni": [
-      "Il percorso dell'interprete bash, cioè la sua path",
-      "Il carattere cancelletto e punto esclamativo seguito dal percorso dell'interprete bash",
-      "Il carattere cancelletto e slash seguito dal percorso dell'interprete bash"
-    ],
-    "soluzioni": [
-      "Il carattere cancelletto e punto esclamativo seguito dal percorso dell'interprete bash"
-    ]
-  },
-  {
-    "domanda": "Il percorso \"../../../cucina/ricette/secondi\" è stato formulato in modo:",
-    "opzioni": [
-      "Relativo",
-      "Assoluto",
-      "Non è un percorso correttamente formulato"
-    ],
-    "soluzioni": ["Relativo"]
-  },
-  {
-    "domanda": "L'affermazione \"ogni comando restituisce un exit status. Il successo restituisce 1, il fallimento un codice d'errore\" è corretta?",
-    "opzioni": [
-      "Sì, è corretta",
-      "No, il successo restituisce 0",
-      "No, il successo non restituisce nessun valore"
-    ],
-    "soluzioni": ["No, il successo restituisce 0"]
-  },
-  {
-    "domanda": "Il comando \"cmp\", in caso di file differenti:",
-    "opzioni": [
-      "Visualizza sullo standard output un elenco delle differenze riscontrate sui file",
-      "Visualizza sullo standard output il numero di differenze esistenti tra i file considerati",
-      "Visualizza sullo standard output la differenza riscontrata a partire da dove essa è stata individuata"
-    ],
-    "soluzioni": [
-      "Visualizza sullo standard output la differenza riscontrata a partire da dove essa è stata individuata"
-    ]
-  },
-  {
-    "domanda": "Nell'ambito della shell (terminale) Linux, il tasto di tabulazione richiama la funzione di:",
-    "opzioni": [
-      "Visualizzazione dei possibili comandi alternativi a quello digitato",
-      "Autocompletamento",
-      "Scorrimento della cronologia (history) dei comandi utilizzati"
-    ],
-    "soluzioni": ["Autocompletamento"]
-  },
-  {
-    "domanda": "Il termine \"parametro\" sulla base della documentazione Bash identifica le seguenti entità:",
-    "opzioni": [
-      "Parametri utente, parametri posizionali e variabili speciali",
-      "Parametri posizionali e parametri speciali",
-      "Parametri posizionali, parametri speciali e variabili di shell"
-    ],
-    "soluzioni": [
-      "Parametri posizionali, parametri speciali e variabili di shell"
-    ]
-  },
-  {
-    "domanda": "Dire se le seguenti assegnazioni sono entrambe valide nel linguaggio bash: x=variabile y='pippo'",
-    "opzioni": [
-      "Sono entrambe errate",
-      "Sì, sono entrambi valide",
-      "No, la seconda non è valida"
-    ],
-    "soluzioni": ["Sì, sono entrambi valide"]
-  },
-  {
-    "domanda": "Per accedere al valore contenuto in una variabile bash, devo:",
-    "opzioni": [
-      "Premettere ad essa il simbolo $",
-      "Farla seguire dal simbolo $",
-      "Utilizzare la command substitution"
-    ],
-    "soluzioni": ["Premettere ad essa il simbolo $"]
-  },
-  {
-    "domanda": "Quali sono gli \"operatori di redirezione\" utilizzabili nell'ambito dei canali standard di input/output/error",
-    "opzioni": [
-      "\"<\", \">\" e \">>\"",
-      "\"<\", \">\", \">>\" e \"=\"",
-      "\"<\" e \">\""
-    ],
-    "soluzioni": ["\"<\", \">\" e \">>\""]
-  },
-  {
-    "domanda": "Il comando \"mkdir file.txt\":",
-    "opzioni": [
-      "Crea una nuova directory dal nome \"file.txt\"",
-      "Genera un errore, in quanto si sta cercando di creare un file e non una cartella",
-      "Crea un nuovo file dal nome \"file.txt\""
-    ],
-    "soluzioni": ["Crea una nuova directory dal nome \"file.txt\""]
-  },
-  {
-    "domanda": "Il comando \"cut\" permette di:",
-    "opzioni": [
-      "Estrarre una parte di un file sulla base di un criterio che potrà essere utilizzata per un altro scopo",
-      "Cancellare il contenuto di un file sulla base di un criterio",
-      "Dividere il file in più parti sulla base di un criterio"
-    ],
-    "soluzioni": [
-      "Estrarre una parte di un file sulla base di un criterio che potrà essere utilizzata per un altro scopo"
-    ]
-  },
-  {
-    "domanda": "Dire quale compito svolge il seguente comando: test -x /bin/ls",
-    "opzioni": [
-      "Verificare se \"ls\" è un file eseguibile",
-      "Verificare se \"ls\" è un file con dimensione zero",
-      "Non esiste l'opzione \"-x\""
-    ],
-    "soluzioni": ["Verificare se \"ls\" è un file eseguibile"]
-  },
-  {
-    "domanda": "E' possibile specificare i permessi di accesso anche per le directory, così come è possibile per i file?",
-    "opzioni": ["No", "Dipende dal tipo di directory", "Si"],
-    "soluzioni": ["Si"]
-  },
-  {
-    "domanda": "Le informazioni inserite mediante la tastiera vengono veicolate tramite un canale definito:",
-    "opzioni": ["Input channel", "Standard input", "Standard keyboard"],
-    "soluzioni": ["Standard input"]
-  },
-  {
-    "domanda": "Se il processo padre è terminato:",
-    "opzioni": [
-      "Il PPID del processo \"orfano\" viene settato a 1",
-      "Il processo \"orfano\" viene adottato da init",
-      "Il processo \"orfano\" termina ed il suo PID viene comunicato al processo init"
-    ],
-    "soluzioni": ["Il processo \"orfano\" viene adottato da init"]
-  },
-  {
-    "domanda": "Selezionare la corretta definizione formale di una directory (cartella):",
-    "opzioni": [
-      "Una directory è un tipo particolare di file associato a degli inode",
-      "Una directory è una cartella che contiene una lista di file",
-      "Una directory è un file che contiene una lista di nomi associati a degli inode"
-    ],
-    "soluzioni": ["Una directory è una cartella che contiene una lista di file"]
-  },
-  {
-    "domanda": "Se un file leggibile, scrivibile ed eseguibile viene posto all'interno di una directory che non è accessibile (perché ha il permesso di esecuzione disabilitato) il file stesso diventa:",
-    "opzioni": [
-      "Accessibile",
-      "Inaccessibile",
-      "Accessibile al solo proprietario"
-    ],
-    "soluzioni": ["Inaccessibile"]
-  },
-  {
-    "domanda": "Selezionare le corrette affermazioni sui processi nello stato \"zombie\" (o defunct)",
-    "opzioni": [
-      "Un processo diviene zombie dopo essere terminato e prima che il processo padre abbia eseguito una wait per esso",
-      "Un processo zombie non consuma risorse",
-      "Un processo zombie consuma risorse fino alla sua terminazione da parte di init"
-    ],
-    "soluzioni": [
-      "Un processo diviene zombie dopo essere terminato e prima che il processo padre abbia eseguito una wait per esso"
-    ]
-  },
-  {
-    "domanda": "Per modificare i permessi di accesso di un file occorre usare il comando:",
-    "opzioni": ["ls -l -change", "chown", "chmod"],
-    "soluzioni": ["chmod"]
-  },
-  {
-    "domanda": "Il carattere speciale \".\" identifica:",
-    "opzioni": [
-      "Tutte le directory che si trovano al livello immediatamente superiore",
-      "La directory corrente",
-      "La directory che si trova al livello immediatamente superiore"
-    ],
-    "soluzioni": ["La directory corrente"]
-  },
-  {
-    "domanda": "Per visualizzare il numero di righe vuote nel file \"miofile.txt\" tramite il comando grep, dobbiamo eseguire:",
-    "opzioni": [
-      "grep '^$' miofile.txt",
-      "grep -c '^$' miofile.txt",
-      "grep -c '$$' miofile.txt"
-    ],
-    "soluzioni": ["grep -c '^$' miofile.txt"]
-  },
-  {
-    "domanda": "Selezionare i metodi corretti per effettuare operazioni matematiche nel linguaggio bash:",
-    "opzioni": ["let a=2+3", "a='expr 5+3'", "$((a=4+1))"],
-    "soluzioni": ["let a=2+3", "$((a=4+1))"]
-  },
-  {
-    "domanda": "Dire se il seguente frammento di codice è corretto (for i in 1 2 3 4 5...):",
-    "opzioni": ["No", "Dipende dall'interprete", "Si"],
-    "soluzioni": ["No"]
-  },
-  {
-    "domanda": "Nell'ambito della shell Linux, il prompt rappresenta:",
-    "opzioni": [
-      "Una serie di informazioni relative all'utente corrente ed al sistema utilizzato",
-      "Un carattere o un insieme di caratteri che possono essere personalizzati dall'utente",
-      "Un carattere o un insieme di caratteri definiti in fase di installazione del sistema operativo"
-    ],
-    "soluzioni": [
-      "Un carattere o un insieme di caratteri che possono essere personalizzati dall'utente"
-    ]
-  },
-  {
-    "domanda": "Il permesso di lettura su una directory:",
-    "opzioni": [
-      "Consente di accedere all'interno della directory",
-      "Consente di elencare tutti i file in essa contenuti",
-      "Consente di aggiungere nuovi file al suo interno"
-    ],
-    "soluzioni": ["Consente di elencare tutti i file in essa contenuti"]
-  },
-  {
-    "domanda": "Se mi trovo nella cartella \"due\" del percorso \"/home/pippo/uno/due/tre/dati\", è possibile spostarsi all'interno della cartella \"dati\" utilizzando il comando \"cd tre/dati\":",
-    "opzioni": [
-      "No. il comando viene eseguito solo parzialmente",
-      "No, il comando deve necessariamente includere anche le cartelle \"/home/pippo/uno\"",
-      "Si. Il comando è corretto"
-    ],
-    "soluzioni": ["Si. Il comando è corretto"]
-  },
-  {
-    "domanda": "Il comando \"mv file_sorgente file_destinazione\":",
-    "opzioni": [
-      "Sposta il \"file_sorgente\" su \"file_destinazione\"",
-      "Copia \"file_sorgente\" in \"file_destinazione\"",
-      "Rinomina \"file_sorgente\" in \"file_destinazione\""
-    ],
-    "soluzioni": ["Rinomina \"file_sorgente\" in \"file_destinazione\""]
-  },
-  {
-    "domanda": "Affinchè una variabile sia visibile all'interno di qualsiasi shell:",
-    "opzioni": [
-      "Occorre esportarla mediante il comando \"set\"",
-      "Occorre esportarla mediante il comando \"export\"",
-      "Occorre esportarla mediante il comando \"echo\""
-    ],
-    "soluzioni": ["Occorre esportarla mediante il comando \"export\""]
-  },
-  {
-    "domanda": "Per visualizzare le variabili di ambiente si può usare il comando:",
-    "opzioni": ["set", "env", "echo"],
-    "soluzioni": ["env"]
-  },
-  {
-    "domanda": "L'esecuzione del comando \"chown dax elenco.txt\" ha come risultato di:",
-    "opzioni": [
-      "Genera un errore, in quanto la sintassi è errata",
-      "Genera un errore, in quanto l'ordine degli argomenti è errato",
-      "Cambiare in \"dax\" il proprietario del file \"elenco.txt\""
-    ],
-    "soluzioni": ["Cambiare in \"dax\" il proprietario del file \"elenco.txt\""]
-  },
-  {
-    "domanda": "Il comando \"tr\" permette di:",
-    "opzioni": [
-      "Modificare o cancellare caratteri da uno stream di input",
-      "Tradurre stringhe di testo in italiano da uno stream di input usando un dizionario di default",
-      "Modificare o cancellare caratteri da uno stream di output"
-    ],
-    "soluzioni": ["Modificare o cancellare caratteri da uno stream di input"]
-  },
-  {
-    "domanda": "Indicare la prima riga che identifica uno script in linguaggio bash",
-    "opzioni": ["#/bin/bash", "#!/bash", "#!/bin/bash"],
-    "soluzioni": ["#!/bin/bash"]
-  },
-  {
-    "domanda": "Le variabili $1, $2,...sono:",
-    "opzioni": [
-      "Variabili argomentali associate all'esecuzione di uno script parametrizzato",
-      "Variabili speciali associate ai vari argomenti passati durante l'esecuzione di uno script",
-      "Variabili globali alle quali è possibile attribuire un valore durante l'esecuzione di uno script"
-    ],
-    "soluzioni": [
-      "Variabili speciali associate ai vari argomenti passati durante l'esecuzione di uno script"
-    ]
-  },
-  {
-    "domanda": "Utilizzando il metodo assoluto per la modifica dei permessi, la maschera binaria 000 ha l'effetto di:",
-    "opzioni": [
-      "Disabilitare tutti i permessi a tutti gli utenti, proprietario compreso",
-      "Disabilitare tutti i permessi relativi al proprietario del file",
-      "Lasciare inalterati i permessi"
-    ],
-    "soluzioni": [
-      "Disabilitare tutti i permessi a tutti gli utenti, proprietario compreso"
-    ]
-  },
-  {
-    "domanda": "Nell'ambito Bash, cosa si intende per \"path\":",
-    "opzioni": [
-      "Un elenco di comandi all'interno di speciali cartelle di sistema",
-      "Un elenco di directory separato da una virgola che indica il percorso dove cercare i comandi",
-      "Un elenco di directory separato da due punti che configura l'insieme dei percorsi di ricerca dei comandi"
-    ],
-    "soluzioni": [
-      "Un elenco di directory separato da due punti che configura l'insieme dei percorsi di ricerca dei comandi"
-    ]
-  },
-  {
-    "domanda": "Utilizzando il metodo assoluto per la modifica dei permessi, la cifra ottale 5 corrisponde ad una maschera binaria ed ad un significato del tipo:",
-    "opzioni": [
-      "101, che codifica lettura abilitata, scrittura disabilitata ed esecuzione abilitata",
-      "101, che codifica scrittura abilitata, lettura disabilitata ed esecuzione abilitata",
-      "111, che codifica lettura abilitata, scrittura abilitata ed esecuzione abilitata"
-    ],
-    "soluzioni": [
-      "101, che codifica lettura abilitata, scrittura disabilitata ed esecuzione abilitata"
-    ]
-  },
-  {
-    "domanda": "Quali di queste affermazioni sui link simbolici è corretta?",
-    "opzioni": [
-      "Un link simbolico dipende dal filesystem ed è possibile crearlo solo nell'ambito di filesystem di tipo EXT3 o EXT4",
-      "Un link simbolico non dipende dal file originale e nel momento in cui viene cancellato il file sorgente, il collegamento punterà comunque ad esso",
-      "Un link simbolico dipende dal file originale e nel momento in cui viene cancellato il file sorgente, il collegamento non punterà più a nulla"
-    ],
-    "soluzioni": [
-      "Un link simbolico dipende dal file originale e nel momento in cui viene cancellato il file sorgente, il collegamento non punterà più a nulla"
-    ]
-  },
-  {
-    "domanda": "Per visualizzare le informazioni circa righe, parole e dimensione in Byte di un file denominato \"miofile\", devo eseguire:",
-    "opzioni": ["wc -all miofile", "wc -cw miofile", "wc miofile"],
-    "soluzioni": ["wc miofile"]
-  },
-  {
-    "domanda": "Selezionare i metodi corretti per effettuare operazioni matematiche nel linguaggio bash:",
-    "opzioni": ["[ a=4+1]", "let a=2+3", "$((a=4+1))"],
-    "soluzioni": ["let a=2+3", "$((a=4+1))"]
-  },
-  {
-    "domanda": "L'esecuzione del comando \"ls\" senza parametri visualizza tutti i file e directory all'interno della directory corrente:",
-    "opzioni": ["Si, ad eccezione di quelli nascosti", "Si", "No"],
-    "soluzioni": ["Si, ad eccezione di quelli nascosti"]
-  },
-  {
-    "domanda": "Il comando \"cp file_sorgente directory/\":",
-    "opzioni": [
-      "Rinomina \"file_sorgente\" come \"directory/\"",
-      "Copia \"file_sorgente\" all'interno della cartella \"directory/\"",
-      "Sposta il \"file_sorgente\" all'interno della cartella \"directory/\""
-    ],
-    "soluzioni": [
-      "Copia \"file_sorgente\" all'interno della cartella \"directory/\""
-    ]
-  },
-  {
-    "domanda": "La lettura del contenuto di una variabile si ottiene facendone precedere il nome dal simbolo:",
-    "opzioni": ["$", "&", "#"],
-    "soluzioni": ["$"]
-  },
-  {
-    "domanda": "Per conoscere l'elenco dei job esistenti ed il loro stato:",
-    "opzioni": [
-      "Il comando \"stats\"",
-      "Il comando \"jobs\"",
-      "Il comando \"listjobs\""
-    ],
-    "soluzioni": ["Il comando \"jobs\""]
-  },
-  {
-    "domanda": "I comandi digitati dall'utente:",
-    "opzioni": [
-      "I comandi digitati dall'utente vengono letti dalla shell, interpretati e inviati al kernel per essere eseguiti",
-      "I comandi digitati dall'utente vengono eseguiti nella shell, e quindi interpretati dal kernel Linux",
-      "I comandi digitati dall'utente vengono letti dal sistema operativo, compilati ed inviati al kernel per essere eseguiti"
-    ],
-    "soluzioni": [
-      "I comandi digitati dall'utente vengono letti dalla shell, interpretati e inviati al kernel per essere eseguiti"
-    ]
-  },
-  {
-    "domanda": "Il comando \"rmdir nome_directory\":",
-    "opzioni": [
-      "Rimuove la cartella \"nome_directory\" e tutti i file in essa contenuti",
-      "Rinomina la cartella \"nome_directory\"",
-      "Rimuove la cartella \"nome_directory\" se questa è vuota"
-    ],
-    "soluzioni": ["Rimuove la cartella \"nome_directory\" se questa è vuota"]
-  },
-  {
-    "domanda": "Completare in modo corretto il seguente frammento di codice bash: if [ $1 ... 100 ]; then ... elif ...",
-    "opzioni": ["-gt", "elif"],
-    "soluzioni": ["-gt", "elif"]
-  },
-  {
-    "domanda": "Convenzionalmente, l'indice 0 (zero) dell'array di un file descriptor identifica:",
-    "opzioni": [
-      "Lo \"standard output\"",
-      "Lo \"standard error\"",
-      "Lo \"standard input\""
-    ],
-    "soluzioni": ["Lo \"standard input\""]
-  },
-  {
-    "domanda": "Inizialmente, un file creato all'interno di una directory:",
-    "opzioni": [
-      "Eredita i permessi che possiedono gli altri file presenti nella directory",
-      "Inizialmente non è automaticamente definito alcun permesso",
-      "Eredita i permessi che possiede la directory"
-    ],
-    "soluzioni": ["Eredita i permessi che possiede la directory"]
-  },
-  {
-    "domanda": "Selezionare una corretta definizione di shell Linux:",
-    "opzioni": [
-      "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del terminale fisico di un sistema di elaborazione",
-      "Una shell consente di interfacciarsi con il kernel Linux, senza l'impiego di librerie specifiche",
-      "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del kernel di un sistema di elaborazione Linux"
-    ],
-    "soluzioni": [
-      "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del terminale fisico di un sistema di elaborazione"
-    ]
-  },
-  {
-    "domanda": "Riguardo alla shell Linux, selezionare le affermazioni non corrette:",
-    "opzioni": [
-      "E' possibile configurare il sistema per utilizzare la shell che si preferisce",
-      "Esistono vari tipi di shell",
-      "Esistono vari tipi di shell ma da diversi anni è possibile utilizzare solo Bash"
-    ],
-    "soluzioni": [
-      "Esistono vari tipi di shell ma da diversi anni è possibile utilizzare solo Bash"
-    ]
-  },
-  {
-    "domanda": "Selezionare le affermazioni corrette:",
-    "opzioni": [
-      "\"cat\" visualizza il file testo, pagina per pagina",
-      "\"more\" funziona come \"less\", ma ha meno funzioni",
-      "\"less\" ci consente di visualizzare il contenuto testuale di un file binario"
-    ],
-    "soluzioni": ["\"more\" funziona come \"less\", ma ha meno funzioni"]
-  },
-  {
-    "domanda": "Per ricercare le occorrenze di una o più parole in una serie di file possiamo utilizzare il comando:",
-    "opzioni": ["info", "grep", "search"],
-    "soluzioni": ["grep"]
-  },
-  {
-    "domanda": "Se utilizziamo il comando fg per portare in foreground un job che prima era in background, senza specificare il job su cui agire:",
-    "opzioni": [
-      "Dobbiamo necessariamente specificare il job su cui agire",
-      "Implicitamente ci riferiamo a quello attuale.",
-      "Tutti i jobs in background vengono portati in foreground"
-    ],
-    "soluzioni": ["Implicitamente ci riferiamo a quello attuale."]
-  },
-  {
-    "domanda": "Le informazioni visualizzate a video vengono veicolate tramite un canale definito:",
-    "opzioni": ["Standard view", "Standard input", "Standard output"],
-    "soluzioni": ["Standard output"]
-  },
-  {
-    "domanda": "Nell'ambito di una shell Linux, i tasti Ctrl-A e Ctrl-E:",
-    "opzioni": [
-      "Aggiungono e tolgono caratteri dalla linea di comando",
-      "Muovono il cursore all'inizio ed alla fine della linea di comando",
-      "Consentono di scorrere la history"
-    ],
-    "soluzioni": [
-      "Muovono il cursore all'inizio ed alla fine della linea di comando"
-    ]
-  },
-  {
-    "domanda": "Le espressioni regolari (RE) si avvalgono di:",
-    "opzioni": [
-      "Metadati e modificatori",
-      "Pattern matching languages",
-      "Metacaratteri e modificatori"
-    ],
-    "soluzioni": ["Metacaratteri e modificatori"]
-  },
-  {
-    "domanda": "Il modo di specificare i permessi di accesso di un file, tramite il comando chmod, che utilizza i simboli r, w e x viene definito:",
-    "opzioni": ["Simbolico", "Ottale", "Ottale/binario"],
-    "soluzioni": ["Simbolico"]
-  },
-  {
-    "domanda": "Come possiamo collegare l'output del comando, \"cat testo.txt\" al comando \"more\"?",
-    "opzioni": [
-      "cat testo.txt > more",
-      "Non è possibile effettuare questa operazione",
-      "cat testo.txt | more"
-    ],
-    "soluzioni": ["cat testo.txt | more"]
-  },
-  {
-    "domanda": "Il comando \"rmdir file.txt\":",
-    "opzioni": [
-      "Non genera un errore ma non cancella \"file.txt\"",
-      "Rimuove iil file \"file.txt\", in quanto mkdir funziona sia su file sia su cartelle",
-      "Genera un errore, in quanto \"file.txt\", è un file e non una cartella"
-    ],
-    "soluzioni": [
-      "Genera un errore, in quanto \"file.txt\", è un file e non una cartella"
-    ]
-  },
-  {
-    "domanda": "Il seguente comando tr -c A-Za-z0-9 ' '",
-    "opzioni": [
-      "Sostituisce i caratteri alfanumerici (-c = complement) con spazi",
-      "Sostituisce le stringhe composte da carattere alfabetici (-c = singolo carattere) con caratteri numerici",
-      "Sostituisce i caratteri non alfanumerici (-c = complement) con spazi"
-    ],
-    "soluzioni": [
-      "Sostituisce i caratteri non alfanumerici (-c = complement) con spazi"
-    ]
-  },
-  {
-    "domanda": "La variabile speciale $@ ",
-    "opzioni": [
-      "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola",
-      "Restituisce il numero dei parametri",
-      "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
-    ],
-    "soluzioni": [
-      "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola"
-    ]
-  },
-  {
-    "domanda": "Quali caratteri si utilizzano per redirezionare lo standard error?",
-    "opzioni": ["1>", "2>", "&2"],
-    "soluzioni": ["2>"]
-  },
-  {
-    "domanda": "Il comando \"grep '^globe$' list.txt\"",
-    "opzioni": [
-      "Ricerca nel file specificato tutte le righe che contengono solo la parola \"globe\"",
-      "Ricerca nel file specificato tutte le righe che contengono la parola \"globe\"",
-      "Ricerca nel file specificato tutte le righe che non contengono la parola \"globe\""
-    ],
-    "soluzioni": [
-      "Ricerca nel file specificato tutte le righe che contengono solo la parola \"globe\""
-    ]
-  },
-  {
-    "domanda": "Il comando \"ln file1 data1\" crea un link di tipo:",
-    "opzioni": ["Fisico", "Esclusivo", "Simbolico"],
-    "soluzioni": ["Fisico"]
-  },
-  {
-    "domanda": "Per passare dei valori alle funzioni definite in linguaggio bash:",
-    "opzioni": [
-      "Si usa il meccanismo delle variabili globali",
-      "Non si possono passare valori alle funzioni bash",
-      "Si usa lo stesso meccanismo del passaggio dei parametri utilizzato dai comandi"
-    ],
-    "soluzioni": [
-      "Si usa lo stesso meccanismo del passaggio dei parametri utilizzato dai comandi"
-    ]
-  },
-  {
-    "domanda": "Nell'output del comando \"ls -l\", i permessi di accesso al file sono indicati:",
-    "opzioni": [
-      "Dai 3 gruppi di 3 caratteri ciascuno che seguono il nome e il gruppo utente, nelle informazioni di ciascun file",
-      "Dai 9 caratteri successivi al primo, nelle informazioni di ciascun file",
-      "Dai primi 9 caratteri, nelle informazioni di ciascun file"
-    ],
-    "soluzioni": [
-      "Dai 9 caratteri successivi al primo, nelle informazioni di ciascun file"
-    ]
-  },
-  {
-    "domanda": "Selezionare le affermazioni corrette riguardo ai nomi di file in ambito filesystem Linux:",
-    "opzioni": [
-      "Può essere lungo al massimo 256 caratteri",
-      "Può contenere caratteri alfabetici, numeri, caratteri di sottolineatura o di punteggiatura",
-      "Può contenere caratteri particolari come punti interrogativi o asterischi"
-    ],
-    "soluzioni": ["Può essere lungo al massimo 256 caratteri"]
-  },
-  {
-    "domanda": "In ambito bash, per accedere al valore con indice n di un array denominato \"mydata\" devo scrivere:",
-    "opzioni": ["$mydata[n]", "${mydata[n]}", "$[mydata(n)]"],
-    "soluzioni": ["${mydata[n]}"]
-  },
-  {
-    "domanda": "Per visualizzare il contenuto della cartella corrente, devo utlizzare il comando:",
-    "opzioni": ["ls.", "ls", "cat"],
-    "soluzioni": ["ls."]
-  },
-  {
-    "domanda": "Completare in modo corretto il seguente frammento di codice bash: #!/bin/bash if [ $1 ... 100 ]; then ... elif ...",
-    "opzioni": ["-gt", "elif"],
-    "soluzioni": ["-gt", "elif"]
-  },
-  {
-    "domanda": "Valutare la correttezza dell'affermazione \"il kernel è la parte di Linux che corrisponde al sistema operativo vero e proprio; esso gestisce sia i processi sia le funzioni di input/output\"",
-    "opzioni": [
-      "L'affermazione non è corretta",
-      "L'affermazione è corretta parzialmente",
-      "L'affermazione è corretta"
-    ],
-    "soluzioni": ["L'affermazione è corretta"]
-  },
-  {
-    "domanda": "Il comando \"cmp\" permette di:",
-    "opzioni": [
-      "Compara due file binari e visualizza il solo numero di riga della prima differenza individuata",
-      "Confronta due file di qualunque tipo e visualizza la differenza in byte",
-      "Compara due file di qualunque tipo e visualizza il byte e il numero di riga della prima differenza individuata"
-    ],
-    "soluzioni": [
-      "Compara due file di qualunque tipo e visualizza il byte e il numero di riga della prima differenza individuata"
-    ]
-  },
-  {
-    "domanda": "Il comando \"chmod g+w-x script.sh\":",
-    "opzioni": [
-      "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per l'esecuzione",
-      "Genera un errore, in quanto la sintassi del comando chmod è errata",
-      "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per la scrittura e disabilita i permessi di esecuzione del file"
-    ],
-    "soluzioni": [
-      "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per la scrittura e disabilita i permessi di esecuzione del file"
-    ]
-  },
-  {
-    "domanda": "Quale di queste affermazioni sul comando \"sort\" è corretta:",
-    "opzioni": [
-      "Il comando \"sort\" tratta ogni linea come una collezione di vari campi separati da delimitatori",
-      "Il comando \"sort\" tratta ogni linea come un insieme di campi omogenei",
-      "Il comando \"sort\" tratta ogni linea attraverso l'impiego di un differente linguaggio regolare"
-    ],
-    "soluzioni": [
-      "Il comando \"sort\" tratta ogni linea come una collezione di vari campi separati da delimitatori"
-    ]
-  },
-  {
-    "domanda": "Il percorso \"/home/utente/documenti/lettere/mario\" è formulato in modo:",
-    "opzioni": [
-      "Assoluto",
-      "Non è un percorso correttamente formulato",
-      "Relativo"
-    ],
-    "soluzioni": ["Assoluto"]
-  },
-  {
-    "domanda": "I principali file in un sistema operativo Linux sono:",
-    "opzioni": [
-      "File regolari, file di testo, file eseguibili e file a blocchi",
-      "File regolari, directory, file a caratteri e file a blocchi",
-      "File regolari, directory, file a caratteri e file sequenziali"
-    ],
-    "soluzioni": ["File regolari, directory, file a caratteri e file a blocchi"]
-  },
-  {
-    "domanda": "Quando un job viene sospeso, la shell genera una riga del tipo:",
-    "opzioni": [
-      "[1] 134",
-      "[1]+ Stopped nomejob",
-      "Non viene mostrata alcuna informazione in shell"
-    ],
-    "soluzioni": ["[1]+ Stopped nomejob"]
-  },
-  {
-    "domanda": "Per ottenere il nome del terminale corrente (shell), possiamo utilizzare il comando:",
-    "opzioni": ["get", "tty", "terminal-name"],
-    "soluzioni": ["tty"]
-  },
-  {
-    "domanda": "Il comando \"pwd\":",
-    "opzioni": [
-      "Visualizza il contenuto di un file di testo",
-      "Acronimo di Paint White Directory, serve a cancellare il contenuto della shell corrente",
-      "Visualizza il percorso corrente"
-    ],
-    "soluzioni": ["Visualizza il percorso corrente"]
-  },
-  {
-    "domanda": "Dire se il seguente frammento di codice è corretto: #!/bin/bash x=10 for (( i=1; i <= $x; i++)) ...",
-    "opzioni": [
-      "No",
-      "Si",
-      "Funziona togliendo le doppie virgolette nell'istruzione \"echo\""
-    ],
-    "soluzioni": ["No"]
-  },
-  {
-    "domanda": "In ambito bash, è possibile inizializzare un array in questo modo: array = (1 2 3 4 5 6)",
-    "opzioni": [
-      "Si",
-      "Solo in questo caso (interi) ma non con altri tipi di dati (esempio, stringhe)",
-      "No"
-    ],
-    "soluzioni": ["Si"]
-  },
-  {
-    "domanda": "Dopo l'avvio di un programma come job in background, la shell restituisce una riga contenente:",
-    "opzioni": [
-      "Solo il PID del primo processo generato da questo job",
-      "Non restituisce nulla",
-      "Il numero del job e il numero del primo processo generato da questo job (PID)"
-    ],
-    "soluzioni": [
-      "Il numero del job e il numero del primo processo generato da questo job (PID)"
-    ]
-  },
-  {
-    "domanda": "Convenzionalmente, l'indice 2 (due) dell'array di un file descriptor identifica:",
-    "opzioni": [
-      "Lo \"standard input\"",
-      "Lo \"standard error\"",
-      "Lo \"standard output\""
-    ],
-    "soluzioni": ["Lo \"standard error\""]
-  },
-  {
-    "domanda": "Il comando \"chgrp\" viene utilizzato per:",
-    "opzioni": [
-      "Cambiare il gruppo ad un file ed accetta due argomenti",
-      "Non esiste questo comando Bash",
-      "Cambiare il gruppo ad un file ed accetta un solo argomento"
-    ],
-    "soluzioni": ["Cambiare il gruppo ad un file ed accetta due argomenti"]
-  },
-  {
-    "domanda": "Selezionare le affermazioni corrette:",
-    "opzioni": [
-      "\"cat\" visualizza il contenuto di un file di testo",
-      "\"less\" visualizza il file di testo, pagina per pagina",
-      "\"more\" funziona come \"less\", ma ha meno funzioni"
-    ],
-    "soluzioni": [
-      "\"cat\" visualizza il contenuto di un file di testo",
-      "\"more\" funziona come \"less\", ma ha meno funzioni"
-    ]
-  },
-  {
-    "domanda": "La variabile speciale $*",
-    "opzioni": [
-      "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script",
-      "Restituisce il numero dei parametri",
-      "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola"
-    ],
-    "soluzioni": [
-      "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
-    ]
-  },
-  {
-    "domanda": "Completare in modo corretto il seguente codice bash: if ! cd $nd 2> /dev/null ...",
-    "opzioni": ["! cd", "/dev/null"],
-    "soluzioni": ["! cd", "/dev/null"]
-  },
-  {
-    "domanda": "Un prompt come \"droms@dedalus:~$ \" ci indica che:",
-    "opzioni": [
-      "L'utente \"dedalus\" è un amministratore (root) del sistema",
-      "L'utente non è un utente privilegiato (root)",
-      "L'utente \"droms\" è un utente privilegiato (root)"
-    ],
-    "soluzioni": ["L'utente non è un utente privilegiato (root)"]
-  },
-  {
-    "domanda": "Selezionare le affermazioni corrette riguardo alla definizione di \"comando\":",
-    "opzioni": [
-      "Un comando è composto dal nome del comando stesso, da una o più opzioni facoltative e da uno o più argomenti facoltativi",
-      "I soli programmi contenuti all'interno della directory \"/bin\"",
-      "Un comando è composto dal nome del comando stesso e da almeno una opzione"
-    ],
-    "soluzioni": [
-      "Un comando è composto dal nome del comando stesso, da una o più opzioni facoltative e da uno o più argomenti facoltativi"
-    ]
-  },
-  {
-    "domanda": "Nell'output del comando \"ls -l\", il primo carattere:",
-    "opzioni": [
-      "Indica il permesso di lettura del proprietario del file",
-      "Fornisce informazioni relative al proprietario del file o della cartella",
-      "Indica il tipo di file"
-    ],
-    "soluzioni": ["Indica il tipo di file"]
-  },
-  {
-    "domanda": "Il comando \"ls\":",
-    "opzioni": [
-      "Lista il contenuto dei file presenti all'interno di una directory",
-      "Visualizza il contenuto di una directory",
-      "Sposta il contenuto di una directory"
-    ],
-    "soluzioni": ["Visualizza il contenuto di una directory"]
-  },
-  {
-    "domanda": "Il comando \"wc -w miofile\":",
-    "opzioni": [
-      "Visualizza diverse informazioni riguardo al file \"miofile\"",
-      "Visualizza il numero delle parole in \"miofile\"",
-      "Visualizza il numero di righe in \"miofile\""
-    ],
-    "soluzioni": ["Visualizza il numero delle parole in \"miofile\""]
-  },
-  {
-    "domanda": "L'affermazione \"ogni comando restituisce un exit status. Il successo restituisce 1, il fallimento un codice d'errore\" è corretta?",
-    "opzioni": [
-      "No, il successo restituisce 0",
-      "No, il successo non restituisce nessun valore",
-      "Sì, è corretta"
-    ],
-    "soluzioni": ["No, il successo restituisce 0"]
-  },
-  {
-    "domanda": "In una maschera binaria le tre categorie di utenti ossia le tre terne di simboli diventano 3 cifre in formato:",
-    "opzioni": ["Ottale", "Binario", "Decimale"],
-    "soluzioni": ["Ottale"]
-  },
-  {
-    "domanda": "Secondo il metodo assoluto, possiamo specificare tutti i permessi di tutte le categorie di utenti contemporaneamente usando le:",
-    "opzioni": ["Maschere binarie", "Maschere ottali", "Maschere simboliche"],
-    "soluzioni": ["Maschere binarie"]
-  },
-  {
-    "domanda": "Il comando \"man\":",
-    "opzioni": [
-      "Visualizza le pagine di manuale del comando specificato come parametro",
-      "Visualizza la tipologia del file specificato come argomento",
-      "Visualizza la breve descrizione di un comando"
-    ],
-    "soluzioni": [
-      "Visualizza le pagine di manuale del comando specificato come parametro"
-    ]
-  },
-  {
-    "domanda": "L'operatore di \"pipe\", che consente di collegare l'output standard di un comando all'input standard di un secondo comando, viene definito dal carattere:",
-    "opzioni": ["&", "Opzione 2", "|"],
-    "soluzioni": ["|"]
-  },
-  {
-    "domanda": "Il comando \"ls -l\":",
-    "opzioni": [
-      "Lista i file regolari ma non le cartelle presenti nella directory corrente",
-      "Elenca con numerosi dettagli i file della directory corrente",
-      "Visualizze solo nomi e proprietari dei file e delle cartelle presenti della directory corrente"
-    ],
-    "soluzioni": [
-      "Elenca con numerosi dettagli i file della directory corrente"
-    ]
-  },
-  {
-    "domanda": "La funzione che consente di assegnare variabili da standard input in uno script bash è:",
-    "opzioni": [
-      "La funzione \"get\"",
-      "La funzione \"readchar\"",
-      "La funzione \"read\""
-    ],
-    "soluzioni": ["La funzione \"read\""]
-  },
-  {
-    "domanda": "La radice dell'albero dei processi in un sistema Linux viene definita:",
-    "opzioni": ["root", "init", "main"],
-    "soluzioni": ["init"]
-  },
-  {
-    "domanda": "L'affermazione \"per accedere ad un file non è sufficiente abilitarne i permessi ma occorre che la directory che lo contiene, così come la directory genitrice e tutte le altre directory padre siano abilitate in esecuzione\" è sempre corretta?",
-    "opzioni": ["Sì, sempre", "No, mai", "Sì, ma con qualche eccezione"],
-    "soluzioni": ["Sì, sempre"]
-  },
-  {
-    "domanda": "Un file che può essere letto, modificato ed eseguito da qualsiasi utente del sistema, visualizzate le informazioni tramite il comando \"ls -l\", sarà caratterizzato nei permessi da una stringa del tipo:",
-    "opzioni": ["all all all", "rwxrwxrwx", "+++++++++"],
-    "soluzioni": ["rwxrwxrwx"]
-  },
-  {
-    "domanda": "Il permesso di scrittura su una directory:",
-    "opzioni": [
-      "Consente di accedere all'interno della directory",
-      "Consente di aggiungere nuovi file al suo interno",
-      "Consente di elencare tutti i file in essa contenuti"
-    ],
-    "soluzioni": ["Consente di aggiungere nuovi file al suo interno"]
-  },
-  {
-    "domanda": "Il comando \"ln\" con l'opzione \"-s\" viene utilizzato per:",
-    "opzioni": [
-      "Creare un link fisico",
-      "Non esiste l'opzione \"-s\" nel comando \"ln\"",
-      "Creare un link simbolico"
-    ],
-    "soluzioni": ["Creare un link simbolico"]
-  },
-  {
-    "domanda": "Il permesso di esecuzione su una directory:",
-    "opzioni": [
-      "Consente di elencare tutti i file in essa contenuti",
-      "Consente di aggiungere nuovi file al suo interno",
-      "Consente di accedere all'interno della directory"
-    ],
-    "soluzioni": ["Consente di accedere all'interno della directory"]
-  },
-  {
-    "domanda": "Considerando che un comando immesso mediante lo standard input può generare un messaggio di errore:",
-    "opzioni": [
-      "Esiste un ulteriore canale denominato standard error",
-      "I messaggi di errore possono esclusivamente essere veicolati tramite lo standard output",
-      "Il verificarsi di un errore inibisce il meccanismo dei canali di input/output"
-    ],
-    "soluzioni": ["Esiste un ulteriore canale denominato standard error"]
-  },
-  {
-    "domanda": "Quando con \"chmod\" non specifichiamo una categoria di utenti (u, g, oppure o):",
-    "opzioni": [
-      "Il comando modifica i permessi relativi al solo utente proprietario",
-      "Il comando modifica i permessi per tutte le categorie",
-      "Il comando genera un errore"
-    ],
-    "soluzioni": ["Il comando modifica i permessi per tutte le categorie"]
-  },
-  {
-    "domanda": "Per cambiare il proprietario di un file occorre usare il comando:",
-    "opzioni": ["chown", "chmod -u", "chmod"],
-    "soluzioni": ["chown"]
-  }
+    {
+        "domanda": "L'esecuzione del comando \"chown dax elenco.txt\" ha come risultato di:",
+        "opzioni": [
+            "Cambiare in \"dax\" il proprietario del file \"elenco.txt\"",
+            "Genera un errore, in quanto l'ordine degli argomenti è errato",
+            "Genera un errore, in quanto la sintassi è errata"
+        ],
+        "soluzioni": [
+            "Cambiare in \"dax\" il proprietario del file \"elenco.txt\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per modificare i permessi di accesso di un file occorre usare il comando:",
+        "opzioni": [
+            "chown",
+            "ls -l-change",
+            "chmod"
+        ],
+        "soluzioni": [
+            "chmod"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "In un sistema Linux, i comandi possono essere correttamente definiti come:",
+        "opzioni": [
+            "Programmi contenuti all'interno di alcune directory speciali",
+            "I soli programmi contenuti all'interno della directory \"/bin\"",
+            "Istruzioni sequenziali definite dagli utenti del sistema"
+        ],
+        "soluzioni": [
+            "Programmi contenuti all'interno di alcune directory speciali"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Quali caratteri si utilizzano per redirezionare lo standard error?",
+        "opzioni": [
+            "1>",
+            "&2",
+            "2>"
+        ],
+        "soluzioni": [
+            "2>"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Completare in modo corretto il seguente frammento di codice bash:",
+        "opzioni": [
+            "!-z $3",
+            "exit",
+            "-e $[3]",
+            "ERR_ARGUMENTS",
+            "[-w $2]",
+            "else",
+            "-z $3"
+        ],
+        "soluzioni": [
+            "-z $3",
+            "exit"
+        ],
+        "tipologia": "multiple",
+        "img": "lab_027.png"
+    },
+    
+    {
+        "domanda": "Il modo di specificare i permessi di accesso di un file, tramite il comando chmod, che utilizza i simboli r, w e x viene definito:",
+        "opzioni": [
+            "Simbolico",
+            "Ottale",
+            "Ottale/binario"
+        ],
+        "soluzioni": [
+            "Simbolico"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Completare in modo corretto il seguente frammento di codice bash:",
+        "opzioni": [
+            "-z $3",
+            "exit",
+            "-e $[3]",
+            "ERR_ARGUMENTS",
+            "[-w $2",
+            "else"
+        ],
+        "soluzioni": [
+            "[-w $2",
+            "exit",
+            "ERR_ARGUMENTS"
+        ],
+        "tipologia": "singola",
+        "img": "Frammento di codice bash con spazi da completare per la verifica dei parametri"
+    },
+    {
+        "domanda": "L'operatore di \"pipe\", che consente di collegare l'output standard di un comando all'input standard di un secondo comando, viene definito dal carattere:",
+        "opzioni": [
+            "Opzione 2",
+            "&",
+            "|"
+        ],
+        "soluzioni": [
+            "|"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "I principali file in un sistema operativo Linux sono:",
+        "opzioni": [
+            "File regolari, directory, file a caratteri e file a blocchi",
+            "File regolari, file di testo, file eseguibili e file a blocchi",
+            "File regolari, directory, file a caratteri e file sequenziali"
+        ],
+        "soluzioni": [
+            "File regolari, directory, file a caratteri e file a blocchi"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per visualizzare il contenuto di una variabile occorre usare il comando:",
+        "opzioni": [
+            "echo",
+            "env",
+            "set"
+        ],
+        "soluzioni": [
+            "echo"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Selezionare i metodi corretti per effettuare operazioni matematiche nel linguaggio bash:",
+        "opzioni": [
+            "[[ $a=4+1]]",
+            "$((a=4+1))",
+            "let $a=2+3"
+        ],
+        "soluzioni": [
+            "$((a=4+1))",
+            "let $a=2+3"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Nell'output del comando \"ls -l\", i permessi di accesso al file sono indicati:",
+        "opzioni": [
+            "Dai 9 caratteri successivi al primo, nelle informazioni di ciascun file",
+            "Dai 3 gruppi di 3 caratteri ciascuno che seguono il nome e il gruppo utente, nelle informazioni di ciascun file",
+            "Dai primi 9 caratteri, nelle informazioni di ciascun file"
+        ],
+        "soluzioni": [
+            "Dai 9 caratteri successivi al primo, nelle informazioni di ciascun file"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "L'affermazione \"per accedere ad un file non è sufficiente abilitarne i permessi ma occorre che la directory che lo contiene, così come la directory genitrice e tutte le altre directory padre siano abilitate in esecuzione\" è sempre corretta?",
+        "opzioni": [
+            "No, mai",
+            "Sì, sempre",
+            "Sì, ma con qualche eccezione"
+        ],
+        "soluzioni": [
+            "Sì, sempre"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "I permessi di un file si riferiscono:",
+        "opzioni": [
+            "A 2 categorie di utenti: proprietario e utenti appartenenti gruppo del proprietario",
+            "A 4 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario, utenti del sistema e tutti gli altri utenti",
+            "A 3 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario e tutti gli altri utenti"
+        ],
+        "soluzioni": [
+            "A 3 categorie di utenti: proprietario, utenti appartenenti gruppo del proprietario e tutti gli altri utenti"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Quali sono gli \"operatori di redirezione\" utilizzabili nell'ambito dei canali standard di input/output/error",
+        "opzioni": [
+            "\"<\", \">\", \">>\" e \"=\"",
+            "\"<\", \">\" e \">>\"",
+            "\"<\" e \">"
+        ],
+        "soluzioni": [
+            "\"<\", \">\" e \">>\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Riguardo alla shell Linux, selezionare le affermazioni non corrette:",
+        "opzioni": [
+            "Esistono vari tipi di shell ma da diversi anni è possibile utilizzare solo Bash",
+            "Esistono vari tipi di shell",
+            "E' possibile configurare il sistema per utilizzare la shell che si preferisce"
+        ],
+        "soluzioni": [
+            "Esistono vari tipi di shell ma da diversi anni è possibile utilizzare solo Bash"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"wc -w miofile\":",
+        "opzioni": [
+            "Visualizza il numero di righe in \"miofile\"",
+            "Visualizza diverse informazioni riguardo al file \"miofile\"",
+            "Visualizza il numero delle parole in \"miofile\""
+        ],
+        "soluzioni": [
+            "Visualizza il numero delle parole in \"miofile\""
+        ],
+        "tipologia": "singola"
+    },
+   
+    {
+        "domanda": "Il permesso di esecuzione su una directory:",
+        "opzioni": [
+            "Consente di aggiungere nuovi file al suo interno",
+            "Consente di elencare tutti i file in essa contenuti",
+            "Consente di accedere all'interno della directory"
+        ],
+        "soluzioni": [
+            "Consente di accedere all'interno della directory"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"mv file_sorgente file_destinazione\":",
+        "opzioni": [
+            "Sposta il \"file_sorgente\" su \"file_destinazione\"",
+            "Copia \"file_sorgente\" in \"file_destinazione\"",
+            "Rinomina \"file_sorgente\" in \"file_destinazione\""
+        ],
+        "soluzioni": [
+            "Rinomina \"file_sorgente\" in \"file_destinazione\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"rmdir nome_directory\":",
+        "opzioni": [
+            "Rinomina la cartella \"nome_directory\"",
+            "Rimuove la cartella \"nome_directory\" se questa è vuota",
+            "Rimuove la cartella \"nome_directory\" e tutti i file in essa contenuti"
+        ],
+        "soluzioni": [
+            "Rimuove la cartella \"nome_directory\" se questa è vuota"
+        ],
+        "tipologia": "singola"
+    },
+    
+    {
+        "domanda": "L'esecuzione del comando \"cd\" senza alcun parametro ha come risultato:",
+        "opzioni": [
+            "Il comando \"cd\" senza parametri genera un errore, in quanto occorre specificare almeno un argomento",
+            "Il comando \"cd\" senza parametri non genera alcun risultato",
+            "Il comando \"cd\" senza parametri posiziona l'utente all'interno della sua home directory"
+        ],
+        "soluzioni": [
+            "Il comando \"cd\" senza parametri posiziona l'utente all'interno della sua home directory"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Supponiamo ora di voler salvare l'elenco dei nomi dei file presenti nella directory corrente all'interno di un file denominato elenco.txt, quale diquesti comandi occorre utilizzare:",
+        "opzioni": [
+            "Soltanto \"Is >> elenco.txt\"",
+            "\"Is > elenco.txt\" oppure \"Is >> elenco.txt\"",
+            "Soltanto \"Is > elenco.txt\""
+        ],
+        "soluzioni": [
+            "\"Is > elenco.txt\" oppure \"Is >> elenco.txt\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Quando un job viene sospeso, la shell genera una riga del tipo:",
+        "opzioni": [
+            "[1]+ Stopped nomejob",
+            "[1] 134",
+            "Non viene mostrata alcuna informazione in shell"
+        ],
+        "soluzioni": [
+            "[1]+ Stopped nomejob"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Indicare la prima riga che identifica uno script in linguaggio bash",
+        "opzioni": [
+            "#!/bash",
+            "#/bin/bash",
+            "#!/bin/bash"
+        ],
+        "soluzioni": [
+            "#!/bin/bash"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il carattere speciale \"..\" identifica:",
+        "opzioni": [
+            "La directory che si trova al livello immediatamente superiore",
+            "La directory corrente",
+            "Tutte le directory che si trovano al livello immediatamente superiore"
+        ],
+        "soluzioni": [
+            "La directory che si trova al livello immediatamente superiore"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "La funzione che consente di assegnare variabili da standard input in uno script bash è:",
+        "opzioni": [
+            "La funzione \"read\"",
+            "La funzione \"readchar\"",
+            "La funzione \"get\""
+        ],
+        "soluzioni": [
+            "La funzione \"read\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"cut\" permette di:",
+        "opzioni": [
+            "Estrarre una parte di un file sulla base di un criterio che potrà essere utilizzata per un altro scopo",
+            "Cancellare il contenuto di un file sulla base di un criterio",
+            "Dividere il file in più parti sulla base di un criterio"
+        ],
+        "soluzioni": [
+            "Estrarre una parte di un file sulla base di un criterio che potrà essere utilizzata per un altro scopo"
+        ],
+        "tipologia": "singola"
+    },
+    
+    {
+        "domanda": "Il comando \"whatis\":",
+        "opzioni": [
+            "Visualizza il tipo di file",
+            "Visualizza le pagine di manuale del comando specificato come parametro",
+            "Visualizza la breve descrizione di un comando"
+        ],
+        "soluzioni": [
+            "Visualizza la breve descrizione di un comando"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Selezionare le affermazioni corrette:",
+        "opzioni": [
+            "\"file\" visualizza il contenuto di un file",
+            "\"head\" visualizza la prima parte di un file di testo",
+            "\"strings\" visualizza stringhe di testo all'interno di un file binario"
+        ],
+        "soluzioni": [
+            "\"head\" visualizza la prima parte di un file di testo",
+            "\"strings\" visualizza stringhe di testo all'interno di un file binario"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il permesso di lettura su una directory:",
+        "opzioni": [
+            "Consente di accedere all'interno della directory",
+            "Consente di aggiungere nuovi file al suo interno",
+            "Consente di elencare tutti i file in essa contenuti"
+        ],
+        "soluzioni": [
+            "Consente di elencare tutti i file in essa contenuti"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Nell'ambito Bash, cosa si intende per \"path\":",
+        "opzioni": [
+            "Un elenco di directory separato da due punti che configura l'insieme dei percorsi di ricerca dei comandi",
+            "Un elenco di comandi all'interno di speciali cartelle di sistema",
+            "Un elenco di directory separato da una virgola che indica il percorso dove cercare i comandi"
+        ],
+        "soluzioni": [
+            "Un elenco di directory separato da due punti che configura l'insieme dei percorsi di ricerca dei comandi"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il permesso di scrittura su una directory:",
+        "opzioni": [
+            "Consente di accedere all'interno della directory",
+            "Consente di aggiungere nuovi file al suo interno",
+            "Consente di elencare tutti i file in essa contenuti"
+        ],
+        "soluzioni": [
+            "Consente di aggiungere nuovi file al suo interno"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"sort -k 2 -n documento.txt\":",
+        "opzioni": [
+            "Visualizza le prime due righe del file ordinate numericamente",
+            "Visualizza il contenuto del file indicato, ordinandolo alfabeticamente sulla base della seconda colonna",
+            "Visualizza il contenuto del file indicato, ordinandolo numericamente sulla base della seconda colonna"
+        ],
+        "soluzioni": [
+            "Visualizza il contenuto del file indicato, ordinandolo numericamente sulla base della seconda colonna"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Dopo l'avvio di un programma come job in background, la shell restituisce una riga contenente:",
+        "opzioni": [
+            "Il numero del job e il numero del primo processo generato da questo job (PID)",
+            "Solo il PID del primo processo generato da questo job",
+            "Non restituisce nulla"
+        ],
+        "soluzioni": [
+            "Il numero del job e il numero del primo processo generato da questo job (PID)"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per visualizzare il contenuto della cartella corrente, devo utlizzare il comando:",
+        "opzioni": [
+            "ls",
+            "cat"
+        ],
+        "soluzioni": [
+            "ls"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "E' possibile specificare i permessi di accesso anche per le directory, così come è possibile per i file?",
+        "opzioni": [
+            "Dipende dal tipo di directory",
+            "Si",
+            "No"
+        ],
+        "soluzioni": [
+            "Si"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Un programma viene avviato esplicitamente come job in background quando alla fine della riga di comando aggiungiamo il simbolo:",
+        "opzioni": [
+            "&",
+            "2>",
+            ">"
+        ],
+        "soluzioni": [
+            "&"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per visualizzare le variabili di ambiente si può usare il comando:",
+        "opzioni": [
+            "echo",
+            "env",
+            "set"
+        ],
+        "soluzioni": [
+            "env"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Nell'ambito della shell Linux, il prompt rappresenta:",
+        "opzioni": [
+            "Un carattere o un insieme di caratteri che possono essere personalizzati dall'utente",
+            "Un carattere o un insieme di caratteri definiti in fase di installazione del sistema operativo",
+            "Una serie di informazioni relative all'utente corrente ed al sistema utilizzato"
+        ],
+        "soluzioni": [
+            "Un carattere o un insieme di caratteri che possono essere personalizzati dall'utente"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"cp file_sorgente directory/\":",
+        "opzioni": [
+            "Copia \"file_sorgente\" all'interno della cartella \"directory/\"",
+            "Rinomina \"file_sorgente\" come \"directory/\"",
+            "Sposta il \"file_sorgente\" all'interno della cartella \"directory/\""
+        ],
+        "soluzioni": [
+            "Copia \"file_sorgente\" all'interno della cartella \"directory/\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Job di shell e processo sono la stessa cosa?",
+        "opzioni": [
+            "Solo nel contesto dell'utilizzo di una pipe",
+            "No",
+            "Si"
+        ],
+        "soluzioni": [
+            "No"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per ricercare le occorrenze di una o più parole in una serie di file possiamo utilizzare il comando:",
+        "opzioni": [
+            "grep",
+            "info",
+            "search"
+        ],
+        "soluzioni": [
+            "grep"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando condizionale, di seguito riportato, esegue il comando condition_command e utilizza il suo exit status per decidere se eseguire leistruzioni true_commands (exit status 0) oppure le istruzioni false_commands (exit status non zero) ?",
+        "opzioni": [
+            "No, le true_commands hanno un exit status 1",
+            "Si",
+            "No, due rami sono invertiti"
+        ],
+        "soluzioni": [
+            "Si"
+        ],
+        "tipologia": "singola",
+        "img": "lab_028.png"
+    },
+    {
+        "domanda": "Il comando \"mkdir file.txt\":",
+        "opzioni": [
+            "Crea una nuova directory dal nome \"file.txt\"",
+            "Crea un nuovo file dal nome \"file.txt\"",
+            "Genera un errore, in quanto si sta cercando di creare un file e non una cartella"
+        ],
+        "soluzioni": [
+            "Crea una nuova directory dal nome \"file.txt\""
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"cmp\" permette di:",
+        "opzioni": [
+            "Compara due file di qualunque tipo e visualizza il byte e il numero di riga della prima differenza individuata",
+            "Compara due file binari e visualizza il solo numero di riga della prima differenza individuata",
+            "Confronta due file di qualunque tipo e visualizza la differenza in byte"
+        ],
+        "soluzioni": [
+            "Compara due file di qualunque tipo e visualizza il byte e il numero di riga della prima differenza individuata"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"ln\" con l'opzione \"-s\" viene utilizzato per:",
+        "opzioni": [
+            "Creare un link simbolico",
+            "Non esiste l'opzione \"-s\" nel comando \"ln\"",
+            "Creare un link fisico"
+        ],
+        "soluzioni": [
+            "Creare un link simbolico"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Dire se il seguente frammento di codice è corretto:",
+        "opzioni": [
+            "Dipende dall'interprete",
+            "Si",
+            "No"
+        ],
+        "soluzioni": [
+            "No"
+        ],
+        "tipologia": "singola",
+        "img": "lab_029.png"
+    },
+    {
+        "domanda": "In ambito bash che cosa si intende per \"magic number\"?",
+        "opzioni": [
+            "Il percorso dell'interprete bash, cioè la sua path",
+            "Il carattere cancelletto e slash seguito dal percorso dell'interprete bash",
+            "Il carattere cancelletto e punto esclamativo seguito dal percorso dell'interprete bash"
+        ],
+        "soluzioni": [
+            "Il carattere cancelletto e punto esclamativo seguito dal percorso dell'interprete bash"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Un prompt come \"droms@dedalus:~$ \" ci indica che:",
+        "opzioni": [
+            "L'utente \"dedalus\" è un amministratore (root) del sistema",
+            "L'utente \"droms\" è un utente privilegiato (root)",
+            "L'utente non è un utente privilegiato (root)"
+        ],
+        "soluzioni": [
+            "L'utente non è un utente privilegiato (root)"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il seguente comando tr -c A-Za-z0-9 ' '",
+        "opzioni": [
+            "Sostituisce le stringhe composte da carattere alfabetici (-c = singolo carattere) con caratteri numerici",
+            "Sostituisce i caratteri alfanumerici (-c = complement) con spazi",
+            "Sostituisce i caratteri non alfanumerici (-c = complement) con spazi"
+        ],
+        "soluzioni": [
+            "Sostituisce i caratteri non alfanumerici (-c = complement) con spazi"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"ln nome_file altro_nome_file\":",
+        "opzioni": [
+            "Permette di creare ulteriori link al file, cioè creare un ulteriori nomi per referenziarlo:",
+            "Permette di creare ulteriori nomi per il file, cioè creare ulteriori link per referenziarlo:",
+            "Genera un errore"
+        ],
+        "soluzioni": [
+            "Permette di creare ulteriori link al file, cioè creare un ulteriori nomi per referenziarlo:"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "I comandi digitati dall'utente:",
+        "opzioni": [
+            "I comandi digitati dall'utente vengono letti dalla shell, interpretati e inviati al kernel per essere eseguiti",
+            "I comandi digitati dall'utente vengono eseguiti nella shell, e quindi interpretati dal kernel Linux",
+            "I comandi digitati dall'utente vengono letti dal sistema operativo, compilati ed inviati al kernel per essere eseguiti"
+        ],
+        "soluzioni": [
+            "I comandi digitati dall'utente vengono letti dalla shell, interpretati e inviati al kernel per essere eseguiti"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"uniq\":",
+        "opzioni": [
+            "Confronta il contenuto di due file",
+            "Rimuove le righe duplicate consecutive da un file che potrà essere utilizzata per un altro scopo",
+            "Cerca file duplicati all'interno del percorso specificato"
+        ],
+        "soluzioni": [
+            "Rimuove le righe duplicate consecutive da un file che potrà essere utilizzata per un altro scopo"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Come possiamo collegare l'output del comando, \"cat testo.txt\" al comando \"more\"?",
+        "opzioni": [
+            "cat testo.txt | more",
+            "cat testo.txt > more",
+            "Non è possibile effettuare questa operazione"
+        ],
+        "soluzioni": [
+            "cat testo.txt | more"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Dire se il seguente frammento di codice è corretto:",
+        "opzioni": [
+            "Si",
+            "Funziona togliendo le doppie virgolette nell'istruzione \"echo\"",
+            "No"
+        ],
+        "soluzioni": [
+            "No"
+        ],
+        "tipologia": "singola",
+        "img": "lab_030.png"
+    },
+    {
+        "domanda": "Il comando \"ls -l\":",
+        "opzioni": [
+            "Lista i file regolari ma non le cartelle presenti nella directory corrente",
+            "Elenca con numerosi dettagli i file della directory corrente",
+            "Visualizze solo nomi e proprietari dei file e delle cartelle presenti della directory corrente"
+        ],
+        "soluzioni": [
+            "Elenca con numerosi dettagli i file della directory corrente"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per passare dei valori alle funzioni definite in linguaggio bash:",
+        "opzioni": [
+            "Si usa lo stesso meccanismo del passaggio dei parametri utilizzato dai comandi",
+            "Non si possono passare valori alle funzioni bash",
+            "Si usa il meccanismo delle variabili globali"
+        ],
+        "soluzioni": [
+            "Si usa lo stesso meccanismo del passaggio dei parametri utilizzato dai comandi"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Utilizzando il metodo assoluto per la modifica dei permessi, la cifra ottale 5 corrisponde ad una maschera binaria ed ad un significato del tipo:",
+        "opzioni": [
+            "101, che codifica lettura abilitata, scrittura disabilitata ed esecuzione abilitata",
+            "101, che codifica scrittura abilitata, lettura disabilitata ed esecuzione abilitata",
+            "111, che codifica lettura abilitata, scrittura abilitata ed esecuzione abilitata"
+        ],
+        "soluzioni": [
+            "101, che codifica lettura abilitata, scrittura disabilitata ed esecuzione abilitata"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Le informazioni inserite mediante la tastiera vengono veicolate tramite un canale definito:",
+        "opzioni": [
+            "Standard keyboard",
+            "Standard input",
+            "Input channel"
+        ],
+        "soluzioni": [
+            "Standard input"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "La variabile speciale $*",
+        "opzioni": [
+            "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola",
+            "Restituisce il numero dei parametri",
+            "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
+        ],
+        "soluzioni": [
+            "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Utilizzando il metodo assoluto per la modifica dei permessi, la maschera binaria 000 ha l'effetto di:",
+        "opzioni": [
+            "Lasciare inalterati i permessi",
+            "Disabilitare tutti i permessi relativi al proprietario del file",
+            "Disabilitare tutti i permessi a tutti gli utenti, proprietario compreso"
+        ],
+        "soluzioni": [
+            "Disabilitare tutti i permessi a tutti gli utenti, proprietario compreso"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"apropos\":",
+        "opzioni": [
+            "Visualizza i file presenti sulla cartella corrente, ordinandoli per funzione",
+            "Visualizza parte dei file presenti sulla cartella corrente, sulla base di una stringa/sottostringa",
+            "Effettua ricerche di stringhe/sottostringhe nelle pagine di manuale"
+        ],
+        "soluzioni": [
+            "Effettua ricerche di stringhe/sottostringhe nelle pagine di manuale"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Dire se le seguenti assegnazioni sono entrambe valide nel linguaggio bash: x=variabile y='pippo'",
+        "opzioni": [
+            "Sì, sono entrambi valide",
+            "Sono entrambe errate",
+            "No, la seconda non è valida"
+        ],
+        "soluzioni": [
+            "Sì, sono entrambi valide"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "In ambito bash, è possibile inizializzare un array in questo modo: array=(1 2 3 4 5 6)",
+        "opzioni": [
+            "No",
+            "Solo in questo caso (interi) ma non con altri tipi di dati (esempio, stringhe)",
+            "Si"
+        ],
+        "soluzioni": [
+            "Si"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Per visualizzare le variabili definite si può usare il comando:",
+        "opzioni": [
+            "set",
+            "echo",
+            "env"
+        ],
+        "soluzioni": [
+            "set"
+        ],
+        "tipologia": "singola"
+    },
+    {
+        "domanda": "Il comando \"grep '^globe$' list.txt\"",
+        "opzioni": [
+            "Ricerca nel file specificato tutte le righe che non contengono la parola \"globe\"",
+            "Ricerca nel file specificato tutte le righe che contengono solo la parola \"globe\"",
+            "Ricerca nel file specificato tutte le righe che contengono la parola \"globe\""
+        ],
+        "soluzioni": [
+            "Ricerca nel file specificato tutte le righe che contengono solo la parola \"globe\""
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il percorso \"/home/utente/documenti/lettere/mario\" è formulato in modo:",
+        "opzioni": [
+            "Assoluto",
+            "Relativo",
+            "Non è un percorso correttamente formulato"
+        ],
+        "soluzioni": [
+            "Assoluto"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Le variabili $1, $2,...sono:",
+        "opzioni": [
+            "Variabili argomentali associate all'esecuzione di uno script parametrizzato",
+            "Variabili speciali associate ai vari argomenti passati durante l'esecuzione di uno script",
+            "Variabili globali alle quali è possibile attribuire un valore durante l'esecuzione di uno script"
+        ],
+        "soluzioni": [
+            "Variabili speciali associate ai vari argomenti passati durante l'esecuzione di uno script"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"grep '^2[234]' list.txt\"",
+        "opzioni": [
+            "Ricerca nel file specificato tutte le righe che iniziano con \"2\", \"3\" ο \"4\"",
+            "Ricerca nel file specificato tutte le righe che iniziano con 22,23,24",
+            "Ricerca nel file specificato tutte le righe che terminano con \"22\", \"23\" o \"24\""
+        ],
+        "soluzioni": [
+            "Ricerca nel file specificato tutte le righe che iniziano con 22,23,24"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "L'operatore di \"pipe\":",
+        "opzioni": [
+            "Consente di collegare l'output standard di un comando all'output standard di un secondo comando",
+            "Consente di collegare l'input standard di un comando all'output standard di un secondo comando",
+            "Consente di collegare l'output standard di un comando all'input standard di un secondo comando"
+        ],
+        "soluzioni": [
+            "Consente di collegare l'output standard di un comando all'input standard di un secondo comando"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Per ottenere il nome del terminale corrente (shell), possiamo utilizzare il comando:",
+        "opzioni": [
+            "tty",
+            "terminal-name",
+            "get"
+        ],
+        "soluzioni": [
+            "tty"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il carattere speciale \".\" identifica:",
+        "opzioni": [
+            "La directory corrente",
+            "Tutte le directory che si trovano al livello immediatamente superiore",
+            "La directory che si trova al livello immediatamente superiore"
+        ],
+        "soluzioni": [
+            "La directory corrente"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "In ambito bash, per accedere al valore con indice n di un array denominato \"mydata\" devo scrivere:",
+        "opzioni": [
+            "${mydata[n]}",
+            "$mydata[n]",
+            "$[mydata(n)]"
+        ],
+        "soluzioni": [
+            "${mydata[n]}"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Nell'ambito della shell (terminale) Linux, il tasto di tabulazione richiama la funzione di:",
+        "opzioni": [
+            "Autocompletamento",
+            "Visualizzazione dei possibili comandi alternativi a quello digitato",
+            "Scorrimento della cronologia (history) dei comandi utilizzati"
+        ],
+        "soluzioni": [
+            "Autocompletamento"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Per conoscere l'elenco dei job esistenti ed il loro stato:",
+        "opzioni": [
+            "Il comando \"jobs\"",
+            "Il comando \"listjobs\"",
+            "Il comando \"stats\""
+        ],
+        "soluzioni": [
+            "Il comando \"jobs\""
+        ],
+        "tipologia": "singola"
+    },
+   
+    {
+        "domanda": "Se un file leggibile, scrivibile ed eseguibile viene posto all'interno di una directory che non è accessibile (perché ha il permesso di esecuzione disabilitato) il file stesso diventa:",
+        "opzioni": [
+            "Accessibile al solo proprietario",
+            "Accessibile",
+            "Inaccessibile"
+        ],
+        "soluzioni": [
+            "Inaccessibile"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"chmod g+w-x script.sh\":",
+        "opzioni": [
+            "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per la scrittura e disabilita i permessi di esecuzione del file",
+            "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per l'esecuzione",
+            "Genera un errore, in quanto la sintassi del comando chmod è errata"
+        ],
+        "soluzioni": [
+            "Abilita il gruppo di utenti del quale fa parte il proprietario del file \"script.sh\" per la scrittura e disabilita i permessi di esecuzione del file"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"ls\":",
+        "opzioni": [
+            "Sposta il contenuto di una directory",
+            "Visualizza il contenuto di una directory",
+            "Lista il contenuto dei file presenti all'interno di una directory"
+        ],
+        "soluzioni": [
+            "Visualizza il contenuto di una directory"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "La variabile speciale $#",
+        "opzioni": [
+            "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola",
+            "Restituisce il numero dei parametri",
+            "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script"
+        ],
+        "soluzioni": [
+            "Restituisce il numero dei parametri"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Nell'output del comando \"ls -l\", il primo carattere:",
+        "opzioni": [
+            "Indica il tipo di file",
+            "Fornisce informazioni relative al proprietario del file o della cartella",
+            "Indica il permesso di lettura del proprietario del file"
+        ],
+        "soluzioni": [
+            "Indica il tipo di file"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "La variabile speciale $@",
+        "opzioni": [
+            "Rappresenta in un'unica parola tutti i parametri posizionali passati allo script",
+            "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola",
+            "Restituisce il numero dei parametri"
+        ],
+        "soluzioni": [
+            "Rappresenta tutti i parametri posizionali passati allo script, ciascuno sotto forma di singola parola"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Selezionare una corretta definizione di shell Linux:",
+        "opzioni": [
+            "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del kernel di un sistema di elaborazione Linux",
+            "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del terminale fisico di un sistema di elaborazione",
+            "Una shell consente di interfacciarsi con il kernel Linux, senza l'impiego di librerie specifiche"
+        ],
+        "soluzioni": [
+            "Una shell consente di immettere dei comandi in una finestra, emulando il funzionamento del terminale fisico di un sistema di elaborazione"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"man\":",
+        "opzioni": [
+            "Visualizza le pagine di manuale del comando specificato come parametro",
+            "Visualizza la breve descrizione di un comando",
+            "Visualizza la tipologia del file specificato come argomento"
+        ],
+        "soluzioni": [
+            "Visualizza le pagine di manuale del comando specificato come parametro"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "In ambito bash, per dichiarare un array \"mydata\" di dimensione N devo scrivere:",
+        "opzioni": [
+            "{mydata[N]}",
+            "mydata[N]",
+            "{mydata}[N]"
+        ],
+        "soluzioni": [
+            "mydata[N]"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Nel seguente output, ottenuto tramite il comando \"ls -l\", cosa identifica la stringa \"due\" - rwx rwx rwx 1 uno due 210 Feb 18 12:10 tre",
+        "opzioni": [
+            "Il proprietario del file",
+            "Il gruppo di apparteneneza del proprietario del file",
+            "Il nome del file"
+        ],
+        "soluzioni": [
+            "Il gruppo di apparteneneza del proprietario del file"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando 'OBJECTS = file1.o file2.o' eseguito in shell:",
+        "opzioni": [
+            "Sovrascrive il valore precedentemente definito nel Makefile",
+            "Genera un errore",
+            "Non sovrascrive il valore precedentemente definito nel Makefile, in quanto prioritario"
+        ],
+        "soluzioni": [
+            "Genera un errore"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "L'affermazione \"ogni comando restituisce un exit status. Il successo restituisce 1, il fallimento un codice d'errore\" è corretta?",
+        "opzioni": [
+            "No, il successo restituisce 0",
+            "Sì, è corretta",
+            "No, il successo non restituisce nessun valore"
+        ],
+        "soluzioni": [
+            "No, il successo restituisce 0"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Per visualizzare il numero di righe vuote nel file \"miofile.txt\" tramite il comando grep, dobbiamo eseguire:",
+        "opzioni": [
+            "grep -c '$$' miofile.txt",
+            "grep -c '^$' miofile.txt",
+            "grep '^$' miofile.txt"
+        ],
+        "soluzioni": [
+            "grep -c '^$' miofile.txt"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Quando con \"chmod\" non specifichiamo una categoria di utenti (u, g, oppure o):",
+        "opzioni": [
+            "Il comando modifica i permessi relativi al solo utente proprietario",
+            "Il comando genera un errore",
+            "Il comando modifica i permessi per tutte le categorie"
+        ],
+        "soluzioni": [
+            "Il comando modifica i permessi per tutte le categorie"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "La lettura del contenuto di una variabile si ottiene facendone precedere il nome dal simbolo:",
+        "opzioni": [
+            "&",
+            "#",
+            "$"
+        ],
+        "soluzioni": [
+            "$"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Considerando che un comando immesso mediante lo standard input può generare un messaggio di errore:",
+        "opzioni": [
+            "I messaggi di errore possono esclusivamente essere veicolati tramite lo standard output",
+            "Il verificarsi di un errore inibisce il meccanismo dei canali di input/output",
+            "Esiste un ulteriore canale denominato standard error"
+        ],
+        "soluzioni": [
+            "Esiste un ulteriore canale denominato standard error"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"pwd\":",
+        "opzioni": [
+            "Visualizza il contenuto di un file di testo",
+            "Acronimo di Paint White Directory, serve a cancellare il contenuto della shell corrente",
+            "Visualizza il percorso corrente"
+        ],
+        "soluzioni": [
+            "Visualizza il percorso corrente"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Selezionare la corretta definizione formale di una directory (cartella):",
+        "opzioni": [
+            "Una directory è un tipo particolare di file associato a degli inode",
+            "Una directory è una cartella che contiene una lista di file",
+            "Una directory è un file che contiene una lista di nomi associati a degli inode"
+        ],
+        "soluzioni": [
+            "Una directory è una cartella che contiene una lista di file"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Se utilizziamo il comando fg per portare in foreground un job che prima era in background,, senza specificare il job su cui agire:",
+        "opzioni": [
+            "Dobbiamo necessariamente specificare il job su cui agire",
+            "Tutti i jobs in background vengono portati in foreground",
+            "Implicitamente ci riferiamo a quello attuale."
+        ],
+        "soluzioni": [
+            "Implicitamente ci riferiamo a quello attuale."
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"ln file1 data1\" crea un link di tipo:",
+        "opzioni": [
+            "Fisico",
+            "Esclusivo",
+            "Simbolico"
+        ],
+        "soluzioni": [
+            "Fisico"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Dire quale compito svolge il seguente comando: test -x /bin/ls",
+        "opzioni": [
+            "Verificare se \"ls\" è un file eseguibile",
+            "Non esiste l'opzione \"-x\"",
+            "Verificare se \"ls\" è un file con dimensione zero"
+        ],
+        "soluzioni": [
+            "Verificare se \"ls\" è un file eseguibile"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il percorso \"../../../cucina/ricette/secondi\" è stato formulato in modo:",
+        "opzioni": [
+            "Assoluto",
+            "Relativo",
+            "Non è un percorso correttamente formulato"
+        ],
+        "soluzioni": [
+            "Relativo"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Selezionare le affermazioni corrette:",
+        "opzioni": [
+            "\"cat\" visualizza il contenuto di un file di testo",
+            "\"less\" visualizza il file di testo, pagina per pagina",
+            "\"more\" funziona come \"less\", ma ha meno funzioni"
+        ],
+        "soluzioni": [
+            "\"cat\" visualizza il contenuto di un file di testo",
+            "\"less\" visualizza il file di testo, pagina per pagina",
+            "\"more\" funziona come \"less\", ma ha meno funzioni"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"chgrp\" viene utilizzato per:",
+        "opzioni": [
+            "Cambiare il gruppo ad un file ed accetta due argomenti",
+            "Cambiare il gruppo ad un file ed accetta un solo argomento",
+            "Non esiste questo comando Bash"
+        ],
+        "soluzioni": [
+            "Cambiare il gruppo ad un file ed accetta due argomenti"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Secondo il metodo assoluto, possiamo specificare tutti i permessi di tutte le categorie di utenti contemporaneamente usando le:",
+        "opzioni": [
+            "Maschere binarie",
+            "Maschere simboliche",
+            "Maschere ottali"
+        ],
+        "soluzioni": [
+            "Maschere binarie"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Il comando \"cmp\", in caso di file differenti:",
+        "opzioni": [
+            "Visualizza sullo standard output il numero di differenze esistenti tra i file considerati",
+            "Visualizza sullo standard output la differenza riscontrata a partire da dove essa è stata individuata",
+            "Visualizza sullo standard output un elenco delle differenze riscontrate sui file"
+        ],
+        "soluzioni": [
+            "Visualizza sullo standard output la differenza riscontrata a partire da dove essa è stata individuata"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Selezionare i metodi corretti per effettuare operazioni matematiche nel linguaggio bash:",
+        "opzioni": [
+            "a = expr 5 + 3",
+            "let a=2+3",
+            "((a=4+1))"
+        ],
+        "soluzioni": [
+            "let a=2+3",
+            "((a=4+1))"
+        ],
+        "tipologia": "multiple"
+    },
+    {
+        "domanda": "Selezionare le affermazioni corrette riguardo alla definizione di \"comando\":",
+        "opzioni": [
+            "I soli programmi contenuti all'interno della directory \"/bin\"",
+            "Un comando è composto dal nome del comando stesso, da una o più opzioni facoltative e da uno o più argomenti facoltativi",
+            "Un comando è composto dal nome del comando stesso e da almeno una opzione"
+        ],
+        "soluzioni": [
+            "Un comando è composto dal nome del comando stesso, da una o più opzioni facoltative e da uno o più argomenti facoltativi"
+        ],
+        "tipologia": "multiple"
+    }
 ]
