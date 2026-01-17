@@ -247,8 +247,8 @@
       "Prevede che il contenuto dei registri base e limite siano dei parametri del kernel",
       "E' valido per qualunque modalità di allocazione di memoria si utilizzi",
       "Rende impossibile al codice utente di accedere alle periferiche",
-      "Prevede che i registri base e limite siano modificati dal kernel prima di mandare in esecuzione codice utente...",
-      "In caso di verificarsi delle condizioni di accesso illegale scatena un interrupt..."
+      "Prevede che i registri base e limite siano modificati dal kernel prima di mandare in esecuzione codice utente. Opzionalmente il kernel può cambiare modalità di esecuzione prima di mandare in esecuzione il codice utente",
+      "In caso di verificarsi delle condizioni di accesso illegale scatena un interrupt che comunque completa l'esecuzione dell'accesso in memoria prima di lanciare la routine associata"
     ],
     "soluzioni": [
       "Rende impossibile al codice utente di accedere alle periferiche"
@@ -420,9 +420,9 @@
   {
     "domanda": "Relativamente alla possibile architettura di un bus di comunicazione a supporto del memory mapping vista nel materiale del corso e descritta dallo schema seguente sono vere le seguenti affermazioni:",
     "opzioni": [
-      "E' possibile che gli spazi di indirizzamento delle periferiche siano parzialmente sovrapposti...",
+      "E' possibile che gli spazi di indirizzamento delle periferiche siano parzialmente sovrapposti nel caso di memoria condivisa fra i processi",
       "Il decoder del bus è indispensabile per le operazioni di scrittura tipo sw",
-      "La scrittura da parte del processore del dato su una periferica sollecita i decoder interni...",
+      "La scrittura da parte del processore del dato su una periferica sollecita i decoder interni a ciascuna delle periferiche, al contrario delle letture che usano solo il decoder centralizzato del bus",
       "Il dato in scrittura sulle periferiche viene inviato in parallelo a tutte le porte dati in in scrittura delle periferiche presenti nel sistema",
       "Il Mux del bus ha lo scopo di selezionare quale periferica è abilitata a collegarsi alla porta dati di ingresso della cpu durante le operazioni di scrittura tipo lw"
     ],
@@ -483,14 +483,14 @@
     "domanda": "Relativamente al flusso di esecuzione in caso di interrupt, descritto dallo schema seguente, è vero che:",
     "opzioni": [
       "L'interrupt si verifica sempre a causa della sollecitazione dell'apposito ingresso HW della CPU",
-      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare...",
+      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare alla prima istruzione della routine di interrupt",
       "La routine di interrupt si fa carico in SW di salvare e ripristinare il contenuto dei registri sporcati durante la sua esecuzione",
       "L'interrupt si attiva coerentemente al flusso normale di esecuzione, in maniera sincrona",
       "L'interrupt si avvia sovrascrivendo il contenuto del PC con indirizzo della prima istruzione della routine di interrupt e salva in HW indirizzo della istruzione successiva da eseguire"
     ],
     "soluzioni": [
       "L'interrupt si verifica sempre a causa della sollecitazione dell'apposito ingresso HW della CPU",
-      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare...",
+      "Quando l'interrupt si verifica durante l'esecuzione di una istruzione assembly del ciclo principale l'istruzione stessa viene portata a termine prima di saltare alla prima istruzione della routine di interrupt",
       "La routine di interrupt si fa carico in SW di salvare e ripristinare il contenuto dei registri sporcati durante la sua esecuzione",
       "L'interrupt si avvia sovrascrivendo il contenuto del PC con indirizzo della prima istruzione della routine di interrupt e salva in HW indirizzo della istruzione successiva da eseguire"
     ],
@@ -679,13 +679,13 @@
   {
     "domanda": "Relativamente al seguente esempio di flusso di esecuzione, è vero che:",
     "opzioni": [
-      "Non protegge completamente sia la memoria che la cpu da comportamenti dannosi...",
-      "Il Timer, insieme alla doppia modalità di esecuzione, viene utilizzato per proteggere...",
+      "Non protegge completamente sia la memoria che la cpu da comportamenti dannosi da parte del codice , in utente, in nessun caso",
+      "Il Timer, insieme alla doppia modalità di esecuzione, viene utilizzato per proteggere in maniera inespugnabile la memoria da accessi indesiderati del codice utente",
       "I registri base e limite sono accessibili solo dal codice del kernel",
       "Non consente accesso alle periferiche, solo alla memoria protetta",
       "I registri base e limite sono accessibili al momento dell'avvio del sistema",
       "In caso di allocazione contigua della memoria, protegge completamente sia la memoria che la cpu da comportamenti dannosi da parte del codice utente",
-      "Se anche all'avvio venisse eseguito codice utente, è sufficiente che il sistema si avvii in modalità kernel...",
+      "Se anche all'avvio venisse eseguito codice utente, è sufficiente che il sistema si avvii in modalità kernel perché il sistema sia protetto",
       "Protegge la CPU perché al termine del quanto di tempo si verifica una trap"
     ],
     "soluzioni": [
@@ -776,7 +776,7 @@
     "tipologia": "multiple"
   },
   {
-    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della branch if equal dell'ISA MIPS... beq$2, $3, label1 è la seguente",
+    "domanda": "Secondo quanto visto nel materiale del corso, la funzionalità della branch if equal dell'ISA MIPS, caso della specifica espressa in linguaggio Assembly: beq $2, $3, label1 è la seguente",
     "opzioni": [
       "if(REGS[$2]==REGS[$3]) PC = imm",
       "if(REGS[$2]==REGS[$3]) PC = PC+imm",
@@ -822,7 +822,7 @@
     "opzioni": [
       "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità di un altro processo",
       "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità bassa acquisisce priorità superiore rispetto al processo a priorità alta",
-      "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità intermedia acquisisce priorità superiore...",
+      "Nell'esempio visto nel materiale del corso, in caso di inversione di priorità, il processo a priorità intermedia acquisisce priorità superiore rispetto al processo a priorità alta",
       "Quando un processo a priorità alta richiede una risorsa i processi a priorità intermedia vengono messi in attesa",
       "Quando un processo ottiene l'accesso a una risorsa viene messo in prima posizione nella coda di waiting",
       "Quando un processo ottiene l'accesso a una risorsa acquisisce temporaneamente la priorità più alta possibile",

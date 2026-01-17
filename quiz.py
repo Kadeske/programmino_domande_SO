@@ -368,8 +368,7 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
 
     # controllo immagine (e caricamento)
     if img is not None:
-        img_w = UI.crea_widget_immagine(finestra, f"{utils.config["path_img"]}{
-                                        img}", UI.dati_img["larghezza"], UI.dati_img["altezza"])
+        img_w = UI.crea_widget_immagine(finestra, f"{utils.config['path_img']}{img}", UI.dati_img["larghezza"], UI.dati_img["altezza"])
         img_w.pack(pady=10)
 
     # CARICA OPZIONI (in base al tipo di domande)
@@ -405,8 +404,7 @@ def genera_schermata(finestra, dati, funzione_salta, img=None):
     # info
     frame_info = tk.Frame(finestra)
     frame_info.pack(pady=10)
-    label_N_domande = tk.Label(frame_info, text=f"domanda: {len(lista_domande_fatte)}/{len(lista_domande_caricata) + len(
-        lista_domande_fatte)}", font=(UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"]))
+    label_N_domande = tk.Label(frame_info, text=f"domanda: {len(lista_domande_fatte)}/{len(lista_domande_caricata) + len(lista_domande_fatte)}", font=(UI.dati_testo["font_testo"], UI.dati_testo["dimensione_base"] - UI.dati_testo["diff_info"]))
     label_N_domande.pack(side="left", padx=20)
 
     label_punti = tk.Label(frame_info, text=f"punti: {punti:.2f}/{len(lista_domande_caricata) + len(lista_domande_fatte)}", font=(
