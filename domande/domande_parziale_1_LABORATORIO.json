@@ -79,24 +79,6 @@
         "tipologia": "singola"
     },
     {
-        "domanda": "Completare in modo corretto il seguente frammento di codice bash:",
-        "opzioni": [
-            "-z $3",
-            "exit",
-            "-e $[3]",
-            "ERR_ARGUMENTS",
-            "[-w $2",
-            "else"
-        ],
-        "soluzioni": [
-            "[-w $2",
-            "exit",
-            "ERR_ARGUMENTS"
-        ],
-        "tipologia": "singola",
-        "img": "Frammento di codice bash con spazi da completare per la verifica dei parametri"
-    },
-    {
         "domanda": "L'operatore di \"pipe\", che consente di collegare l'output standard di un comando all'input standard di un secondo comando, viene definito dal carattere:",
         "opzioni": [
             "Opzione 2",
