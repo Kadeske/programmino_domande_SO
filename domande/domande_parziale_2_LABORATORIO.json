@@ -463,7 +463,6 @@
     ],
     "soluzioni": [
       "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS-1",
-      "Un numero intero compreso nell'intervallo da 1 a 7"
     ],
     "tipologia": "singola"
   },
@@ -1068,7 +1067,6 @@
     ],
     "soluzioni": [
       "(x=0, y=LINES-1)",
-      "(x=0, y=LINES)"
     ],
     "tipologia": "singola"
   },
@@ -1503,11 +1501,11 @@
     "domanda": "Dire quale funzione svolge il seguente codice C:\nclose(p[0]);\nwrite(p[1], msg, msize);",
     "opzioni": [
       "Il codice genera un errore",
-      "Chiude il descrittore di scrittura nel file descriptor \"p\" e ne utilizza uno in scrittura per inviare il messaggio \"msg\" di dimensione \"msize\" tramite la \"pipe\"",
+      "Chiude il descrittore di lettura nel file descriptor \"p\" e ne utilizza uno in scrittura per inviare il messaggio \"msg\" di dimensione \"msize\" tramite la \"pipe\"",
       "Chiude il descrittore di scrittura nel file descriptor \"p\" e ne utilizza uno in lettura per leggere il messaggio \"msg\" di dimensione \"msize\" tramite la \"pipe\""
     ],
     "soluzioni": [
-      "Chiude il descrittore di scrittura nel file descriptor \"p\" e ne utilizza uno in scrittura per inviare il messaggio \"msg\" di dimensione \"msize\" tramite la \"pipe\""
+      "Chiude il descrittore di lettura nel file descriptor \"p\" e ne utilizza uno in scrittura per inviare il messaggio \"msg\" di dimensione \"msize\" tramite la \"pipe\""
     ],
     "tipologia": "singola"
   },
