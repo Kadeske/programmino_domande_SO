@@ -462,7 +462,7 @@
       "Un numero intero compreso nell'intervallo da 1 a 7"
     ],
     "soluzioni": [
-      "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS-1",
+      "Un numero intero compreso nell'intervallo da 1 a COLOR_PAIRS-1"
     ],
     "tipologia": "singola"
   },
@@ -1066,7 +1066,7 @@
       "(x=0, y=LINES)"
     ],
     "soluzioni": [
-      "(x=0, y=LINES-1)",
+      "(x=0, y=LINES-1)"
     ],
     "tipologia": "singola"
   },
