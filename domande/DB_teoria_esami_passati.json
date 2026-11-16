@@ -2,39 +2,39 @@
   {
     "domanda": "Possono esistere attributi di una tabella che non appartengono a nessuna superchiave?",
     "opzioni": [
-      "Sì: gli attributi che non fanno parte di alcuna chiave",
-      "Sì: gli attributi che ammettono valori nulli",
-      "No: l'insieme di tutti gli attributi è sempre una superchiave, quindi ogni attributo ne fa parte",
-      "Dipende dall'istanza della relazione"
+      "Sì: gli attributi che non fanno parte di alcuna chiave della relazione",
+      "Sì: gli attributi che possono assumere il valore NULL in qualche tupla",
+      "No: l'insieme di tutti gli attributi è sempre una superchiave",
+      "Dipende dall'istanza: succede se la relazione ha tuple quasi uguali"
     ],
     "soluzioni": [
-      "No: l'insieme di tutti gli attributi è sempre una superchiave, quindi ogni attributo ne fa parte"
+      "No: l'insieme di tutti gli attributi è sempre una superchiave"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Una superchiave non minimale può essere sottoinsieme di una chiave primaria?",
     "opzioni": [
-      "Sì, se ha meno attributi della chiave primaria",
-      "No: in quel caso la chiave primaria conterrebbe propriamente una superchiave, e non sarebbe minimale",
-      "Sì, sempre",
-      "Solo se la chiave primaria è una chiave artificiale"
+      "Sì, se la superchiave ha meno attributi della chiave primaria",
+      "No, perché la chiave primaria non sarebbe più minimale",
+      "Sì, sempre: ogni superchiave è contenuta in una chiave primaria",
+      "Solo se la chiave primaria è una chiave artificiale (surrogata)"
     ],
     "soluzioni": [
-      "No: in quel caso la chiave primaria conterrebbe propriamente una superchiave, e non sarebbe minimale"
+      "No, perché la chiave primaria non sarebbe più minimale"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale descrizione dei tre livelli dell'architettura di un DBMS è corretta?",
     "opzioni": [
-      "Esterno: strutture di memorizzazione su disco · Logico: viste dei singoli utenti · Fisico: descrizione dell'intera base di dati",
-      "Esterno: vista parziale o derivata di una parte della base di dati, per utenti e applicazioni · Logico: descrizione dell'intera base di dati nel modello logico del DBMS · Fisico: rappresentazione dello schema logico tramite strutture di memorizzazione",
-      "Esterno: interfaccia grafica del DBMS · Logico: schema ER · Fisico: hardware del server",
-      "Esterno e logico coincidono sempre; il fisico descrive le tabelle"
+      "Esterno: strutture di memorizzazione su disco · Logico: le viste dei singoli utenti · Fisico: l'intera base di dati",
+      "Esterno: viste per utenti e applicazioni · Logico: l'intera base di dati · Fisico: strutture di memorizzazione",
+      "Esterno: l'interfaccia grafica del DBMS · Logico: lo schema ER del progetto · Fisico: l'hardware del server che ospita i dati",
+      "Esterno: l'intera base di dati · Logico: le strutture di memorizzazione · Fisico: le viste degli utenti sui file"
     ],
     "soluzioni": [
-      "Esterno: vista parziale o derivata di una parte della base di dati, per utenti e applicazioni · Logico: descrizione dell'intera base di dati nel modello logico del DBMS · Fisico: rappresentazione dello schema logico tramite strutture di memorizzazione"
+      "Esterno: viste per utenti e applicazioni · Logico: l'intera base di dati · Fisico: strutture di memorizzazione"
     ],
     "tipologia": "singola"
   },
@@ -54,39 +54,39 @@
   {
     "domanda": "Quale affermazione descrive correttamente vantaggi e svantaggi di un DBMS che supporta le proprietà ACID?",
     "opzioni": [
-      "Garantisce transazioni affidabili anche in presenza di concorrenza e guasti, ma garantire queste proprietà ha un costo in termini di efficienza",
-      "È più veloce, ma meno affidabile di un DBMS senza ACID",
-      "Rende superflui i vincoli di integrità",
-      "Non ha svantaggi: tutti i DBMS moderni, NoSQL compresi, garantiscono ACID completo"
+      "Transazioni affidabili con concorrenza e guasti, al prezzo di una minore efficienza",
+      "Maggiore velocità rispetto ai DBMS senza ACID, al prezzo di una minore affidabilità",
+      "Vincoli di integrità superflui, perché le transazioni garantiscono già la correttezza",
+      "Nessuno svantaggio: anche tutti i NoSQL garantiscono ACID completo senza alcun costo"
     ],
     "soluzioni": [
-      "Garantisce transazioni affidabili anche in presenza di concorrenza e guasti, ma garantire queste proprietà ha un costo in termini di efficienza"
+      "Transazioni affidabili con concorrenza e guasti, al prezzo di una minore efficienza"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Perché ogni relazione in BCNF è anche in 3NF?",
     "opzioni": [
-      "Perché la 3NF richiede più condizioni della BCNF",
-      "Perché la 3NF richiede che, per ogni dipendenza funzionale non banale X → Y, X sia superchiave oppure ogni attributo di Y appartenga a una chiave; la BCNF richiede sempre la prima condizione, quindi soddisfa anche la disgiunzione",
-      "Non è vero: esistono relazioni in BCNF che non sono in 3NF",
-      "Perché entrambe vietano qualsiasi dipendenza funzionale"
+      "Perché la 3NF impone condizioni più restrittive della BCNF su ogni dipendenza",
+      "Perché la condizione della BCNF è uno dei due casi ammessi dalla 3NF",
+      "Non è vero: esistono relazioni in BCNF che non soddisfano la 3NF",
+      "Perché entrambe vietano qualsiasi dipendenza funzionale non banale"
     ],
     "soluzioni": [
-      "Perché la 3NF richiede che, per ogni dipendenza funzionale non banale X → Y, X sia superchiave oppure ogni attributo di Y appartenga a una chiave; la BCNF richiede sempre la prima condizione, quindi soddisfa anche la disgiunzione"
+      "Perché la condizione della BCNF è uno dei due casi ammessi dalla 3NF"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale affermazione sui formati dei record è corretta?",
     "opzioni": [
-      "Nel formato fisso lo schema (campi, tipi, lunghezze) è nel direttorio e il record contiene solo i dati: compatto e veloce, ma rigido. Nel formato auto-descrittivo ogni record contiene anche i metadati: flessibile, ma occupa più spazio e richiede più elaborazione",
-      "Nel formato fisso ogni record contiene i propri metadati; nell'auto-descrittivo lo schema sta nel direttorio",
-      "Il formato auto-descrittivo occupa sempre meno spazio di quello fisso",
-      "Solo il formato fisso permette di avere record con campi diversi"
+      "Fisso: schema nel direttorio e solo dati nel record; auto-descrittivo: anche i metadati nel record",
+      "Fisso: metadati in ogni record; auto-descrittivo: schema nel direttorio, solo dati nei record",
+      "Fisso e auto-descrittivo differiscono solo per l'ordine in cui i campi sono scritti nel record",
+      "Auto-descrittivo occupa meno spazio, perché non ripete in ogni record le informazioni sullo schema"
     ],
     "soluzioni": [
-      "Nel formato fisso lo schema (campi, tipi, lunghezze) è nel direttorio e il record contiene solo i dati: compatto e veloce, ma rigido. Nel formato auto-descrittivo ogni record contiene anche i metadati: flessibile, ma occupa più spazio e richiede più elaborazione"
+      "Fisso: schema nel direttorio e solo dati nel record; auto-descrittivo: anche i metadati nel record"
     ],
     "tipologia": "singola"
   },
@@ -145,26 +145,26 @@
   {
     "domanda": "Quale coppia di definizioni di indipendenza fisica e logica dei dati è corretta?",
     "opzioni": [
-      "Indipendenza fisica: il livello esterno è indipendente da quello logico · Indipendenza logica: i livelli logico ed esterno sono indipendenti da quello fisico",
-      "Indipendenza fisica: i programmi non dipendono dall'hardware del server · Indipendenza logica: i programmi non dipendono dal linguaggio SQL",
-      "Indipendenza fisica: i livelli logico ed esterno sono indipendenti dal fisico, quindi la realizzazione fisica può cambiare senza modificare i programmi · Indipendenza logica: il livello esterno è indipendente dal logico, quindi le modifiche allo schema logico che lasciano invariato lo schema esterno sono trasparenti",
-      "Sono sinonimi"
+      "Fisica: l'esterno non dipende dal logico · Logica: logico ed esterno non dipendono dal fisico",
+      "Fisica: i programmi non dipendono dall'hardware · Logica: i programmi non dipendono da SQL",
+      "Fisica: logico ed esterno non dipendono dal fisico · Logica: l'esterno non dipende dal logico",
+      "Fisica: le viste non dipendono dalle tabelle · Logica: le tabelle non dipendono dagli indici"
     ],
     "soluzioni": [
-      "Indipendenza fisica: i livelli logico ed esterno sono indipendenti dal fisico, quindi la realizzazione fisica può cambiare senza modificare i programmi · Indipendenza logica: il livello esterno è indipendente dal logico, quindi le modifiche allo schema logico che lasciano invariato lo schema esterno sono trasparenti"
+      "Fisica: logico ed esterno non dipendono dal fisico · Logica: l'esterno non dipende dal logico"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale affermazione descrive correttamente analogie e differenze tra la relazione matematica e la relazione del modello relazionale?",
     "opzioni": [
-      "Entrambe sono insiemi di tuple distinte, senza ordine tra le tuple; la relazione matematica ha una struttura posizionale, mentre nel modello relazionale ogni dominio ha un nome (attributo), quindi l'ordine delle colonne è irrilevante",
-      "La relazione matematica ammette tuple duplicate, quella del modello relazionale no",
-      "Nel modello relazionale l'ordine delle colonne è significativo, nella relazione matematica no",
-      "Non ci sono differenze"
+      "Entrambe sono insiemi di tuple; la matematica è posizionale, l'altra usa nomi di attributo",
+      "La matematica ammette tuple duplicate, mentre quella del modello relazionale non le ammette",
+      "Nel modello relazionale conta l'ordine delle colonne, nella relazione matematica invece no",
+      "Nessuna differenza: sono due nomi diversi per lo stesso concetto, con le stesse proprietà"
     ],
     "soluzioni": [
-      "Entrambe sono insiemi di tuple distinte, senza ordine tra le tuple; la relazione matematica ha una struttura posizionale, mentre nel modello relazionale ogni dominio ha un nome (attributo), quindi l'ordine delle colonne è irrilevante"
+      "Entrambe sono insiemi di tuple; la matematica è posizionale, l'altra usa nomi di attributo"
     ],
     "tipologia": "singola"
   },
@@ -172,25 +172,25 @@
     "domanda": "Che cosa rappresenta il valore NULL?",
     "opzioni": [
       "Il valore 0 per i numeri e la stringa vuota per i testi",
-      "L'assenza di un valore del dominio: un valore inesistente oppure sconosciuto",
-      "Un valore speciale del dominio, uguale a tutti gli altri NULL",
-      "Un errore nei dati, che il DBMS segnala"
+      "L'assenza di un valore: inesistente oppure sconosciuto",
+      "Un valore speciale del dominio, uguale a ogni altro NULL",
+      "Un errore nei dati, che il DBMS segnala all'utente"
     ],
     "soluzioni": [
-      "L'assenza di un valore del dominio: un valore inesistente oppure sconosciuto"
+      "L'assenza di un valore: inesistente oppure sconosciuto"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Che cosa succede alle righe con Stipendio = NULL in una query con WHERE Stipendio > 50000?",
     "opzioni": [
-      "Vengono restituite, perché NULL soddisfa qualunque condizione",
-      "La query termina con un errore",
-      "Vengono trattate come se lo stipendio fosse 0",
-      "Non vengono restituite, perché il confronto con NULL non è vero"
+      "Vengono restituite, perché NULL soddisfa ogni condizione",
+      "La query si interrompe con un errore di tipo sul confronto",
+      "Vengono trattate come se il loro stipendio valesse zero",
+      "Non vengono restituite: il confronto con NULL non è vero"
     ],
     "soluzioni": [
-      "Non vengono restituite, perché il confronto con NULL non è vero"
+      "Non vengono restituite: il confronto con NULL non è vero"
     ],
     "tipologia": "singola"
   },
@@ -210,65 +210,65 @@
   {
     "domanda": "Come funziona un indice hash e qual è il suo vantaggio rispetto a un B-tree?",
     "opzioni": [
-      "Ordina le chiavi in un albero bilanciato; è più efficiente per le ricerche su intervalli",
-      "Una funzione hash calcola, dal valore della chiave, l'indirizzo del blocco che contiene il record; per le ricerche di uguaglianza costa circa 1 accesso, contro profondità + 1 di un B-tree",
-      "Memorizza una sequenza di bit per ogni valore della colonna; è adatto alle colonne con pochi valori",
-      "Mantiene i record ordinati sul disco; non richiede alcun calcolo per la ricerca"
+      "Ordina le chiavi in un albero bilanciato; è ottimo per le ricerche su intervalli",
+      "Calcola dalla chiave l'indirizzo del blocco; ~1 accesso per ricerche di uguaglianza",
+      "Usa una sequenza di bit per ogni valore; è adatto a colonne con pochi valori distinti",
+      "Tiene i record ordinati su disco; la ricerca binaria non richiede strutture aggiuntive"
     ],
     "soluzioni": [
-      "Una funzione hash calcola, dal valore della chiave, l'indirizzo del blocco che contiene il record; per le ricerche di uguaglianza costa circa 1 accesso, contro profondità + 1 di un B-tree"
+      "Calcola dalla chiave l'indirizzo del blocco; ~1 accesso per ricerche di uguaglianza"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "In che cosa consiste il problema delle collisioni e come si affronta?",
     "opzioni": [
-      "Due transazioni modificano lo stesso record; si risolve con i lock",
-      "La funzione hash è iniettiva; si risolve rendendola non iniettiva",
-      "Chiavi diverse finiscono nello stesso indirizzo, perché i possibili valori sono molti più degli indirizzi; si riducono con una buona funzione hash e spazio ridondante, e si gestiscono con posizioni successive o aree di overflow",
-      "Due chiavi uguali finiscono in indirizzi diversi; si risolve ordinando il file"
+      "Due transazioni modificano lo stesso record; si risolvono con i lock sulle righe",
+      "La funzione hash è iniettiva; si risolvono sostituendola con una non iniettiva",
+      "Chiavi diverse finiscono nello stesso indirizzo; si usano overflow o posizioni libere",
+      "Chiavi uguali finiscono in indirizzi diversi; si risolve riordinando il file sulla chiave hash"
     ],
     "soluzioni": [
-      "Chiavi diverse finiscono nello stesso indirizzo, perché i possibili valori sono molti più degli indirizzi; si riducono con una buona funzione hash e spazio ridondante, e si gestiscono con posizioni successive o aree di overflow"
+      "Chiavi diverse finiscono nello stesso indirizzo; si usano overflow o posizioni libere"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale affermazione su record spanned e unspanned è corretta?",
     "opzioni": [
-      "Unspanned: ogni record sta in un solo blocco, più semplice e veloce ma spreca spazio · Spanned: un record può essere diviso su più blocchi, sfrutta meglio lo spazio ed è necessario per record più grandi di un blocco, ma è più complesso",
-      "Spanned: ogni record sta in un solo blocco · Unspanned: un record può essere diviso su più blocchi",
-      "Unspanned è necessario per i record più grandi di un blocco",
-      "Spanned e unspanned indicano rispettivamente formato fisso e auto-descrittivo"
+      "Unspanned: record in un solo blocco, semplice ma spreca spazio; spanned: record su più blocchi",
+      "Spanned: record in un solo blocco, semplice ma spreca spazio; unspanned: record su più blocchi",
+      "Unspanned è necessario per i record più grandi di un blocco, spanned per quelli più piccoli",
+      "Spanned e unspanned sono sinonimi di formato dei record fisso e formato auto-descrittivo"
     ],
     "soluzioni": [
-      "Unspanned: ogni record sta in un solo blocco, più semplice e veloce ma spreca spazio · Spanned: un record può essere diviso su più blocchi, sfrutta meglio lo spazio ed è necessario per record più grandi di un blocco, ma è più complesso"
+      "Unspanned: record in un solo blocco, semplice ma spreca spazio; spanned: record su più blocchi"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "In base a cosa si calcola il costo di un'operazione su un DBMS?",
     "opzioni": [
-      "In base al numero di istruzioni eseguite dalla CPU",
-      "In base al numero di accessi alla memoria secondaria (blocchi letti o scritti)",
-      "In base al numero di tuple restituite",
-      "In base alla lunghezza della query SQL"
+      "Dal numero di istruzioni macchina eseguite dalla CPU",
+      "Dal numero di blocchi letti o scritti su disco",
+      "Dal numero di tuple restituite dalla query",
+      "Dalla lunghezza del testo della query SQL"
     ],
     "soluzioni": [
-      "In base al numero di accessi alla memoria secondaria (blocchi letti o scritti)"
+      "Dal numero di blocchi letti o scritti su disco"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Che cosa sono le euristiche push selections down e push projections down?",
     "opzioni": [
-      "Spostare selezioni e proiezioni verso la radice dell'albero della query, cioè eseguirle per ultime",
-      "Eliminare selezioni e proiezioni dalla query",
-      "Eseguire selezioni e proiezioni il prima possibile (verso le foglie dell'albero), sostituendo la query con un'espressione equivalente che produce risultati intermedi più piccoli",
-      "Trasformare le selezioni in join"
+      "Eseguire selezioni e proiezioni per ultime, vicino alla radice dell'albero",
+      "Eliminare dalla query le selezioni e le proiezioni che risultano superflue",
+      "Eseguire selezioni e proiezioni il prima possibile, vicino alle foglie",
+      "Trasformare selezioni e proiezioni in join, che il DBMS esegue più velocemente"
     ],
     "soluzioni": [
-      "Eseguire selezioni e proiezioni il prima possibile (verso le foglie dell'albero), sostituendo la query con un'espressione equivalente che produce risultati intermedi più piccoli"
+      "Eseguire selezioni e proiezioni il prima possibile, vicino alle foglie"
     ],
     "tipologia": "singola"
   },
@@ -327,52 +327,52 @@
   {
     "domanda": "Che cos'è lo schema esterno e perché è utile creare viste?",
     "opzioni": [
-      "È la rappresentazione dei dati su disco; le viste servono a velocizzare le scritture",
-      "È una vista parziale o derivata di una parte della base di dati; le viste mostrano a ogni utente solo ciò che gli interessa, semplificano la scrittura delle interrogazioni e permettono di riusare programmi esistenti su schemi ristrutturati",
-      "È lo schema concettuale ER; le viste servono a definire le chiavi",
-      "È una copia di backup della base di dati; le viste servono al ripristino dopo un guasto"
+      "La rappresentazione dei dati su disco; le viste velocizzano le scritture",
+      "Una vista parziale o derivata dei dati; le viste semplificano le query",
+      "Lo schema concettuale ER; le viste servono a definire le chiavi primarie",
+      "Una copia di backup del database; le viste servono al ripristino dai guasti"
     ],
     "soluzioni": [
-      "È una vista parziale o derivata di una parte della base di dati; le viste mostrano a ogni utente solo ciò che gli interessa, semplificano la scrittura delle interrogazioni e permettono di riusare programmi esistenti su schemi ristrutturati"
+      "Una vista parziale o derivata dei dati; le viste semplificano le query"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Che ruolo hanno le viste nella privatezza dei dati?",
     "opzioni": [
-      "Cifrano i dati della tabella di base",
-      "Nessuno: la privatezza si gestisce solo a livello fisico",
-      "Impediscono qualsiasi accesso alla tabella di base, anche all'amministratore",
-      "Si definisce una vista che seleziona solo le righe (e colonne) che un utente può vedere e gli si concedono i privilegi sulla vista invece che sulla tabella di base"
+      "Cifrano i dati della tabella di base, rendendoli leggibili solo agli autorizzati",
+      "Nessuno: la privatezza si gestisce solo con i permessi sui file a livello fisico",
+      "Impediscono a chiunque, amministratore compreso, l'accesso alla tabella di base",
+      "Si concedono i privilegi sulla vista, che mostra solo le righe autorizzate"
     ],
     "soluzioni": [
-      "Si definisce una vista che seleziona solo le righe (e colonne) che un utente può vedere e gli si concedono i privilegi sulla vista invece che sulla tabella di base"
+      "Si concedono i privilegi sulla vista, che mostra solo le righe autorizzate"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Ogni relazione R ha almeno una chiave?",
     "opzioni": [
-      "No: una relazione con tuple duplicate non ha chiavi",
-      "Sì: R è un insieme, quindi non ha tuple uguali; perciò l'insieme di tutti i suoi attributi è una superchiave, e togliendo attributi finché resta superchiave si ottiene una chiave",
-      "No: se tutti gli attributi possono essere nulli non esistono chiavi",
-      "Sì, perché il DBMS crea automaticamente una chiave artificiale"
+      "No: una relazione che contiene tuple duplicate non ha alcuna chiave",
+      "Sì: l'insieme di tutti gli attributi è superchiave, e contiene una chiave",
+      "No: se tutti gli attributi ammettono NULL non può esistere una chiave",
+      "Sì: il DBMS aggiunge automaticamente una chiave artificiale a ogni tabella"
     ],
     "soluzioni": [
-      "Sì: R è un insieme, quindi non ha tuple uguali; perciò l'insieme di tutti i suoi attributi è una superchiave, e togliendo attributi finché resta superchiave si ottiene una chiave"
+      "Sì: l'insieme di tutti gli attributi è superchiave, e contiene una chiave"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale associazione tra ruolo e compiti è corretta?",
     "opzioni": [
-      "Il DBA (Database Administrator) scrive il codice del DBMS",
-      "Gli utenti finali sono responsabili delle autorizzazioni e delle prestazioni",
-      "Il DBA è responsabile del controllo centralizzato e della gestione del sistema: risorse, prestazioni (spazio e tempo), affidabilità e autorizzazioni, e spesso anche della progettazione della base di dati",
-      "Gli sviluppatori di applicazioni progettano e realizzano il software del DBMS"
+      "Il DBA scrive e mantiene il codice sorgente del software DBMS",
+      "Gli utenti finali gestiscono autorizzazioni e prestazioni del sistema",
+      "Il DBA gestisce risorse, prestazioni, affidabilità e autorizzazioni",
+      "Gli sviluppatori di applicazioni progettano e realizzano il DBMS"
     ],
     "soluzioni": [
-      "Il DBA è responsabile del controllo centralizzato e della gestione del sistema: risorse, prestazioni (spazio e tempo), affidabilità e autorizzazioni, e spesso anche della progettazione della base di dati"
+      "Il DBA gestisce risorse, prestazioni, affidabilità e autorizzazioni"
     ],
     "tipologia": "singola"
   },
@@ -392,78 +392,78 @@
   {
     "domanda": "Rappresentando un indice bitmap in forma tabellare, a cosa corrispondono righe, colonne e celle?",
     "opzioni": [
-      "Righe: blocchi del disco · colonne: chiavi della tabella · celle: puntatori",
-      "Righe: le tuple della tabella · colonne: i valori distinti della colonna indicizzata · celle: 1 se la tupla ha quel valore, 0 altrimenti",
-      "Righe: i valori distinti · colonne: le pagine del buffer · celle: contatori",
-      "Righe e colonne: le tuple della tabella · celle: la distanza tra le tuple"
+      "Righe: blocchi del disco · colonne: chiavi della tabella · celle: puntatori ai record",
+      "Righe: tuple della tabella · colonne: valori distinti della colonna · celle: 0 o 1",
+      "Righe: valori distinti · colonne: pagine del buffer · celle: contatori di utilizzo",
+      "Righe e colonne: tuple della tabella · celle: distanza tra le due tuple"
     ],
     "soluzioni": [
-      "Righe: le tuple della tabella · colonne: i valori distinti della colonna indicizzata · celle: 1 se la tupla ha quel valore, 0 altrimenti"
+      "Righe: tuple della tabella · colonne: valori distinti della colonna · celle: 0 o 1"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale vantaggio ha un indice bitmap rispetto a un B-tree?",
     "opzioni": [
-      "È più efficiente per le ricerche su intervalli",
-      "È più adatto a tabelle con molti aggiornamenti concorrenti",
-      "Funziona meglio su colonne con valori tutti diversi",
-      "Le condizioni su più colonne con pochi valori si risolvono con operazioni AND/OR bit a bit, in modo molto efficiente e compatto"
+      "È più efficiente del B-tree per le ricerche su intervalli di valori",
+      "Regge meglio del B-tree tabelle con molti aggiornamenti concorrenti",
+      "Funziona meglio del B-tree su colonne con valori tutti diversi tra loro",
+      "Combina condizioni su più colonne con AND/OR bit a bit, molto veloci"
     ],
     "soluzioni": [
-      "Le condizioni su più colonne con pochi valori si risolvono con operazioni AND/OR bit a bit, in modo molto efficiente e compatto"
+      "Combina condizioni su più colonne con AND/OR bit a bit, molto veloci"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Perché un indice bitmap non è adatto a una colonna che è chiave della tabella?",
     "opzioni": [
-      "Perché le chiavi non possono essere indicizzate",
-      "Perché in una chiave tutti i valori sono distinti: servirebbe una colonna di bit per ogni tupla, cioè un indice di n × n bit, enorme e quasi tutto a zero",
-      "Perché le chiavi possono contenere valori nulli",
-      "Perché il bitmap funziona solo su colonne numeriche"
+      "Perché le colonne chiave non possono essere indicizzate in nessun modo",
+      "Perché servirebbe una colonna di bit per ogni tupla: indice enorme",
+      "Perché le colonne chiave possono contenere valori nulli in alcune tuple",
+      "Perché un indice bitmap funziona solo su colonne di tipo numerico intero"
     ],
     "soluzioni": [
-      "Perché in una chiave tutti i valori sono distinti: servirebbe una colonna di bit per ogni tupla, cioè un indice di n × n bit, enorme e quasi tutto a zero"
+      "Perché servirebbe una colonna di bit per ogni tupla: indice enorme"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale affermazione sui formati dei record fisso e auto-descrittivo è corretta?",
     "opzioni": [
-      "Il formato fisso memorizza in ogni record nomi e tipi dei campi",
-      "Il formato auto-descrittivo è più compatto perché non ripete lo schema",
-      "Il formato fisso tiene lo schema nel direttorio e nei record solo i dati (compatto e veloce, ma rigido); il formato auto-descrittivo memorizza nei record anche i metadati (flessibile, ma più spazio ed elaborazione)",
-      "I due formati differiscono solo per l'ordine dei campi"
+      "Il formato fisso memorizza in ogni record anche nomi e tipi dei campi",
+      "Il formato auto-descrittivo è più compatto, perché non ripete lo schema",
+      "Il fisso è compatto ma rigido; l'auto-descrittivo flessibile ma più pesante",
+      "I due formati differiscono soltanto per l'ordine in cui sono scritti i campi"
     ],
     "soluzioni": [
-      "Il formato fisso tiene lo schema nel direttorio e nei record solo i dati (compatto e veloce, ma rigido); il formato auto-descrittivo memorizza nei record anche i metadati (flessibile, ma più spazio ed elaborazione)"
+      "Il fisso è compatto ma rigido; l'auto-descrittivo flessibile ma più pesante"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "È sempre utile creare un indice? In quali casi conviene?",
     "opzioni": [
-      "Sì, conviene indicizzare tutte le colonne di tutte le tabelle",
-      "No: un indice occupa spazio e rallenta inserimenti e modifiche; conviene se si recupera spesso una piccola parte (meno del 15% circa) delle righe di una grande tabella, sulle colonne usate nei join e su colonne con valori relativamente univoci",
-      "No: gli indici servono solo per le chiavi primarie",
-      "Sì, perché gli indici non hanno costi"
+      "Sì: conviene sempre indicizzare tutte le colonne di tutte le tabelle",
+      "No: conviene se si recupera spesso una piccola parte delle righe",
+      "No: gli indici servono esclusivamente per le chiavi primarie",
+      "Sì: gli indici non occupano spazio e non rallentano le modifiche"
     ],
     "soluzioni": [
-      "No: un indice occupa spazio e rallenta inserimenti e modifiche; conviene se si recupera spesso una piccola parte (meno del 15% circa) delle righe di una grande tabella, sulle colonne usate nei join e su colonne con valori relativamente univoci"
+      "No: conviene se si recupera spesso una piccola parte delle righe"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Perché non ha senso indicizzare una colonna se le query recuperano di solito più della metà delle righe?",
     "opzioni": [
-      "Perché l'indice restituirebbe risultati sbagliati",
-      "Perché il DBMS non permette indici su tabelle grandi",
-      "Perché le righe da leggere sono sparse in quasi tutti i blocchi: con l'indice si leggerebbero comunque quasi tutti i blocchi dei dati, più quelli dell'indice e in ordine sparso, mentre una scansione sequenziale legge ogni blocco una sola volta",
-      "Perché l'indice si cancella automaticamente"
+      "Perché l'indice restituirebbe risultati errati quando le righe sono tante",
+      "Perché il DBMS non permette indici su tabelle molto grandi",
+      "Perché si leggerebbero comunque quasi tutti i blocchi, più l'indice",
+      "Perché l'indice verrebbe cancellato automaticamente dal DBMS"
     ],
     "soluzioni": [
-      "Perché le righe da leggere sono sparse in quasi tutti i blocchi: con l'indice si leggerebbero comunque quasi tutti i blocchi dei dati, più quelli dell'indice e in ordine sparso, mentre una scansione sequenziale legge ogni blocco una sola volta"
+      "Perché si leggerebbero comunque quasi tutti i blocchi, più l'indice"
     ],
     "tipologia": "singola"
   },
@@ -492,26 +492,26 @@
   {
     "domanda": "Qual è la differenza principale tra relazione matematica e relazione del modello relazionale dei dati?",
     "opzioni": [
-      "La relazione matematica è un insieme di tuple, quella del modello relazionale è una lista ordinata di righe",
-      "Nella relazione matematica i valori sono identificati dalla posizione nella tupla; nel modello relazionale ogni dominio ha un nome (attributo) che ne descrive il ruolo, quindi la struttura non è posizionale",
-      "Solo la relazione matematica può contenere valori nulli",
-      "Nel modello relazionale le tuple possono ripetersi"
+      "La matematica è un insieme di tuple, quella del modello è una lista ordinata",
+      "Nella matematica conta la posizione, nel modello ogni dominio ha un nome",
+      "Solo la relazione matematica può contenere valori nulli nelle sue tuple",
+      "Nel modello relazionale le tuple possono ripetersi, in quella matematica no"
     ],
     "soluzioni": [
-      "Nella relazione matematica i valori sono identificati dalla posizione nella tupla; nel modello relazionale ogni dominio ha un nome (attributo) che ne descrive il ruolo, quindi la struttura non è posizionale"
+      "Nella matematica conta la posizione, nel modello ogni dominio ha un nome"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Che cos'è il buffer manager?",
     "opzioni": [
-      "Il modulo che traduce le query SQL in algebra relazionale",
-      "Il modulo che gestisce un'area di memoria centrale condivisa tra le transazioni (il buffer), con lo scopo di ridurre gli accessi alla memoria secondaria",
-      "Il modulo che gestisce le autorizzazioni degli utenti",
-      "Il file in cui vengono registrate le operazioni per il ripristino dopo un guasto"
+      "Il modulo che traduce le query SQL in espressioni di algebra relazionale",
+      "Il modulo che gestisce il buffer in RAM per ridurre gli accessi al disco",
+      "Il modulo che controlla le autorizzazioni e i privilegi degli utenti",
+      "Il file su cui si registrano le operazioni per il ripristino dopo un guasto"
     ],
     "soluzioni": [
-      "Il modulo che gestisce un'area di memoria centrale condivisa tra le transazioni (il buffer), con lo scopo di ridurre gli accessi alla memoria secondaria"
+      "Il modulo che gestisce il buffer in RAM per ridurre gli accessi al disco"
     ],
     "tipologia": "singola"
   },
@@ -531,26 +531,26 @@
   {
     "domanda": "Quale indice conviene per le range query?",
     "opzioni": [
-      "Un indice hash, perché costa circa 1 accesso",
-      "Un indice bitmap, perché la colonna ha molti valori",
-      "Un B+ tree, perché si trova la prima chiave dell'intervallo scendendo nell'albero e poi si scorrono le foglie collegate fino all'ultima",
-      "Nessun indice: le range query non possono usare indici"
+      "Un indice hash, perché ogni ricerca costa circa un solo accesso",
+      "Un indice bitmap, perché la colonna ha molti valori diversi",
+      "Un B+ tree, perché le foglie collegate si scorrono in ordine",
+      "Nessun indice, perché le range query non possono usare indici"
     ],
     "soluzioni": [
-      "Un B+ tree, perché si trova la prima chiave dell'intervallo scendendo nell'albero e poi si scorrono le foglie collegate fino all'ultima"
+      "Un B+ tree, perché le foglie collegate si scorrono in ordine"
     ],
     "tipologia": "singola"
   },
   {
     "domanda": "Quale descrizione degli algoritmi di join è corretta?",
     "opzioni": [
-      "Nested-loop: per ogni tupla della tabella esterna si scandisce l'interna; sempre applicabile, ma costoso se l'interna è grande e non ha indici · Merge-join: richiede input ordinati sul campo di join, che vengono scanditi in parallelo una sola volta · Hash-join: si applica la stessa funzione hash alle due tabelle e si confrontano solo i bucket corrispondenti; vale solo per gli equi-join",
-      "Hash-join e merge-join funzionano con qualsiasi condizione, il nested-loop solo con l'uguaglianza",
-      "Il merge-join non richiede che gli input siano ordinati",
+      "Il nested-loop vale per ogni condizione; l'hash-join solo per l'uguaglianza",
+      "L'hash-join vale per ogni condizione; il nested-loop solo per l'uguaglianza",
+      "Il merge-join non richiede input ordinati e funziona con qualsiasi condizione",
       "L'unico algoritmo di join è il prodotto cartesiano seguito da una selezione"
     ],
     "soluzioni": [
-      "Nested-loop: per ogni tupla della tabella esterna si scandisce l'interna; sempre applicabile, ma costoso se l'interna è grande e non ha indici · Merge-join: richiede input ordinati sul campo di join, che vengono scanditi in parallelo una sola volta · Hash-join: si applica la stessa funzione hash alle due tabelle e si confrontano solo i bucket corrispondenti; vale solo per gli equi-join"
+      "Il nested-loop vale per ogni condizione; l'hash-join solo per l'uguaglianza"
     ],
     "tipologia": "singola"
   }
