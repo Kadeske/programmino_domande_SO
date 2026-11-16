@@ -1,0 +1,808 @@
+[
+  {
+    "domanda": "Che cosa garantisce l'indipendenza fisica dei dati?",
+    "opzioni": [
+      "Le viste possono essere modificate senza modificare lo schema logico",
+      "La realizzazione fisica dei dati può cambiare senza modificare i programmi",
+      "Ogni utente vede solo i dati che è autorizzato a vedere",
+      "I dati sopravvivono alla terminazione dei programmi che li usano"
+    ],
+    "soluzioni": [
+      "La realizzazione fisica dei dati può cambiare senza modificare i programmi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale di queste istruzioni SQL appartiene al DDL?",
+    "opzioni": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "ALTER TABLE"
+    ],
+    "soluzioni": [
+      "ALTER TABLE"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione su una relazione matematica è FALSA?",
+    "opzioni": [
+      "L'ordine delle tuple è irrilevante",
+      "Può contenere due tuple identiche",
+      "In ogni tupla l'i-esimo valore proviene dall'i-esimo dominio",
+      "È un sottoinsieme di un prodotto cartesiano"
+    ],
+    "soluzioni": [
+      "Può contenere due tuple identiche"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cos'è una chiave?",
+    "opzioni": [
+      "Una superchiave formata da un solo attributo",
+      "Un insieme di attributi che non contiene valori nulli",
+      "Una superchiave minimale",
+      "L'insieme di tutti gli attributi della relazione"
+    ],
+    "soluzioni": [
+      "Una superchiave minimale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché ogni relazione ha almeno una chiave?",
+    "opzioni": [
+      "Perché una relazione non contiene tuple uguali, quindi l'insieme di tutti i suoi attributi è una superchiave, che contiene una superchiave minimale",
+      "Perché il DBMS aggiunge automaticamente una chiave artificiale",
+      "Perché ogni relazione deve avere una chiave primaria dichiarata",
+      "Perché gli attributi non possono assumere valori nulli"
+    ],
+    "soluzioni": [
+      "Perché una relazione non contiene tuple uguali, quindi l'insieme di tutti i suoi attributi è una superchiave, che contiene una superchiave minimale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In ESAMI(Studente, Corso, Voto) uno studente può sostenere più esami, ma non lo stesso corso due volte. Qual è la chiave?",
+    "opzioni": [
+      "Studente",
+      "<Studente, Voto>",
+      "Corso",
+      "<Studente, Corso>"
+    ],
+    "soluzioni": [
+      "<Studente, Corso>"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale attributo può assumere il valore NULL?",
+    "opzioni": [
+      "Un attributo della chiave primaria",
+      "Una chiave esterna che non fa parte della chiave primaria",
+      "Una chiave esterna che fa parte della chiave primaria",
+      "Nessuno: NULL non è ammesso nel modello relazionale"
+    ],
+    "soluzioni": [
+      "Una chiave esterna che non fa parte della chiave primaria"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Il vincolo DataFine ≥ DataInizio è un vincolo:",
+    "opzioni": [
+      "di dominio",
+      "di chiave",
+      "di tupla",
+      "referenziale"
+    ],
+    "soluzioni": [
+      "di tupla"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un vincolo di integrità referenziale tra l'attributo X di R1 e la relazione R2 impone che:",
+    "opzioni": [
+      "i valori di X in R1 siano tutti distinti",
+      "ogni valore della chiave primaria di R2 compaia in X",
+      "X sia la chiave primaria di R1",
+      "i valori di X in R1 compaiano come valori della chiave primaria di R2"
+    ],
+    "soluzioni": [
+      "i valori di X in R1 compaiano come valori della chiave primaria di R2"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "RIGA_ORDINE(NumeroOrdine, CodiceProdotto, Quantità) ha chiave primaria <NumeroOrdine, CodiceProdotto> e chiave esterna CodiceProdotto → PRODOTTO. Quale azione NON si può usare alla cancellazione di un prodotto?",
+    "opzioni": [
+      "ON DELETE SET NULL",
+      "ON DELETE CASCADE",
+      "ON DELETE RESTRICT",
+      "ON DELETE NO ACTION"
+    ],
+    "soluzioni": [
+      "ON DELETE SET NULL"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione sulle chiavi è vera?",
+    "opzioni": [
+      "Una relazione può avere più chiavi, ma una sola chiave primaria",
+      "Una chiave può essere sottoinsieme di un'altra chiave",
+      "Ogni attributo appartiene al massimo a una chiave",
+      "Esistono attributi che non appartengono a nessuna superchiave"
+    ],
+    "soluzioni": [
+      "Una relazione può avere più chiavi, ma una sola chiave primaria"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "L'algebra relazionale è un linguaggio:",
+    "opzioni": [
+      "dichiarativo",
+      "procedurale",
+      "di definizione dei dati",
+      "di programmazione general purpose"
+    ],
+    "soluzioni": [
+      "procedurale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "L'unione R ∪ S è definita solo se:",
+    "opzioni": [
+      "R e S hanno la stessa cardinalità",
+      "R e S hanno almeno un attributo in comune",
+      "R e S sono definite sugli stessi attributi",
+      "R e S non hanno tuple in comune"
+    ],
+    "soluzioni": [
+      "R e S sono definite sugli stessi attributi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se X è una superchiave di R, quante tuple contiene π[X](R)?",
+    "opzioni": [
+      "Una sola",
+      "Al più |R|, ma possono essere meno",
+      "Più di |R|",
+      "Esattamente |R|"
+    ],
+    "soluzioni": [
+      "Esattamente |R|"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "La relazione P ha un attributo Età con alcuni valori NULL. Cosa vale per σ[Età>30](P) ∪ σ[Età≤30](P)?",
+    "opzioni": [
+      "È sempre uguale a P",
+      "Può contenere meno tuple di P",
+      "Può contenere più tuple di P",
+      "È sempre vuota"
+    ],
+    "soluzioni": [
+      "Può contenere meno tuple di P"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa produce il join naturale tra R(A, B) e S(C, D)?",
+    "opzioni": [
+      "Un risultato sempre vuoto",
+      "Un errore di sintassi",
+      "Il prodotto cartesiano R × S",
+      "L'unione R ∪ S"
+    ],
+    "soluzioni": [
+      "Il prodotto cartesiano R × S"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "R1(A, B) e R2(B, C): B è chiave di R2 ed esiste una chiave esterna (senza NULL) da R1.B a R2. Quante tuple ha R1 ⋈ R2?",
+    "opzioni": [
+      "Esattamente |R1|",
+      "Esattamente |R2|",
+      "Esattamente |R1| · |R2|",
+      "Un numero qualsiasi tra 0 e |R1| · |R2|"
+    ],
+    "soluzioni": [
+      "Esattamente |R1|"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza tra l'equi-join R ⋈[A=B] S e il join naturale?",
+    "opzioni": [
+      "L'equi-join conserva anche le tuple senza corrispondenza",
+      "Il join naturale ammette condizioni con < e >",
+      "Nell'equi-join le colonne confrontate restano entrambe; nel join naturale gli attributi comuni compaiono una sola volta",
+      "Nessuna: producono sempre lo stesso schema"
+    ],
+    "soluzioni": [
+      "Nell'equi-join le colonne confrontate restano entrambe; nel join naturale gli attributi comuni compaiono una sola volta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa fa il join esterno sinistro R ⟕ S?",
+    "opzioni": [
+      "Conserva solo le tuple di R che hanno corrispondenza in S",
+      "Conserva tutte le tuple di S, completando con NULL",
+      "Restituisce l'unione di R e S",
+      "Conserva tutte le tuple di R, completando con NULL quelle senza corrispondenza"
+    ],
+    "soluzioni": [
+      "Conserva tutte le tuple di R, completando con NULL quelle senza corrispondenza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Su Impiegati(Matricola, Nome, Stipendio), quale espressione è ERRATA?",
+    "opzioni": [
+      "π[Nome](σ[Stipendio>50](Impiegati))",
+      "σ[Stipendio>50](π[Nome](Impiegati))",
+      "σ[Stipendio>50](π[Nome,Stipendio](Impiegati))",
+      "π[Matricola](Impiegati)"
+    ],
+    "soluzioni": [
+      "σ[Stipendio>50](π[Nome](Impiegati))"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si trova il prezzo massimo di una relazione PRODOTTO in algebra relazionale?",
+    "opzioni": [
+      "Con l'operatore MAX",
+      "Togliendo da tutti i prezzi quelli minori di almeno un altro prezzo (self-join e differenza)",
+      "Con una proiezione, che elimina i duplicati",
+      "Non si può esprimere"
+    ],
+    "soluzioni": [
+      "Togliendo da tutti i prezzi quelli minori di almeno un altro prezzo (self-join e differenza)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale di queste interrogazioni NON si può esprimere in algebra relazionale?",
+    "opzioni": [
+      "Tutti i superiori, diretti e indiretti, di ogni impiegato",
+      "Gli studenti che non hanno sostenuto esami",
+      "Le coppie di prodotti diversi con lo stesso nome",
+      "I corsi che nessuno ha superato"
+    ],
+    "soluzioni": [
+      "Tutti i superiori, diretti e indiretti, di ogni impiegato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa equivale il theta-join R ⋈[F] S?",
+    "opzioni": [
+      "σ[F](R) × S",
+      "σ[F](R × S)",
+      "π[F](R × S)",
+      "σ[F](R ∪ S)"
+    ],
+    "soluzioni": [
+      "σ[F](R × S)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Con ESAMI(Studente, Corso, Voto), quale espressione trova gli studenti che hanno preso solo voti ≥ 27?",
+    "opzioni": [
+      "π[Studente](σ[Voto≥27](ESAMI))",
+      "π[Studente](ESAMI) ∩ π[Studente](σ[Voto<27](ESAMI))",
+      "π[Studente](σ[Voto<27](ESAMI))",
+      "π[Studente](ESAMI) - π[Studente](σ[Voto<27](ESAMI))"
+    ],
+    "soluzioni": [
+      "π[Studente](ESAMI) - π[Studente](σ[Voto<27](ESAMI))"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel modello di costo usato per i DBMS, da che cosa dipende il costo di un'operazione?",
+    "opzioni": [
+      "Dal numero di istruzioni eseguite dalla CPU",
+      "Dal numero di tuple del risultato",
+      "Dal numero di blocchi letti o scritti in memoria secondaria",
+      "Dalla dimensione della memoria centrale"
+    ],
+    "soluzioni": [
+      "Dal numero di blocchi letti o scritti in memoria secondaria"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa fa la primitiva fix quando la pagina richiesta è già nel buffer?",
+    "opzioni": [
+      "La rilegge dal disco per avere la versione aggiornata",
+      "La scrive su disco prima di restituirla",
+      "Azzera il suo contatore",
+      "Ne restituisce l'indirizzo e incrementa il contatore, senza accedere al disco"
+    ],
+    "soluzioni": [
+      "Ne restituisce l'indirizzo e incrementa il contatore, senza accedere al disco"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve il bit dirty di una pagina del buffer?",
+    "opzioni": [
+      "Indica che la pagina è stata modificata e va riscritta su disco prima di essere sostituita",
+      "Indica che la pagina è usata da almeno una transazione",
+      "Indica che la pagina contiene dati corrotti",
+      "Riserva la pagina a una sola transazione"
+    ],
+    "soluzioni": [
+      "Indica che la pagina è stata modificata e va riscritta su disco prima di essere sostituita"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Tutte le pagine del buffer hanno contatore maggiore di zero e la politica è no-steal. Che cosa succede a una nuova fix di una pagina non presente?",
+    "opzioni": [
+      "La richiesta viene messa in attesa",
+      "Si sceglie una pagina vittima tra quelle in uso",
+      "Il buffer viene ingrandito",
+      "La transazione viene annullata"
+    ],
+    "soluzioni": [
+      "La richiesta viene messa in attesa"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza tra force e flush?",
+    "opzioni": [
+      "force scrive una pagina su disco in modo sincrono, flush in modo asincrono",
+      "force legge una pagina, flush la scrive",
+      "force è usata solo dal buffer manager, flush solo dalle transazioni",
+      "Nessuna, sono sinonimi"
+    ],
+    "soluzioni": [
+      "force scrive una pagina su disco in modo sincrono, flush in modo asincrono"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quando è necessaria un'organizzazione spanned dei record?",
+    "opzioni": [
+      "Quando i record hanno formato auto-descrittivo",
+      "Quando un record è più grande di un blocco",
+      "Quando il file è ordinato",
+      "Quando si usa un column store"
+    ],
+    "soluzioni": [
+      "Quando un record è più grande di un blocco"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per quale tipo di carico è più vantaggioso un column store?",
+    "opzioni": [
+      "Lettura e modifica di molti campi dello stesso record",
+      "Inserimenti frequenti di singole righe",
+      "Statistiche e analisi che leggono poche colonne di moltissime righe",
+      "Accesso diretto a un record tramite la sua chiave primaria"
+    ],
+    "soluzioni": [
+      "Statistiche e analisi che leggono poche colonne di moltissime righe"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Su quale file si può costruire un indice sparso?",
+    "opzioni": [
+      "Su qualsiasi file, ordinato o no",
+      "Solo su un file disordinato",
+      "Solo su un file ordinato secondo il campo dell'indice",
+      "Solo su un file con record a lunghezza variabile"
+    ],
+    "soluzioni": [
+      "Solo su un file ordinato secondo il campo dell'indice"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale vantaggio ha un indice denso rispetto a uno sparso?",
+    "opzioni": [
+      "Occupa meno spazio",
+      "Si può costruire solo su file ordinati",
+      "Non richiede aggiornamenti quando si inseriscono record",
+      "Permette di sapere se esiste un record con una certa chiave guardando solo l'indice"
+    ],
+    "soluzioni": [
+      "Permette di sapere se esiste un record con una certa chiave guardando solo l'indice"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un file ordinato ha 2 record per blocco e indice sparso 10, 30, 50; BLOCK2 contiene 30 e 40. Che cosa succede all'indice se si cancella il record 30?",
+    "opzioni": [
+      "Nulla",
+      "La voce 30 diventa 40",
+      "La voce 30 viene rimossa",
+      "L'indice va ricostruito da capo"
+    ],
+    "soluzioni": [
+      "La voce 30 diventa 40"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue un B+ tree da un B-tree?",
+    "opzioni": [
+      "Il B+ tree non è bilanciato",
+      "Nel B+ tree le foglie sono collegate in lista e solo loro puntano ai dati",
+      "Il B+ tree ha nodi con un solo figlio",
+      "Il B+ tree non supporta gli inserimenti"
+    ],
+    "soluzioni": [
+      "Nel B+ tree le foglie sono collegate in lista e solo loro puntano ai dati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà ha il riempimento dei nodi di un B-tree?",
+    "opzioni": [
+      "È sempre del 100%",
+      "Può scendere a zero",
+      "Resta sempre superiore al 50%",
+      "È sempre esattamente del 70%"
+    ],
+    "soluzioni": [
+      "Resta sempre superiore al 50%"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per quale interrogazione un file hash è poco efficiente?",
+    "opzioni": [
+      "WHERE Matricola = 104",
+      "WHERE Voto BETWEEN 27 AND 30",
+      "WHERE Codice = 'BD'",
+      "Nessuna: è sempre la struttura migliore"
+    ],
+    "soluzioni": [
+      "WHERE Voto BETWEEN 27 AND 30"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nell'hashing estendibile un blocco pieno ha profondità locale j = 1, mentre la profondità globale è i = 2. Che cosa succede inserendovi una nuova chiave?",
+    "opzioni": [
+      "Si raddoppia il direttorio",
+      "Si crea un blocco di overflow",
+      "La chiave viene rifiutata",
+      "Il blocco si divide in due senza modificare la dimensione del direttorio"
+    ],
+    "soluzioni": [
+      "Il blocco si divide in due senza modificare la dimensione del direttorio"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In quale caso è adatto un indice bitmap?",
+    "opzioni": [
+      "Colonne con pochi valori distinti, interrogate in combinazione con altre",
+      "Colonne con valori quasi tutti distinti, come una chiave primaria",
+      "Tabelle aggiornate molto frequentemente",
+      "Ricerche su intervalli di date"
+    ],
+    "soluzioni": [
+      "Colonne con pochi valori distinti, interrogate in combinazione con altre"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Con A attributo di R2, perché l'ottimizzatore riscrive σ[A=10](R1 ⋈ R2) come R1 ⋈ σ[A=10](R2)?",
+    "opzioni": [
+      "Perché la seconda forma riduce la dimensione del risultato intermedio del join",
+      "Perché la prima forma è sintatticamente errata",
+      "Perché le due espressioni danno risultati diversi",
+      "Perché il join va sempre eseguito per ultimo"
+    ],
+    "soluzioni": [
+      "Perché la seconda forma riduce la dimensione del risultato intermedio del join"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale algoritmo di join si può usare SOLO per gli equi-join?",
+    "opzioni": [
+      "Nested-loop",
+      "Hash-join",
+      "Prodotto cartesiano",
+      "Nessuno: tutti valgono per qualsiasi condizione"
+    ],
+    "soluzioni": [
+      "Hash-join"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà ACID garantisce che una transazione venga eseguita per intero o per niente?",
+    "opzioni": [
+      "Consistenza",
+      "Isolamento",
+      "Atomicità",
+      "Durability"
+    ],
+    "soluzioni": [
+      "Atomicità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Durante una transazione un vincolo di chiave esterna viene violato, ma prima del commit viene inserita la tupla mancante. Che cosa succede?",
+    "opzioni": [
+      "La transazione viene annullata appena il vincolo è violato",
+      "La transazione si conclude correttamente, perché alla fine il vincolo è rispettato",
+      "Il DBMS cancella la tupla che viola il vincolo",
+      "Il vincolo viene disattivato"
+    ],
+    "soluzioni": [
+      "La transazione si conclude correttamente, perché alla fine il vincolo è rispettato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Due transazioni concorrenti leggono entrambe che il posto 07F è libero e lo prenotano entrambe. Le due transazioni vengono completate per intero. Quale proprietà è violata?",
+    "opzioni": [
+      "Atomicità",
+      "Durability",
+      "Consistenza dei vincoli di dominio",
+      "Isolamento"
+    ],
+    "soluzioni": [
+      "Isolamento"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa permette al DBMS di garantire che un bonifico confermato non vada perso in caso di blackout?",
+    "opzioni": [
+      "Il log scritto su memoria stabile, riletto al riavvio",
+      "L'indice primario sulla tabella dei conti",
+      "La politica no-steal del buffer",
+      "I trigger AFTER"
+    ],
+    "soluzioni": [
+      "Il log scritto su memoria stabile, riletto al riavvio"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un programma Python usa psycopg2 con le impostazioni predefinite, esegue alcuni UPDATE e termina senza chiamare conn.commit(). Che cosa succede alle modifiche?",
+    "opzioni": [
+      "Vengono salvate, perché l'autocommit è attivo",
+      "Vengono perse, perché l'autocommit è disattivato di default",
+      "Vengono salvate solo le prime",
+      "Vengono salvate alla connessione successiva"
+    ],
+    "soluzioni": [
+      "Vengono perse, perché l'autocommit è disattivato di default"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa può fare un trigger in modalità BEFORE?",
+    "opzioni": [
+      "Modificare liberamente altre tabelle del database",
+      "Agire solo dopo che la modifica è stata scritta",
+      "Condizionare i valori New prima che la modifica venga eseguita",
+      "Essere attivato solo da istruzioni SELECT"
+    ],
+    "soluzioni": [
+      "Condizionare i valori New prima che la modifica venga eseguita"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali variabili si usano in un trigger statement-level?",
+    "opzioni": [
+      "old_table e new_table",
+      "old e new",
+      "before e after",
+      "Nessuna"
+    ],
+    "soluzioni": [
+      "old_table e new_table"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Più trigger sono associati allo stesso evento. In che ordine vengono eseguiti?",
+    "opzioni": [
+      "Prima gli AFTER, poi la modifica, poi i BEFORE",
+      "Prima i BEFORE, poi la modifica, poi gli AFTER",
+      "In ordine casuale",
+      "Tutti contemporaneamente, dopo la modifica"
+    ],
+    "soluzioni": [
+      "Prima i BEFORE, poi la modifica, poi gli AFTER"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si può concludere se il grafo di triggering è aciclico?",
+    "opzioni": [
+      "Che l'esecuzione dei trigger termina sempre",
+      "Che l'esecuzione dei trigger non termina mai",
+      "Che i trigger non vengono mai attivati",
+      "Nulla sulla terminazione"
+    ],
+    "soluzioni": [
+      "Che l'esecuzione dei trigger termina sempre"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa fa REVOKE ... CASCADE?",
+    "opzioni": [
+      "Blocca la revoca se il privilegio è stato trasmesso ad altri",
+      "Revoca il privilegio e lo propaga a tutte le tabelle collegate da chiavi esterne",
+      "Revoca il privilegio anche agli utenti a cui era stato trasmesso",
+      "Revoca tutti i privilegi dell'utente"
+    ],
+    "soluzioni": [
+      "Revoca il privilegio anche agli utenti a cui era stato trasmesso"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si permette a un utente di vedere solo alcune righe di una tabella?",
+    "opzioni": [
+      "Con GRANT SELECT su alcune colonne",
+      "Definendo una vista con una condizione di selezione e concedendo i privilegi sulla vista",
+      "Con un trigger BEFORE SELECT",
+      "Non è possibile in SQL"
+    ],
+    "soluzioni": [
+      "Definendo una vista con una condizione di selezione e concedendo i privilegi sulla vista"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali sono le \"3V\" dei Big Data?",
+    "opzioni": [
+      "Volume, Velocità, Varietà",
+      "Volume, Valore, Veridicità",
+      "Velocità, Visibilità, Variabilità",
+      "Validità, Volume, Vincoli"
+    ],
+    "soluzioni": [
+      "Volume, Velocità, Varietà"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa il termine NoSQL?",
+    "opzioni": [
+      "Database che rifiutano completamente il linguaggio SQL",
+      "Not only SQL: una famiglia di modelli di dati diversi dal relazionale classico",
+      "Database privi di qualsiasi linguaggio di interrogazione",
+      "Database relazionali senza chiavi"
+    ],
+    "soluzioni": [
+      "Not only SQL: una famiglia di modelli di dati diversi dal relazionale classico"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nell'approccio BASE, che cosa significa la \"E\"?",
+    "opzioni": [
+      "Efficient",
+      "Exclusive",
+      "Eventually consistent",
+      "Encrypted"
+    ],
+    "soluzioni": [
+      "Eventually consistent"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale categoria NoSQL è più adatta a una cache di sessione per un sito ad alto traffico?",
+    "opzioni": [
+      "Graph database",
+      "Wide-column store",
+      "Document store",
+      "Key-value store"
+    ],
+    "soluzioni": [
+      "Key-value store"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale categoria è più adatta a suggerire \"persone che potresti conoscere\" in un social network?",
+    "opzioni": [
+      "Graph database",
+      "Key-value store",
+      "Wide-column store",
+      "Data warehouse"
+    ],
+    "soluzioni": [
+      "Graph database"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Secondo il teorema CAP, che cosa bisogna scegliere in presenza di una partizione di rete?",
+    "opzioni": [
+      "Tra latenza e consistenza",
+      "Tra consistenza e disponibilità",
+      "Tra disponibilità e tolleranza alle partizioni",
+      "Nulla: si possono avere tutte e tre le proprietà"
+    ],
+    "soluzioni": [
+      "Tra consistenza e disponibilità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un sistema classificato PA/EL (es. Cassandra):",
+    "opzioni": [
+      "sceglie la consistenza sia in partizione sia in condizioni normali",
+      "non tollera le partizioni",
+      "in partizione sceglie la disponibilità, altrimenti la bassa latenza",
+      "garantisce transazioni ACID distribuite"
+    ],
+    "soluzioni": [
+      "in partizione sceglie la disponibilità, altrimenti la bassa latenza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Una fintech deve gestire pagamenti atomici tra milioni di utenti su più data center. Che tipo di sistema serve?",
+    "opzioni": [
+      "Un key-value store puro",
+      "Un data lake",
+      "Un database vettoriale",
+      "Un sistema NewSQL (es. Spanner, CockroachDB)"
+    ],
+    "soluzioni": [
+      "Un sistema NewSQL (es. Spanner, CockroachDB)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa caratterizza un data lake rispetto a un data warehouse?",
+    "opzioni": [
+      "Conserva dati grezzi ed eterogenei e applica lo schema solo in lettura (schema-on-read)",
+      "Contiene solo dati puliti e strutturati",
+      "È pensato principalmente per la reportistica di business",
+      "Applica lo schema in fase di scrittura (schema-on-write)"
+    ],
+    "soluzioni": [
+      "Conserva dati grezzi ed eterogenei e applica lo schema solo in lettura (schema-on-read)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cos'è la RAG (Retrieval-Augmented Generation)?",
+    "opzioni": [
+      "Una tecnica di compressione degli embedding",
+      "Un linguaggio di interrogazione per database a grafo",
+      "Una tecnica in cui un LLM recupera documenti rilevanti (es. da un database vettoriale) e li usa come contesto per rispondere",
+      "Un algoritmo di riaddestramento dei modelli linguistici"
+    ],
+    "soluzioni": [
+      "Una tecnica in cui un LLM recupera documenti rilevanti (es. da un database vettoriale) e li usa come contesto per rispondere"
+    ],
+    "tipologia": "singola"
+  }
+]

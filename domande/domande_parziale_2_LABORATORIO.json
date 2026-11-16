@@ -2100,5 +2100,82 @@
       "Convertire il codice dal linguaggio assembly al linguaggio macchina"
     ],
     "tipologia": "multiple"
+  },
+  {
+  "domanda": "Nell'ambito del debugger Linux GDB, quale dei seguenti passi consente di inserire un breakpoint in modo corretto:",
+    "opzioni": [
+      "Nessuna delle altre risposte consente di impostare un breakpoint correttamente",
+      "Usando \"stop\" o \"break\", seguito da un numero di riga",
+      "Usando \"break\" o la lettera \"b\", seguito da un nome di una funzione",
+      "Usando \"breakpoint\", seguito da un numero di riga"
+    ],
+    "soluzioni": [
+      "Usando \"break\" o la lettera \"b\", seguito da un nome di una funzione"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Quali tra le seguenti affermazioni sui meccanismi di gestione delle sezioni critiche sono false?",
+    "opzioni": [
+      "Più processi possono trovarsi contemporaneamente in attesa di accedere alla propria sezione critica",
+      "Più processi possono accedere contemporaneamente alla medesima sezione critica, se protetta da un mutex, ma solo nel caso essi siano \"imparentati\" (padre-figlio, ecc.)",
+      "Più processi possono accedere contemporaneamente alla medesima sezione critica, se protetta da un mutex",
+      "Un unico processo può accedere alla propria sezione critica, se protetta da un mutex"
+    ],
+    "soluzioni": [
+      "Più processi possono accedere contemporaneamente alla medesima sezione critica, se protetta da un mutex, ma solo nel caso essi siano \"imparentati\" (padre-figlio, ecc.)",
+      "Più processi possono accedere contemporaneamente alla medesima sezione critica, se protetta da un mutex"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "La funzione execl():",
+    "opzioni": [
+      "Sovrascrive il programma originale",
+      "Può essere utilizzata successivamente alla chiamata di sistema fork()",
+      "Costituisce un'alternativa alla chiamata di sistema fork()",
+      "E' una versione specializzata della chiamata di sistema runexec()"
+    ],
+    "soluzioni": [
+      "Sovrascrive il programma originale",
+      "Può essere utilizzata successivamente alla chiamata di sistema fork()"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Quale di queste affermazioni riguardanti i \"thread\" è vera:",
+    "opzioni": [
+      "Concettualmente, essi esistono all'interno di un processo",
+      "Sono schedulati dal kernel in modo sincrono ma concorrente",
+      "Sono schedulati dal kernel in modo concorrente ed asincrono"
+    ],
+    "soluzioni": [
+      "Concettualmente, essi esistono all'interno di un processo",
+      "Sono schedulati dal kernel in modo concorrente ed asincrono"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "La libreria libpthread",
+    "opzioni": [
+      "Fornisce i suoi strumenti di base nel file header \"pthread.h\"",
+      "Di base è inclusa nella libreria standard del C",
+      "Consente lo sviluppo di applicazioni C che utilizzano i thread in ambiente Linux"
+    ],
+    "soluzioni": [
+      "Fornisce i suoi strumenti di base nel file header \"pthread.h\"",
+      "Consente lo sviluppo di applicazioni C che utilizzano i thread in ambiente Linux"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "Selezionare le corrette affermazioni sui MUTEX:",
+    "opzioni": [
+      "In genere è buona norma utilizzarli per proteggere le istruzioni di terminazione di un thread (come return o exit) garantendo che siano eseguite in maniera atomica e il thread non si interrompa in maniera anomala",
+      "Sono utili quando un thread vuole lavorare su delle proprie risorse private senza che possa essere interrotto dallo scheduler",
+      "Nella libreria pthread del C sono definiti da variabili di tipo p_thread_mutex_t"
+    ],
+    "soluzioni": [],
+    "tipologia": "multiple"
   }
 ]

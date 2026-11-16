@@ -1240,5 +1240,62 @@
             "Un comando è composto dal nome del comando stesso, da una o più opzioni facoltative e da uno o più argomenti facoltativi"
         ],
         "tipologia": "multiple"
-    }
+    },
+    {
+        "domanda" : "Il comando ((a=7+8)), seguito dal comando echo a:",
+        "opzioni" : [
+          "Nessuna delle altre risposte è corretta",
+          "Stampa ((a=7+8)",
+          "Genera un errore, perché avremmo dovuto premettere let al primo comando",
+          "Visualizza 15"
+        ],
+        "soluzioni" : [
+          "Nessuna delle altre risposte è corretta"
+        ],
+        "tipologia" : "multiple" 
+    },
+  {
+    "domanda": "In merito alla visualizzazione di file in Linux, quale delle seguenti affermazioni è corretta?",
+    "opzioni": [
+      "Il comando cut visualizza l'intero contenuto del file",
+      "I comandi head e tail visualizzano rispettivamente la prima e l'ultima parte di un file",
+      "I comandi less e more permettono di visualizzare un file scorrendo il contenuto",
+      "Il comando file visualizza l'intero contenuto del file"
+    ],
+    "soluzioni": [
+      "I comandi head e tail visualizzano rispettivamente la prima e l'ultima parte di un file",
+      "I comandi less e more permettono di visualizzare un file scorrendo il contenuto"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "I link simbolici:",
+    "opzioni": [
+      "Consentono di creare nuovi i-node per le cartelle",
+      "Non possono essere creati in serie (es: link2---> link 1 ----> file)",
+      "Consentono di creare un collegamento a file che risiedono su altri file system",
+      "Se rimossi, non pregiudicano il file da essi linkato"
+    ],
+    "soluzioni": [
+      "Consentono di creare un collegamento a file che risiedono su altri file system",
+      "Se rimossi, non pregiudicano il file da essi linkato"
+    ],
+    "tipologia": "multiple"
+  },
+  {
+    "domanda": "In uno script bash, la sequenza di caratteri $#",
+    "opzioni": [
+      "Rende il numero di parametri passati dall'utente",
+      "E' ammessa e il suo contenuto può essere stampato con echo (($#))",
+      "Rende l'exit status dell'ultimo job eseguito",
+      "Rappresenta una variabile speciale"
+    ],
+    "soluzioni": [
+      "Rende il numero di parametri passati dall'utente",
+      "Rappresenta una variabile speciale"
+    ],
+    "tipologia": "multiple"
+  }
+  
+
 ]
