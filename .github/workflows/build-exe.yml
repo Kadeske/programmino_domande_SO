@@ -1,0 +1,42 @@
+name: Compila quiz.exe
+
+# Compila l'eseguibile Windows a ogni push su master che tocca il codice,
+# oppure a mano dalla scheda "Actions" su GitHub (bottone "Run workflow").
+on:
+  push:
+    branches: [master]
+    paths:
+      - "*.py"
+      - ".github/workflows/build-exe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Scarica il codice
+        uses: actions/checkout@v4
+
+      - name: Installa Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa dipendenze
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller pillow
+
+      - name: Compila con PyInstaller
+        run: pyinstaller --onefile --windowed --name quiz quiz.py
+
+      - name: Carica quiz.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-exe
+          path: dist/quiz.exe
+          retention-days: 90

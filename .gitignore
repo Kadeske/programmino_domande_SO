@@ -5,3 +5,9 @@ __pycache__/
 *$py.class
 
 pdf_domande
+
+### PyInstaller ###
+build/
+dist/
+*.spec
+*.exe
